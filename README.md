@@ -6,18 +6,48 @@ Batch judgments for coding agents and experimental Ego Lite browser automation, 
 
 ## Features
 
-| Tool | What it does |
-|---|---|
-| `jev_evidence` | Check claims against their sources and verify exact quotes |
-| `jev_classify` | Classify records using a shared catalog |
-| `jev_extract` | Select exact values from regex candidates |
-| `jev_decide` | Compare 2–6 alternatives using supplied evidence |
-| `jev_rerank` | Reorder up to 30 existing search results, preserving all IDs |
-| Ego Lite browser | Use Jev to choose page actions and independently check the requested outcome; experimental |
+### Batch judgments
 
-Pass existing source text directly. Uncertain results return to the agent for review.
+Built on `jev-use` and `jev-mcp` patterns, with local source/quote validation. Pass existing text or tool output directly; no extra LLM summary is needed.
 
-[Tool inputs and examples](skills/jev-kit/references/inputs.md) · [Ego Lite setup](integrations/ego-browser/README.md)
+| Tool | Capability | Example use |
+|---|---|---|
+| `jev_evidence` | Check up to 256 claim/source pairs per input. Verify exact quotes locally; return support, contradiction, insufficient evidence or review | Check report citations, release claims or answers against logs and documents |
+| `jev_classify` | Classify up to 64 records against 2–32 custom classes, with an explicit manual-review option | Triage issues, group feedback or label tool outputs |
+| `jev_extract` | Use regex to find candidates, then select exact source values for up to 8 fields | Find the current version, date or identifier among several mentions |
+| `jev_decide` | Compare 2–6 supplied alternatives against priorities and up to 3 requirements; flag missing or conflicting evidence | Choose an implementation or processing route using known tradeoffs |
+| `jev_rerank` | Reorder up to 30 supplied search results; select an inspection prefix while retaining all remaining IDs | Prioritize code snippets or document passages from existing search results |
+
+These are advisory judgments. Sources and alternatives come from the caller; the tools do not search for missing evidence or execute the selected decision. [Input schemas and examples](skills/jev-kit/references/inputs.md).
+
+### Ego Lite browser automation — experimental
+
+Run a browser job with a goal, starting URL and expected outcome. The pinned `jev-ultrafast` policy chooses actions; Ego Lite executes them.
+
+- Click controls, fill fields, select options and navigate pages for searches, forms and article lookup. Generated field text uses a configured text model or Claude CLI helper.
+- Check target identity, visibility and page state before acting. Re-observe supported stale-target failures instead of replaying the old action.
+- Verify the expected URL and/or page text independently of Jev's completion signal.
+- Set allowed origins, a step limit and a time budget; stop for caller handoff on observed popups or dialogs. Record actions and outcomes in a private receipt.
+
+```sh
+~/.local/share/jev-kit/jev browser --input job.json
+```
+
+Requires separate Ego Lite/upstream setup. Time limits are checked between operations; login, transaction approvals, frames, shadow DOM and popup continuation are outside the tested scope. [Setup and job example](integrations/ego-browser/README.md).
+
+### Agent integration and lifecycle
+
+- **Native integration, MCP and Skill:** expose the same five judgment tools across supported hosts; the included Skill explains when to use them and how to handle uncertain results.
+- **CLI batch processing:** read JSON from a file or stdin, return structured JSON, and validate inputs offline with `--validate-only`.
+- **Shared installation manager:** detect hosts, select integrations, update managed hosts together, check configuration drift and remove individual integrations while preserving unrelated settings.
+
+Installation makes tools available for the agent to call. It does not add automatic permission hooks, context compaction or model routing.
+
+### Review and result tracking
+
+Low-confidence, incomplete or invalid judgments remain marked for review. Reranking failures retain the original candidate order. Local quote checks, empty extraction candidates and single-candidate reranking can skip model calls.
+
+Results include review flags, timing, resolved model and usage when a call returns them; source-based tools also retain IDs/references and hashes for comparison with the original input. CLI output can be saved as a new private receipt without overwriting an existing file.
 
 ## Install
 

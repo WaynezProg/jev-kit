@@ -6,18 +6,48 @@
 
 ## 功能
 
-| 工具 | 用途 |
-|---|---|
-| `jev_evidence` | 比對主張與來源，核對精確引文 |
-| `jev_classify` | 依共同分類表批次分類資料 |
-| `jev_extract` | 從 regex 候選中選出精確值 |
-| `jev_decide` | 根據提供的證據比較 2–6 個選項 |
-| `jev_rerank` | 重排最多 30 筆既有搜尋結果，保留所有 ID |
-| Ego Lite browser | 由 Jev 選擇頁面操作，再獨立檢查指定結果；實驗性功能 |
+### 批次語意判斷
 
-直接傳入既有來源文字，不確定的結果交回 agent 審查。
+整合 `jev-use` 與 `jev-mcp` 的引擎和任務模式，加入本機來源與引文驗證。直接傳入既有文字或工具輸出，不必先讓另一個 LLM 摘要。
 
-[工具輸入與範例](skills/jev-kit/references/inputs.md) · [Ego Lite 設定](integrations/ego-browser/README.md)
+| 工具 | 能做什麼 | 使用情境 |
+|---|---|---|
+| `jev_evidence` | 每份輸入最多 256 組主張與來源；本機核對精確引文，回傳支持、矛盾、證據不足或待審查 | 核對報告引用、發布說明，或比對回答與 logs／文件 |
+| `jev_classify` | 將最多 64 筆資料分到 2–32 個自訂類別，可設人工審查類別 | Issue 分流、回饋歸類、工具輸出分類 |
+| `jev_extract` | 先用 regex 找候選，再依語意選出原文中的精確值；最多 8 個欄位 | 從多個版本號、日期或識別碼中找出需要的值 |
+| `jev_decide` | 依優先條件比較 2–6 個已知方案，檢查最多 3 項需求，標記缺失或衝突的證據 | 根據已知利弊選擇實作方案或處理路徑 |
+| `jev_rerank` | 重排最多 30 筆既有搜尋結果，選出優先閱讀項目並保留其餘所有 ID | 決定先看哪些程式碼片段或文件段落 |
+
+這些工具提供判斷建議。來源與選項由呼叫端提供，不會自行搜尋缺少的證據或執行選出的方案。[輸入 schemas 與範例](skills/jev-kit/references/inputs.md)。
+
+### Ego Lite 瀏覽器自動操作——實驗性
+
+提供目標、起始網址與預期結果，由固定版本的 `jev-ultrafast` policy 選擇動作，再交給 Ego Lite 執行。
+
+- 點擊控制項、填寫欄位、選擇選項與切換頁面，用於搜尋、表單與文章查找；欄位文字由設定的 text model 或 Claude CLI helper 產生。
+- 操作前檢查目標身分、可見性與頁面狀態；遇到支援處理的過期目標錯誤，重新觀察與選擇動作。
+- 獨立核對預期 URL 或頁面文字，不只依賴 Jev 回報完成。
+- 可設允許的網站 origins、步數與時間預算；觀察到 popup／dialog 時停止並交回呼叫端，動作與結果寫入私人 receipt。
+
+```sh
+~/.local/share/jev-kit/jev browser --input job.json
+```
+
+需另行設定 Ego Lite 與 upstream。時間限制在操作間檢查；登入、交易批准、frames、shadow DOM 與 popup 接續操作不在已驗證範圍內。[設定方式與 job 範例](integrations/ego-browser/README.md)。
+
+### Agent 整合與安裝管理
+
+- **Native 整合、MCP 與 Skill**：讓支援的工具使用同一組五個判斷工具；附帶 Skill 說明適用時機與不確定結果的處理方式。
+- **CLI 批次處理**：從 JSON 檔案或 stdin 讀取資料，回傳結構化 JSON，也可用 `--validate-only` 離線檢查輸入。
+- **共用安裝管理器**：偵測 host、選擇整合方式、一起更新受管理的工具、檢查設定是否被改動，並在保留其他設定的前提下個別移除整合。
+
+安裝後由 agent 選擇呼叫工具，不會自動加入權限 hooks、context compaction 或模型路由。
+
+### 審查與結果追蹤
+
+低信心、資料不完整或回應無效的判斷會標記待審查；rerank 失敗時保留候選原始順序。本機引文檢查、沒有擷取候選或只有一筆排序候選時，可略過模型呼叫。
+
+結果包含審查標記、耗時，以及模型回應提供的實際模型與 usage；依來源判斷的工具另保留 ID／來源參照與 hashes，方便核對原始輸入。CLI 可將結果寫成新的私人 receipt，不覆蓋既有檔案。
 
 ## 安裝
 
