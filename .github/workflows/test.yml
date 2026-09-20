@@ -23,4 +23,5 @@ jobs:
       - run: npm run build
       - run: npm test
       - run: python3 -m unittest discover -s test -p '*_test.py'
+      - run: sh -n install.sh && sh -n jev
       - run: node dist/cli.js evidence --input examples/evidence.json --validate-only

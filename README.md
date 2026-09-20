@@ -38,34 +38,77 @@ node dist/cli.js evidence --input examples/evidence.json --output /tmp/jev-evide
 
 Supplied task text is sent to TypeSafe for model judgments. Include only relevant, authorized material; never credentials. Local quote mismatches and certain empty-candidate checks do not need the API.
 
-## Coding agent setup
+## One-command host management
 
-First inspect the changes, then apply them to existing configurations:
+For macOS/Linux with Git, Node.js 22+ and Python 3.11+ already installed:
 
 ```sh
-python3 scripts/install-hosts.py
-python3 scripts/install-hosts.py --apply --receipt /tmp/jev-kit-install-receipt
+curl -fsSL https://raw.githubusercontent.com/WaynezProg/jev-kit/main/install.sh | sh
 ```
 
-Use a new receipt directory each time. The installer adds only `jev-kit`, preserves other settings, rejects conflicting existing entries, and saves private backups. Backups can contain other services' credentials: do not publish them. Missing host configuration files are skipped and listed in the output.
+This downloads a clean checkout and installs into `~/.local/share/jev-kit`. It detects hosts with existing configuration files, plus existing Codex/Pi directories. API credentials must be configured separately. To inspect the script first, download it and run it locally; from a clone, the equivalent command is:
 
-| Host | Integration | Integration evidence from the development environment |
-|---|---|---|
-| Codex | Plugin + MCP + Skill | Installed plugin; four-tool live API smoke test passed |
-| Claude Code, OpenCode, Grok, Gemini CLI | MCP + Skill | Native MCP diagnostics connected |
-| Muse Code | No-argument launcher + MCP + Skill | Fresh TUI listed four connected tools |
-| Pi | Native extension + Skill | Installed SDK loaded four tools; a real Jev call passed |
-| Cursor, VS Code Copilot | MCP | Config-driven handshake and local tool calls passed; editor UI loading not verified |
+```sh
+./jev install
+```
 
-These observations are not a compatibility guarantee for every host version. The installer configures the seven non-Codex MCP hosts above and creates Skill/Pi extension links where supported directories exist. Codex packaging is separate: after generating `.mcp.json`, the root contains a `.codex-plugin/plugin.json` manifest ready for your local marketplace workflow. This repository is not automatically registered in a marketplace.
+Select one host, several hosts, or explicitly create integrations for all nine:
 
-Restart the relevant session to load new settings; use a new Codex task. Example request:
+```sh
+./jev install --hosts claude,opencode
+./jev install --hosts all
+```
+
+| Host selector | Integration |
+|---|---|
+| `codex` | Native plugin, installed using Codex CLI into a dedicated local marketplace |
+| `claude` | MCP + Skill |
+| `opencode` | MCP + Skill |
+| `muse` | No-argument launcher + MCP + Skill |
+| `grok` | MCP + Skill |
+| `gemini` | MCP + Skill |
+| `cursor` | MCP + Skill |
+| `vscode` | MCP for Copilot Agent; macOS/Linux configuration paths |
+| `pi` | Native extension + Skill |
+
+All integrations expose the same four tools. This is a unified lifecycle manager, not a claim that all hosts use the same native plugin format. Codex requires a CLI version with `plugin` commands. Other host configuration formats are JSON, and Grok uses TOML. JSONC/commented JSON is currently refused safely; convert that configuration to strict JSON before using the manager. Windows is not supported by this POSIX installer.
+
+After installation, the manager works without the original checkout:
+
+```sh
+~/.local/share/jev-kit/jev status
+~/.local/share/jev-kit/jev update
+~/.local/share/jev-kit/jev uninstall --hosts muse
+~/.local/share/jev-kit/jev uninstall
+```
+
+`update` downloads the current GitHub `main` into a temporary directory and updates all managed hosts together. The temporary clone is discarded; it does not run npm scripts or install dependencies. `--source /absolute/checkout` selects a local release instead. A content-addressed release is staged and checked before switching the shared runtime. Codex refreshes its plugin cache through its native CLI.
+
+`uninstall` removes only entries and Skill/extension links recorded as managed. It preserves unrelated settings, credentials, release snapshots, the manager itself, and private receipts. It does not restore an old whole-file backup over new user settings. If an owned entry/link was manually changed, it refuses and reports the conflict. Keep the runtime directory until all integrations have been removed.
+
+`status` reports configuration drift and the installed release. It is not a live MCP connectivity test. Existing sessions may retain old tools; restart them after install/update/removal and start a new Codex task.
+
+### Migrating the earlier installer
+
+Existing entries are never silently claimed. If you used the previous `scripts/install-hosts.py`, migrate entries that exactly match its source directory:
+
+```sh
+./jev install --adopt-from /absolute/path/to/old/jev-kit
+```
+
+This also migrates a matching Codex Jev plugin to the dedicated managed marketplace, preserving other plugins. Any mismatch stops before editing host settings. The old source directory is retained. Use `./jev update --source "$PWD"` before adding new hosts from a newer checkout to an existing managed runtime.
+
+Private backups and operation receipts are stored under `~/.local/share/jev-kit/receipts`; backups can contain credentials for unrelated servers. Never share that directory. Ordinary write/native-CLI failures trigger rollback; machine crashes or concurrent external configuration edits may require inspecting the private receipt and repairing the affected installation.
+
+### Compatibility evidence
+
+Nine-host lifecycle fixtures cover install, update, selective removal, repeat operations, legacy migration, manual drift, unrelated settings added after installation, and failure rollback. On the development Mac, Codex native CLI was additionally exercised in an isolated home through a full lifecycle. Earlier host-native diagnostics connected for Claude Code, OpenCode, Muse, Grok and Gemini; Pi's actual SDK loaded its tools and completed a real Jev call. Cursor and VS Code have config-driven protocol evidence, not editor UI acceptance. Host versions may differ.
+
+For manual integration, `node scripts/configure-mcp.mjs` creates a local `.mcp.json`; copy its command/args into a host configuration. `node dist/cli.js serve` is stdio, not HTTP. The Pi extension is `dist/pi-extension.js`, and the shared Skill is in `skills/jev-kit/`.
+
+Example request after installation:
 
 > Use jev-kit to classify these issues into bug, feature, or manual review. Preserve IDs and unresolved items.
-
-For manual MCP setup, copy the generated `.mcp.json` command/args into your host's MCP configuration. `node dist/cli.js serve` is a stdio server, not an HTTP endpoint. Pi loads `dist/pi-extension.js` as an extension. The Skill is in `skills/jev-kit/`.
-
-The launcher and MCP configuration are generated for your installation directory and intentionally ignored by Git. Keep the checkout in place after installation. Moving it requires updating the corresponding host entries and symlinks; the installer refuses conflicting paths instead of silently overwriting them.
 
 ## Results and limits
 

@@ -20321,7 +20321,7 @@ async function run(mode, input2, backend = createBackend2()) {
     const review = rec.escalate || !candidate || conflicting;
     results = [{ ...projection(rec), selected: candidate?.id ?? null, escape: candidate ? null : rec.answer, checks, requires_review: !!review, review_reason: review ? rec.reason ?? (!candidate ? "escape_hatch" : "unresolved_requirement") : null }];
   }
-  return { version: "0.1.0", tool: `jev_${mode}`, status: calls.some((c) => c.error) ? "partial" : "ok", scope: "Advisory judgments over supplied text; not truth, permission, or task acceptance.", results, calls, elapsed_ms: performance.now() - start };
+  return { version: "0.2.0", tool: `jev_${mode}`, status: calls.some((c) => c.error) ? "partial" : "ok", scope: "Advisory judgments over supplied text; not truth, permission, or task acceptance.", results, calls, elapsed_ms: performance.now() - start };
 }
 
 // src/pi-extension.js
