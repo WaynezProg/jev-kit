@@ -18,6 +18,19 @@ Higher-tier median wall reduction: **34.2%**. Frozen gate (no aggregate or per-r
 | haiku_direct → haiku_assisted | 1 | 1 |
 | fable_direct → fable_cascade | 0 | 3 |
 
+## Post-hoc label sensitivity
+
+Case 42 says the document offers no future service-level guarantee, while the claim says the next request is guaranteed to succeed. The frozen key uses insufficient (past observations do not establish a future guarantee), but contradicts is also a defensible reading of the explicit no-guarantee sentence. The original gold and primary scores remain unchanged. Excluding this disputed item after inspection gives:
+
+| Path | Correct excluding case 42 |
+|---|---:|
+| haiku_direct | 140/141 |
+| haiku_assisted | 140/141 |
+| fable_direct | 141/141 |
+| fable_cascade | 139/141 |
+
+The qualitative conclusion is unchanged: no net Haiku gain, and a Fable quality loss. These are 47 cases repeated three times. This is a post-hoc sensitivity analysis, not a new preregistered test; the reported timings still include all 48 original cases.
+
 Main-model input tokens include cache reads and writes. Thinking tokens are a subset of reported output tokens. Wall times include the Jev process/API and main-model startup/review; one-time fixture preparation is excluded. Host monetary estimates in raw metrics omit Jev and are not subscription bills; this study does not establish total cost savings.
 
 Haiku uses its native default effort; Fable is explicitly set to low effort. Different model families, defaults, cache states and output-generation speeds all affect wall time. Only within-model intervention comparisons estimate the benefit of the tested Jev path.

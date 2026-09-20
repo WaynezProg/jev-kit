@@ -26,7 +26,7 @@ Frozen gates:
 
 These are practical screening thresholds, not statistical significance or confidence bounds. Repeating 48 cases three times does not create 144 independent examples. A ceiling score can prevent proving a 5-point improvement; thresholds and cases are not changed after seeing that outcome. A positive signal needs an independently adjudicated production sample before becoming default behavior.
 
-See [measured results](results/RESULTS.md). Reproduce with authenticated Claude Code, Node 22+, Python 3.11+ and the normal TypeSafe credential setup:
+Post-run inspection identified a defensible alternative label for case 42. The original key is preserved; the results include an explicitly post-hoc exclusion analysis, which leaves the qualitative conclusion unchanged. See [measured results](results/RESULTS.md). Reproduce with authenticated Claude Code, Node 22+, Python 3.11+ and the normal TypeSafe credential setup:
 
 ```sh
 python3 benchmarks/model-tiers/run.py --out /tmp/jev-tier-runs --plan-only
