@@ -1,7 +1,7 @@
 {
   "name": "jev-kit",
-  "version": "0.2.0",
-  "description": "Batch evidence checks, classification, exact extraction and bounded decisions with validated Jev responses.",
+  "version": "0.3.0",
+  "description": "Optional candidate reranking, evidence checks, classification, extraction and bounded decisions with validated Jev responses.",
   "author": {
     "name": "Jev Kit contributors"
   },

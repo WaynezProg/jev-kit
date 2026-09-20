@@ -1,6 +1,6 @@
 ---
 name: jev-kit
-description: Use Jev for batches of source-bound claim checks, semantic classification, exact candidate extraction, or bounded choices over evidence already available. Prefer existing tool outputs and fixed templates. Does not browse, write code, approve actions, certify completion, or automatically reduce context or reasoning.
+description: Use Jev for batches of source-bound claim checks, semantic classification, exact candidate extraction, bounded choices, or optional reranking of existing search candidates. Prefer existing tool outputs and fixed templates. Does not browse, write code, approve actions, certify completion, or automatically reduce context or reasoning.
 ---
 
 # Jev Kit
@@ -15,10 +15,11 @@ Use for repeated, bounded semantic judgments where the evidence is already avail
 | Classify texts using a shared catalog | `jev_classify` | `classify` |
 | Find exact values among regex matches | `jev_extract` | `extract` |
 | Compare 2–6 known alternatives | `jev_decide` | `decide` |
+| Optionally rank 1–30 existing search candidates | `jev_rerank` | `rerank` |
 
 Prefer the registered MCP or Pi tool when available. Otherwise use `jev-kit MODE --input /absolute/input.json --output /absolute/new-receipt.json`. Without that local command, resolve this Skill directory's symlink to its actual source and run `node ../../dist/cli.js MODE ...` relative to that source directory; the bundle requires Node 22+ and no dependency installation. See [schemas and examples](references/inputs.md) for the selected mode only. `--validate-only` checks locally without API calls.
 
-Reuse raw sources and existing structured outputs; do not ask another LLM to summarize sources just to call Jev. Preserve qualifiers, corrections and contradictory context. Batch existing records in one call; the runtime splits requests. It rejects oversized input instead of silently truncating evidence. Supplied text goes to TypeSafe; include only material relevant and authorized for the current task, never credentials.
+Reuse raw sources and existing structured outputs; do not ask another LLM to summarize sources just to call Jev. Preserve qualifiers, corrections and contradictory context. Batch existing records in one call; the runtime splits classification/evidence requests; reranking uses one bounded batch. It rejects oversized input instead of silently truncating evidence. Supplied text goes to TypeSafe; include only material relevant and authorized for the current task, never credentials.
 
 ## Read the result
 
@@ -27,6 +28,7 @@ Read `status`, then each result's **`requires_review`**. `partial` means some pr
 - Evidence: `verdict` is supports / contradicts / insufficient / quote_not_found / review. Source support is not independent truth or completion evidence. Quote mismatch refers only to this exact supplied text, including whitespace/OCR differences.
 - Classification: `classification` is the proposed class. Classes marked `requires_review`, including `manual_review`, remain review even with high confidence.
 - Extraction: use `value` only when status=extracted and requires_review=false. `candidate_value` may be a tentative guess. Incomplete candidate sets and regex errors remain review. `not_found` concerns this pattern/document, not all possible evidence.
+- Reranking: `selected_ids` is an inspection prefix, not proof of relevance. `remaining_ids` retains the rest. Keep original candidate texts and expand retrieval if the first set is insufficient. On failure, use the preserved original order and review flags. Do not enable automatically on every search: current tests did not show a coding speedup.
 - Decision: `selected` is an advisory candidate. Escape choices and uncertain, unsupported or contradicted requirements force review. No decision authorizes execution.
 
 For review, inspect the original material using the normal workflow; do not repeatedly call Jev until it agrees. Confidence is not a correctness guarantee. No tool replaces actual tests, browser/device validation, user authorization or existing permissions.

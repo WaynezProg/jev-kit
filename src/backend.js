@@ -23,13 +23,15 @@ export class StrictBackend{
   }catch{throw new BackendError('typesafe','provider_or_validation_error');}
  }
 }
-export function createBackend(){
+export function createBackend(kind='choice'){
  let key='';
  try{key=(process.env.TYPESAFE_API_KEY||readFileSync(process.env.TYPESAFE_API_KEY_FILE||`${homedir()}/.config/jev-benchmark/typesafe-api-key`,'utf8')).trim();}catch{}
  if(!key||/\s/.test(key))return {name:'unconfigured',async judge(){throw new BackendError('unconfigured','missing_or_invalid_api_key');}};
  const inner=new TypeSafeBackend({apiKey:key,timeoutMs:15000,maxRetries:0,defaultModel:'jev-latest'});
- return new StrictBackend({async judge(request){
+ const guarded={name:'typesafe',async judge(request){
   if(JSON.stringify(request).includes(key))throw Error('credential_in_payload');
   return inner.judge(request);
- }});
+ }};
+ // Score responses are validated by rerank.js before they become a ranking.
+ return kind==='score'?guarded:new StrictBackend(guarded);
 }

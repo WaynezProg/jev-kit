@@ -33,3 +33,19 @@ Document ≤50,000 characters; up to 8 fields. Regex matches the entire candidat
 ```
 
 Supply 2–6 candidates, existing evidence ≤12,000 characters, explicit priorities and up to 3 atomic requirements. The runtime adds ask_user / investigate / none internally; user IDs cannot collide with these wire options. Omitted requirements mean no separate requirement checks were performed. Results do not predict user consent or approve actions.
+
+## rerank
+
+```json
+{"query":"Find the total of a numeric list","candidates":[{"id":"sort","text":"def ordered(xs): return sorted(xs)","source_ref":"math.py:2"},{"id":"sum","text":"def total(xs): return sum(xs)","source_ref":"math.py:8"}],"top_k":1}
+```
+
+Supply 1–30 unique candidates, query ≤8,000 characters, each text ≤24,000,
+optional source_ref ≤2,048. The actual JSON state (query plus candidate IDs/text)
+must fit 160,000 UTF-8 bytes; no silent truncation. top_k defaults to min(5, count)
+and cannot exceed the candidate count. Source references are not sent to Jev.
+One candidate uses no API; otherwise one batch rates relevance from 0 to 3.
+Results preserve every ID, source reference and text hash. Scores are expected
+relevance levels, not probabilities of correctness. selected_ids is only a prefix;
+remaining_ids must remain available. Failure returns original order with partial
+status and requires_review=true; do not treat the fallback as a Jev ranking.

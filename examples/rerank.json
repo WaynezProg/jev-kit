@@ -1,0 +1,21 @@
+{
+  "query": "Find the implementation that sums all numbers in a list",
+  "candidates": [
+    {
+      "id": "sort",
+      "text": "def ordered(values):\n    return sorted(values)",
+      "source_ref": "example:ordered"
+    },
+    {
+      "id": "sum",
+      "text": "def total(values):\n    return sum(values)",
+      "source_ref": "example:total"
+    },
+    {
+      "id": "count",
+      "text": "def count(values):\n    return len(values)",
+      "source_ref": "example:count"
+    }
+  ],
+  "top_k": 1
+}

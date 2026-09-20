@@ -7,7 +7,7 @@ async function stdin(){let parts=[],size=0;for await(const chunk of process.stdi
 try{
  const args=process.argv.slice(2),mode=args.shift();
  if(mode==='serve'){if(args.length)throw Error('serve accepts no arguments');await serve();}
- else if(!mode||['--help','help'].includes(mode))console.log('jev-kit serve\njev-kit evidence|classify|extract|decide --input FILE|- [--output NEW_FILE] [--validate-only]\nUses TYPESAFE_API_KEY or TYPESAFE_API_KEY_FILE; otherwise the existing ~/.config/jev-benchmark/typesafe-api-key.\nExit 0: processing complete, not approval. Exit 2: invalid input/service failure. Exit 3: review required.');
+ else if(!mode||['--help','help'].includes(mode))console.log('jev-kit serve\njev-kit evidence|classify|extract|decide|rerank --input FILE|- [--output NEW_FILE] [--validate-only]\nUses TYPESAFE_API_KEY or TYPESAFE_API_KEY_FILE; otherwise the existing ~/.config/jev-benchmark/typesafe-api-key.\nExit 0: processing complete, not approval. Exit 2: invalid input/service failure. Exit 3: review required.');
  else{
   let input='-',output,validate=false;
   for(let i=0;i<args.length;i++){if(args[i]==='--input'&&args[i+1])input=args[++i];else if(args[i]==='--output'&&args[i+1])output=args[++i];else if(args[i]==='--validate-only')validate=true;else throw Error('Unknown or incomplete argument');}

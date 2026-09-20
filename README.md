@@ -10,10 +10,11 @@ Jev Kit combines the batch engine from [jev-use](https://github.com/shitianfang/
 | `jev_classify` | Classify multiple records against a shared catalog |
 | `jev_extract` | Select exact values from bounded regex candidates |
 | `jev_decide` | Compare 2–6 alternatives using supplied evidence and requirements |
+| `jev_rerank` | Optionally order up to 30 existing search candidates, retaining every ID |
 
 Use existing sources and tool outputs. You do not need an extra LLM summary before calling Jev. The host still constructs the tool input and reviews the result, so this does not establish lower total token cost, faster development, or a lower required thinking level.
 
-The current evidence supports a narrow candidate: [bounded browser decision loops](#where-jev-helped-bounded-browser-decision-loops). [Code-search reranking](#code-search-reranking-results) improves paired-target ordering over lexical search, but trails Fable and did not speed up the small repair workflow. General inline review still added overhead, and evidence routing traded accuracy for speed in the [model-tier screening](benchmarks/model-tiers/results/RESULTS.md). Keep Jev optional and validate the workload. These browser/search integrations are experimental; installing the current four-tool MCP server does not provide them.
+The current evidence supports a narrow candidate: [bounded browser decision loops](#where-jev-helped-bounded-browser-decision-loops). [Code-search reranking](#code-search-reranking-results) improves paired-target ordering over lexical search, but trails Fable and did not speed up the small repair workflow. General inline review still added overhead, and evidence routing traded accuracy for speed in the [model-tier screening](benchmarks/model-tiers/results/RESULTS.md). Keep Jev optional and validate the workload. Version 0.3.0 ships optional candidate reranking through CLI, MCP and Pi. It does not search by itself. The browser executor and full search adapters remain experimental.
 
 ## Quick start
 
@@ -73,7 +74,7 @@ Select one host, several hosts, or explicitly create integrations for all nine:
 | `vscode` | MCP for Copilot Agent; macOS/Linux configuration paths |
 | `pi` | Native extension + Skill |
 
-All integrations expose the same four tools. This is a unified lifecycle manager, not a claim that all hosts use the same native plugin format. Codex requires a CLI version with `plugin` commands. Other host configuration formats are JSON, and Grok uses TOML. JSONC/commented JSON is currently refused safely; convert that configuration to strict JSON before using the manager. Windows is not supported by this POSIX installer.
+All integrations expose the same five tools. This is a unified lifecycle manager, not a claim that all hosts use the same native plugin format. Codex requires a CLI version with `plugin` commands. Other host configuration formats are JSON, and Grok uses TOML. JSONC/commented JSON is currently refused safely; convert that configuration to strict JSON before using the manager. Windows is not supported by this POSIX installer.
 
 After installation, the manager works without the original checkout:
 
@@ -111,6 +112,26 @@ For manual integration, `node scripts/configure-mcp.mjs` creates a local `.mcp.j
 Example request after installation:
 
 > Use jev-kit to classify these issues into bug, feature, or manual review. Preserve IDs and unresolved items.
+
+## Optional candidate reranking
+
+Pass existing results from ripgrep, a code graph or document retrieval to `jev_rerank`
+with a query, stable candidate IDs and text. `top_k` selects a prefix for inspection;
+all remaining IDs and hashes stay in the receipt. Source references stay local.
+
+```sh
+node dist/cli.js rerank --input examples/rerank.json --output /tmp/jev-rerank-result.json
+```
+
+One candidate skips the API. Two to thirty candidates use one score batch, bounded
+by 160 KB of UTF-8 model state. Invalid responses, timeouts and missing keys preserve
+the original order as `partial`, with review flags. Ranking is not a correctness or
+relevance guarantee; retain original texts and widen retrieval when needed. This
+is optional because the experiments below did not establish a coding speedup.
+
+For the next capability experiment, see the [debug evidence and executable
+verification design](https://github.com/WaynezProg/jev-kit/blob/main/docs/agent-capability-next.md).
+This is a design to test, not an implemented or validated capability.
 
 ## Code-search reranking results
 
@@ -172,7 +193,7 @@ The Jev path was **54.6% faster** than stepwise Claude by median task time, with
 
 This is a positive **synthetic browser-loop screening**, not general web reliability. The eight distinct tasks have fixed choices and an app that knows the correct route; typing, live network races, frames, login and long planning were not tested. Total timing includes model setup, decisions, browser work and final verification; it excludes initial navigation/observation. Browser work also differed across arms despite using the same executor, so the entire gain is not a pure API-latency effect.
 
-The candidate product is a persistent browser subtask executor: deterministic handling where possible, bounded Jev choices where semantics are needed, and an explicit handoff when unresolved. This mixed fallback policy still needs validation. **The browser loop is benchmark code, not a shipped MCP feature.** The existing four tools and host integrations remain unchanged.
+The candidate product is a persistent browser subtask executor: deterministic handling where possible, bounded Jev choices where semantics are needed, and an explicit handoff when unresolved. This mixed fallback policy still needs validation. **The browser loop is benchmark code, not a shipped MCP feature.** It is separate from the five shipped judgment tools.
 
 [Protocol and reproduction](benchmarks/browser-loop/README.md) · [Full results and timing components](benchmarks/browser-loop/results/RESULTS.md) · [Every attempt](benchmarks/browser-loop/results/runs.json) · [Comparison of existing browser projects](benchmarks/browser-loop/RESEARCH.md)
 
@@ -283,7 +304,7 @@ npm test
 python3 -m unittest discover -s test -p '*_test.py'
 ```
 
-The offline suite exercises malformed responses, source/quote binding, batching, candidate extraction, decision conflicts, CLI receipts, standalone bundles, MCP contracts, Pi registration, and host configuration preservation. A separate live smoke test calls all four tools and requires your key:
+The offline suite exercises malformed responses, source/quote binding, batching, candidate extraction, decision conflicts, CLI receipts, standalone bundles, MCP contracts, Pi registration, and host configuration preservation. A separate live smoke test calls all five tools and requires your key:
 
 ```sh
 node scripts/smoke.mjs /tmp/new-jev-live-smoke.json
