@@ -1,0 +1,19 @@
+{
+  "cases": [
+    "migration",
+    "parser",
+    "cache",
+    "retry",
+    "unicode",
+    "pagination"
+  ],
+  "arms": [
+    "full",
+    "jev",
+    "recency"
+  ],
+  "replay_repeat": 1,
+  "kind": "Native Claude fact-continuation probe, not coding benchmark or native /compact comparison",
+  "model": "claude-fable-5-1",
+  "effort": "low"
+}

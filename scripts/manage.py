@@ -18,6 +18,9 @@ import tempfile
 import time
 import tomllib
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from native_packages import build_packages
+
 NAME = 'jev-kit'
 MARKET = 'jev-kit-managed'
 REPOSITORY = 'https://github.com/WaynezProg/jev-kit.git'
@@ -38,7 +41,7 @@ SKILLS = {
     'pi': '.pi/agent/skills/jev-kit',
 }
 HOSTS = ['codex', *CONFIGS, 'pi']
-PAYLOAD = ['dist', 'src', 'scripts', 'skills', 'vendor', 'examples', '.codex-plugin',
+PAYLOAD = ['dist', 'src', 'scripts', 'skills', 'vendor', 'examples', 'integrations', '.codex-plugin',
            'jev', 'package.json', 'package-lock.json', 'README.md', 'LICENSE', 'THIRD_PARTY.md']
 
 
@@ -229,6 +232,7 @@ class Manager:
                 manifest['version'] = manifest['version'].split('+')[0] + '+codex.' + release_id
                 (temporary / '.codex-plugin/plugin.json').write_bytes(dump(manifest))
                 (temporary / '.mcp.json').write_bytes(dump({'mcpServers': {NAME: {'command': str(self.launcher), 'args': []}}}))
+                build_packages(temporary, self.node, str(self.launcher), release_id)
                 run([self.node, str(temporary / 'dist/cli.js'), 'evidence', '--input', str(temporary / 'examples/evidence.json'), '--validate-only'])
                 temporary.rename(destination)
             finally:
@@ -380,14 +384,25 @@ class Manager:
 
 
 def main(argv=None):
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] == 'browser':
+        node = shutil.which('node')
+        if not node:
+            print('Jev Kit: Node.js 22+ is required', file=sys.stderr)
+            return 1
+        # Keep the public launcher PID on the browser CLI so SIGINT/SIGTERM
+        # reaches its cooperative cancellation handler instead of a Python relay.
+        os.execv(node, [node, str(SOURCE / 'integrations/ego-browser/cli.mjs'), *argv[1:]])
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action', choices=['install', 'update', 'uninstall', 'status'])
     parser.add_argument('--hosts', help='Comma-separated hosts; default detects installed hosts, or all managed hosts for update/uninstall')
     parser.add_argument('--source', type=Path, help='Local release source; update defaults to latest GitHub main')
     parser.add_argument('--home', type=Path, default=Path.home(), help='Alternate home for isolated validation')
     parser.add_argument('--adopt-from', type=Path, help='Migrate only legacy entries/links exactly matching this source checkout')
+    parser.add_argument('--integration', choices=['auto', 'native', 'mcp'], default='auto', help='Prefer native packages; auto falls back when the host CLI is unavailable')
     args = parser.parse_args(argv)
-    manager = Manager(args.home)
+    from native_manager import NativeManager
+    manager = NativeManager(args.home, integration=args.integration)
     hosts = HOSTS.copy() if args.hosts == 'all' else list(dict.fromkeys(args.hosts.split(','))) if args.hosts else []
     try:
         if args.action == 'status':

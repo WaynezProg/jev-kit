@@ -1,0 +1,288 @@
+[
+  {
+    "id": "count",
+    "arm": "direct",
+    "seconds": 44.739811209001346,
+    "passed": true,
+    "check_exit": 0,
+    "status": "completed",
+    "jev_calls": 0,
+    "workers": [
+      {
+        "worker_type": "coding",
+        "status": "completed",
+        "exit_code": 0,
+        "termination_reason": null,
+        "observed_models": [
+          {
+            "model": "gpt-6-astra",
+            "effort": "xhigh"
+          }
+        ],
+        "total_token_usage": {
+          "input_tokens": 108653,
+          "cached_input_tokens": 93568,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1856,
+          "reasoning_output_tokens": 538,
+          "total_tokens": 110509
+        }
+      }
+    ],
+    "interventions": []
+  },
+  {
+    "id": "count",
+    "arm": "foreman",
+    "seconds": 92.4526722090086,
+    "passed": true,
+    "check_exit": 0,
+    "status": "ESCALATED",
+    "jev_calls": 17,
+    "workers": [
+      {
+        "worker_type": "coding",
+        "status": "completed",
+        "exit_code": 0,
+        "termination_reason": null,
+        "observed_models": [
+          {
+            "model": "gpt-6-astra",
+            "effort": "xhigh"
+          }
+        ],
+        "total_token_usage": {
+          "input_tokens": 170658,
+          "cached_input_tokens": 152448,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2499,
+          "reasoning_output_tokens": 833,
+          "total_tokens": 173157
+        }
+      },
+      {
+        "worker_type": "coding",
+        "status": "completed",
+        "exit_code": 0,
+        "termination_reason": null,
+        "observed_models": [
+          {
+            "model": "gpt-6-astra",
+            "effort": "xhigh"
+          }
+        ],
+        "total_token_usage": {
+          "input_tokens": 107269,
+          "cached_input_tokens": 104832,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 586,
+          "reasoning_output_tokens": 183,
+          "total_tokens": 107855
+        }
+      }
+    ],
+    "interventions": [
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "STEER_WORKER",
+        "reason": "active worker appears stuck"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker is within the post-steering grace period"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker is within the post-steering grace period"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker is within the post-steering grace period"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker is within the post-steering grace period"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "START_WORKER",
+        "reason": "meaningful implementation work remains"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "ESCALATE",
+        "reason": "worker limit reached before completion"
+      }
+    ]
+  },
+  {
+    "id": "headers",
+    "arm": "foreman",
+    "seconds": 65.18289833300514,
+    "passed": true,
+    "check_exit": 0,
+    "status": "FINISHED",
+    "jev_calls": 12,
+    "workers": [
+      {
+        "worker_type": "coding",
+        "status": "completed",
+        "exit_code": 0,
+        "termination_reason": null,
+        "observed_models": [
+          {
+            "model": "gpt-6-astra",
+            "effort": "xhigh"
+          }
+        ],
+        "total_token_usage": {
+          "input_tokens": 139237,
+          "cached_input_tokens": 108160,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1766,
+          "reasoning_output_tokens": 259,
+          "total_tokens": 141003
+        }
+      },
+      {
+        "worker_type": "coding",
+        "status": "completed",
+        "exit_code": 0,
+        "termination_reason": null,
+        "observed_models": [
+          {
+            "model": "gpt-6-astra",
+            "effort": "xhigh"
+          }
+        ],
+        "total_token_usage": {
+          "input_tokens": 109310,
+          "cached_input_tokens": 80640,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 516,
+          "reasoning_output_tokens": 102,
+          "total_tokens": 109826
+        }
+      }
+    ],
+    "interventions": [
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "START_WORKER",
+        "reason": "meaningful implementation work remains"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "CONTINUE",
+        "reason": "active worker may continue"
+      },
+      {
+        "action": "FINISH",
+        "reason": "completion thresholds satisfied"
+      }
+    ]
+  },
+  {
+    "id": "headers",
+    "arm": "direct",
+    "seconds": 38.8014004160068,
+    "passed": true,
+    "check_exit": 0,
+    "status": "completed",
+    "jev_calls": 0,
+    "workers": [
+      {
+        "worker_type": "coding",
+        "status": "completed",
+        "exit_code": 0,
+        "termination_reason": null,
+        "observed_models": [
+          {
+            "model": "gpt-6-astra",
+            "effort": "xhigh"
+          }
+        ],
+        "total_token_usage": {
+          "input_tokens": 138902,
+          "cached_input_tokens": 122240,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1467,
+          "reasoning_output_tokens": 183,
+          "total_tokens": 140369
+        }
+      }
+    ],
+    "interventions": []
+  }
+]

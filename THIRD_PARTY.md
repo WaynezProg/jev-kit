@@ -4,4 +4,7 @@
 - jev-mcp 0.5.0, https://github.com/jkudish/jev-mcp/tree/67dd9fa5a6e895909f1b2d80bf45534c29cff25a, MIT. vendor/mcp-helpers.js adapts probability margin, classification thresholds, escape hatches and regex-worker candidate extraction. It adds worker memory/exit handling and CommonJS eval compatibility. Task templates adapt classify/extract/decide patterns. Attribution retained in vendor/jev-mcp-LICENSE.
 - Local jev-evidence 0.1.1 supplies the evidence criteria, exact-quote check, per-item source binding, source/claim hashes and review-first interpretation.
 
-The two upstream gate implementations are not exposed. This package has no approval hook, arbitrary command execution, source retrieval, automatic pruning or model-setting mutation. It is a local integration, not an upstream release.
+The two upstream gate implementations are not exposed. The five judgment MCP tools have no approval hook, arbitrary command execution, source retrieval, automatic pruning or model-setting mutation. This is an independent integration, not an upstream release.
+
+- Experimental Ego adapter: browser-use/jev-ultrafast at `1231850a0bf1a0c0341fe408ef1668dbbfdfac46`, MIT. Its policy and DOM reader are imported from a separate pinned checkout. Execution guards adapt its node identity, page-state and occlusion checks to Ego Page methods; notice retained in `integrations/ego-browser/UPSTREAM-LICENSE`. This optional CLI job executes browser actions and is separate from the five judgment tools.
+- Evaluation only: tamaratran/fast-jev-compaction at `e3f262a7f4d42bd8dd32ced30d26176f7cb545b0` and thruwire/foreman at `3de1556a59b7a7e14daa1f89b2fc49080bbb8cce`, both MIT. Benchmark scripts import separate checkouts; no source from either is bundled into the production judgment tools.

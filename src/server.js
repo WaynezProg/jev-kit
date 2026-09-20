@@ -3,7 +3,7 @@ import {StdioServerTransport} from '@modelcontextprotocol/sdk/server/stdio.js';
 import {schemas,descriptions} from './schema.js';
 import {run} from './core.js';
 export function createServer(backend){
- const server=new McpServer({name:'jev-kit',version:'0.3.0'});
+ const server=new McpServer({name:'jev-kit',version:'0.4.0'});
  for(const mode of Object.keys(schemas))server.registerTool(`jev_${mode}`,{
   description:descriptions[mode],inputSchema:schemas[mode],
   annotations:{readOnlyHint:true,destructiveHint:false,idempotentHint:false,openWorldHint:true},

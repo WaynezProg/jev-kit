@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-20",
+  "node_tests": {
+    "passed": 50,
+    "failed": 0
+  },
+  "host_lifecycle_python_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "live_ego_regressions": {
+    "passed": 9,
+    "failed": 0
+  },
+  "actual_cli_lifecycle_checks": {
+    "passed": 3,
+    "failed": 0
+  },
+  "model_trials": {
+    "v5_attempts": 30,
+    "v5_verified": 29,
+    "v6_postfix_attempts": 12,
+    "v6_postfix_verified": 12
+  },
+  "gitleaks": {
+    "candidate_files": 60,
+    "leaks": 0
+  },
+  "taskspace_cleanup": {
+    "space_id": 11,
+    "lease_released": true,
+    "closed_space": true,
+    "unknown_tabs_closed": 0
+  },
+  "deployment": "Local repo only; no managed host update or GitHub push."
+}

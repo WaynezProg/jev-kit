@@ -1,0 +1,119 @@
+{
+  "upstream_sha": "1231850a0bf1a0c0341fe408ef1668dbbfdfac46",
+  "tasks": [
+    {
+      "id": "headphones",
+      "goal": "Search for noise cancelling headphones. Set Delivery to Courier, enable In stock only, and open the product details.",
+      "query": "noise cancelling headphones",
+      "delivery": "Courier",
+      "stock": true
+    },
+    {
+      "id": "keyboard",
+      "goal": "Search for mechanical keyboard. Set Delivery to Store pickup, leave In stock only off, and open the product details.",
+      "query": "mechanical keyboard",
+      "delivery": "Store pickup",
+      "stock": false
+    },
+    {
+      "id": "monitor",
+      "goal": "Search for portable monitor. Set Delivery to Express, enable In stock only, and open the product details.",
+      "query": "portable monitor",
+      "delivery": "Express",
+      "stock": true
+    }
+  ],
+  "trials": [
+    {
+      "id": "headphones",
+      "repeat": 1,
+      "arm": "jev"
+    },
+    {
+      "id": "headphones",
+      "repeat": 1,
+      "arm": "claude"
+    },
+    {
+      "id": "keyboard",
+      "repeat": 1,
+      "arm": "claude"
+    },
+    {
+      "id": "keyboard",
+      "repeat": 1,
+      "arm": "jev"
+    },
+    {
+      "id": "monitor",
+      "repeat": 1,
+      "arm": "jev"
+    },
+    {
+      "id": "monitor",
+      "repeat": 1,
+      "arm": "claude"
+    },
+    {
+      "id": "headphones",
+      "repeat": 2,
+      "arm": "claude"
+    },
+    {
+      "id": "headphones",
+      "repeat": 2,
+      "arm": "jev"
+    },
+    {
+      "id": "keyboard",
+      "repeat": 2,
+      "arm": "jev"
+    },
+    {
+      "id": "keyboard",
+      "repeat": 2,
+      "arm": "claude"
+    },
+    {
+      "id": "monitor",
+      "repeat": 2,
+      "arm": "claude"
+    },
+    {
+      "id": "monitor",
+      "repeat": 2,
+      "arm": "jev"
+    },
+    {
+      "id": "wikipedia-0",
+      "title": "Compiler",
+      "repeat": 1,
+      "arm": "jev"
+    },
+    {
+      "id": "wikipedia-0",
+      "title": "Compiler",
+      "repeat": 1,
+      "arm": "claude"
+    },
+    {
+      "id": "wikipedia-1",
+      "title": "Garbage collection (computer science)",
+      "repeat": 1,
+      "arm": "claude"
+    },
+    {
+      "id": "wikipedia-1",
+      "title": "Garbage collection (computer science)",
+      "repeat": 1,
+      "arm": "jev"
+    }
+  ],
+  "maxSteps": 14,
+  "models": {
+    "jev": "jev-latest",
+    "claude": "claude-fable-5-1",
+    "effort": "low"
+  },
+  "scope": "3 authored search/filter forms x2 repeats, 2 real Wikipedia navigation tasks x1; same Ego adapter/executor/verifier and Claude text helper in both arms. Browser navigation, initial observations, policy/session setup, model calls, input, final verification included; environment dependency install excluded. All failed attempts retained. No Chrome arm and no general browsing claim."
+}

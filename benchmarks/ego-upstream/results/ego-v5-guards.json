@@ -1,0 +1,194 @@
+[
+  {
+    "name": "batch_rebind_after_own_form_edits",
+    "pass": true,
+    "result": {
+      "status": "verified",
+      "verified": true,
+      "seconds": 0.5286781670000055,
+      "executed_actions": 3,
+      "error_category": null,
+      "steps": [
+        {
+          "step": 1,
+          "choice": "e1",
+          "operation": null,
+          "model": null,
+          "confidence": null,
+          "usage": null,
+          "decision_s": 8.870900000329129e-05,
+          "planned_actions": 3,
+          "executed": true,
+          "browser_s": 0.33530591700001966,
+          "actions": [
+            {
+              "choice": "e1",
+              "kind": "fill",
+              "receipt": {
+                "observed": true,
+                "popups": [],
+                "dialog": false,
+                "executionStopped": null,
+                "mayHaveLateEffects": null
+              }
+            },
+            {
+              "choice": "e3",
+              "kind": "select",
+              "receipt": {
+                "observed": true,
+                "popups": [],
+                "dialog": false,
+                "executionStopped": null,
+                "mayHaveLateEffects": null
+              }
+            },
+            {
+              "choice": "e4",
+              "kind": "click",
+              "receipt": {
+                "observed": true,
+                "popups": [],
+                "dialog": false,
+                "executionStopped": null,
+                "mayHaveLateEffects": null
+              }
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "choice": "DONE",
+          "operation": null,
+          "model": null,
+          "confidence": null,
+          "usage": null,
+          "decision_s": 2.1290999982738868e-05,
+          "planned_actions": 1,
+          "actions": []
+        }
+      ]
+    }
+  },
+  {
+    "name": "done_observes_fresh_state",
+    "pass": true,
+    "result": {
+      "status": "verified",
+      "verified": true,
+      "seconds": 0.07573416599998017,
+      "executed_actions": 0,
+      "error_category": null,
+      "steps": [
+        {
+          "step": 1,
+          "choice": "DONE",
+          "operation": null,
+          "model": null,
+          "confidence": null,
+          "usage": null,
+          "decision_s": 0.000746791999990819,
+          "planned_actions": 1,
+          "actions": []
+        }
+      ]
+    }
+  },
+  {
+    "name": "done_rejects_changed_origin",
+    "pass": true,
+    "result": {
+      "status": "error",
+      "verified": false,
+      "seconds": 0.2455492920000106,
+      "executed_actions": 0,
+      "error_category": "origin_out_of_scope",
+      "steps": [
+        {
+          "step": 1,
+          "choice": "DONE",
+          "operation": null,
+          "model": null,
+          "confidence": null,
+          "usage": null,
+          "decision_s": 0.17131466699999873,
+          "planned_actions": 1,
+          "actions": []
+        }
+      ]
+    }
+  },
+  {
+    "name": "cancel_before_input",
+    "pass": true,
+    "result": {
+      "status": "cancelled",
+      "verified": false,
+      "seconds": 0.1854617910000088,
+      "executed_actions": 0,
+      "error_category": "cancelled",
+      "steps": []
+    }
+  },
+  {
+    "name": "time_budget_before_dispatch",
+    "pass": true,
+    "result": {
+      "status": "time_budget_exhausted",
+      "verified": false,
+      "seconds": 1.1231414999999978,
+      "executed_actions": 0,
+      "error_category": "time_budget_exhausted",
+      "steps": []
+    }
+  },
+  {
+    "name": "replaced_identity",
+    "pass": true
+  },
+  {
+    "name": "covered_target",
+    "pass": true
+  },
+  {
+    "name": "popup_stops_loop",
+    "pass": true,
+    "result": {
+      "status": "error",
+      "verified": false,
+      "seconds": 0.1695607500000042,
+      "executed_actions": 1,
+      "error_category": "popup_requires_handoff",
+      "steps": [
+        {
+          "step": 1,
+          "choice": "e5",
+          "operation": null,
+          "model": null,
+          "confidence": null,
+          "usage": null,
+          "decision_s": 3.445899998769164e-05,
+          "planned_actions": 1,
+          "executed": true,
+          "actions": [
+            {
+              "choice": "e5",
+              "kind": "click",
+              "receipt": {
+                "observed": true,
+                "popups": [
+                  {
+                    "label": "p2"
+                  }
+                ],
+                "dialog": false,
+                "executionStopped": null,
+                "mayHaveLateEffects": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,13 @@
+import {createServer} from 'node:http';
+export const tasks=[
+ {id:'headphones',goal:'Search for noise cancelling headphones. Set Delivery to Courier, enable In stock only, and open the product details.',query:'noise cancelling headphones',delivery:'Courier',stock:true},
+ {id:'keyboard',goal:'Search for mechanical keyboard. Set Delivery to Store pickup, leave In stock only off, and open the product details.',query:'mechanical keyboard',delivery:'Store pickup',stock:false},
+ {id:'monitor',goal:'Search for portable monitor. Set Delivery to Express, enable In stock only, and open the product details.',query:'portable monitor',delivery:'Express',stock:true},
+];
+export function startServer(){const server=createServer((req,res)=>{
+ res.setHeader('content-type','text/html; charset=utf-8');
+ res.end(`<!doctype html><html><head><title>Catalog search</title><style>body{font:18px sans-serif;margin:40px;max-width:780px}label{display:block;margin:20px 0}input,select,button{font:inherit;padding:8px}section{margin-top:24px}</style></head><body><h1>Catalog search</h1><p>Choose a product search and delivery preference.</p><form id="search"><label>Product search <input name="query" type="search" required></label><label>Delivery <select name="delivery"><option>Standard</option><option>Courier</option><option>Store pickup</option><option>Express</option></select></label><label><input name="stock" type="checkbox"> In stock only</label><button>Search products</button></form><section id="results"></section><script>
+let submitted=null;const form=document.querySelector('form'),result=document.querySelector('#results');
+form.onsubmit=e=>{e.preventDefault();submitted={query:form.query.value,delivery:form.delivery.value,stock:form.stock.checked};result.replaceChildren();const heading=document.createElement('h2');heading.textContent='Search results';const text=document.createElement('p');text.textContent=submitted.query+' | '+submitted.delivery+' | '+(submitted.stock?'In stock only':'All stock');const button=document.createElement('button');button.textContent='Open product details';button.onclick=()=>{form.hidden=true;result.replaceChildren();const h=document.createElement('h1');h.textContent='Product details: '+submitted.query;const p=document.createElement('p');p.textContent='Delivery: '+submitted.delivery+'; '+(submitted.stock?'In stock only':'All stock');result.append(h,p);document.body.dataset.complete='true';window.benchmarkSubmission=submitted;};result.append(heading,text,button);};
+</script></body></html>`);
+ });return new Promise(resolve=>server.listen(0,'127.0.0.1',()=>resolve({server,url:`http://127.0.0.1:${server.address().port}`})));}

@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "id": "count",
+      "code": "def parse_count(s):\n    return int(float(s))\n",
+      "job": "Fix parse_count(s). Accept only nonempty ASCII digit strings, including 0 and leading zeros. Reject negative, fraction, whitespace, exponent and non-ASCII digit strings with ValueError. Reject non-string inputs with TypeError. Preserve the function API. Add and run unittest tests. Work only in this fixture repository; no network or additional agents.",
+      "check": "from app import parse_count as f\nassert f('0007') == 7\nassert f('0') == 0\nfor x in ['-1','1.5',' 2','2 ','','1e2','١٢']:\n try: f(x)\n except ValueError: pass\n else: raise AssertionError(repr(x))\nfor x in [None,2,True]:\n try: f(x)\n except TypeError: pass\n else: raise AssertionError(repr(x))\n"
+    },
+    {
+      "id": "headers",
+      "code": "def header_value(headers, name):\n    return headers.get(name)\n",
+      "job": "Fix header_value(headers, name). HTTP header names compare case-insensitively. headers may be a mapping or a list of (name, value) pairs. Return the FIRST matching value unchanged; return None when absent. Preserve API and support empty input. Add and run unittest tests. Work only in this fixture repository; no network or additional agents.",
+      "check": "from app import header_value as f\nassert f({'Content-Type':'a'},'content-type')=='a'\nassert f([('X-Trace','first'),('x-trace','second')],'X-TRACE')=='first'\nassert f([], 'x') is None\nassert f({},'x') is None\nassert f([('x',0)],'X')==0\n"
+    }
+  ],
+  "config": {
+    "assessment_min_interval_seconds": 5.0,
+    "periodic_assessment_seconds": 15.0,
+    "jev_timeout_seconds": 10.0,
+    "worker_timeout_seconds": 90.0,
+    "overall_timeout_seconds": 180.0,
+    "graceful_termination_seconds": 5.0,
+    "max_concurrent_workers": 1,
+    "max_workers": 2,
+    "max_retries": 1,
+    "max_iterations": 12,
+    "codex_backend": "app-server",
+    "steering_enabled": true,
+    "max_steers_per_worker": 1,
+    "steering_grace_seconds": 30.0,
+    "human_threshold": 0.8,
+    "off_track_threshold": 0.8,
+    "agents_drift_threshold": 0.8,
+    "stuck_threshold": 0.8,
+    "verification_threshold": 0.65,
+    "finish_threshold": 0.75,
+    "requirements_threshold": 0.75,
+    "tests_threshold": 0.75,
+    "implementation_for_verification_threshold": 0.75,
+    "diff_limit": 20000,
+    "output_limit": 12000,
+    "field_limit": 50000,
+    "event_history_limit": 30,
+    "worker_history_limit": 10
+  },
+  "order": [
+    "count/direct",
+    "count/foreman",
+    "headers/foreman",
+    "headers/direct"
+  ],
+  "scope": "2 authored repair tasks, 1 run per arm; same upstream App Server worker and coding mission; external checks held outside worker directory. Startup and verification included. No statistical generalization."
+}

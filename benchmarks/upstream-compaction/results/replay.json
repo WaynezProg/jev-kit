@@ -1,0 +1,1946 @@
+[
+  {
+    "id": "migration",
+    "repeat": 1,
+    "seconds": 0.632915208,
+    "before_bytes": 56625,
+    "after_bytes": 24783,
+    "recency_bytes": 24753,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      false,
+      false,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 15,
+      "charsBefore": 26643,
+      "charsAfter": 11764,
+      "calls": 14,
+      "kept": 3,
+      "resultsDropped": 0,
+      "callsDropped": 8,
+      "pinned": 3,
+      "stateTokens": 1539,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 632
+    },
+    "calls": [
+      {
+        "seconds": 0.6307479589999999,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2720,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3620
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.29,
+        "keepResult": 0.49,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.52,
+        "keepResult": 0.78,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.23,
+        "keepResult": 0.41,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.24,
+        "keepResult": 0.38,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.47,
+        "keepResult": 0.79,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.23,
+        "keepResult": 0.39,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.18,
+        "keepResult": 0.28,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.2,
+        "keepResult": 0.36,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.54,
+        "keepResult": 0.86,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.21,
+        "keepResult": 0.35,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.28,
+        "keepResult": 0.42,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "parser",
+    "repeat": 1,
+    "seconds": 0.30159637499999997,
+    "before_bytes": 54066,
+    "after_bytes": 46515,
+    "recency_bytes": 46420,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      false,
+      true,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 27,
+      "charsBefore": 25350,
+      "charsAfter": 21818,
+      "calls": 14,
+      "kept": 9,
+      "resultsDropped": 0,
+      "callsDropped": 2,
+      "pinned": 3,
+      "stateTokens": 1523,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 302
+    },
+    "calls": [
+      {
+        "seconds": 0.3008625,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2708,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3590
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.41,
+        "keepResult": 0.71,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.3,
+        "keepResult": 0.55,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.25,
+        "keepResult": 0.54,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.55,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.31,
+        "keepResult": 0.57,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.54,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.23,
+        "keepResult": 0.49,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.22,
+        "keepResult": 0.47,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.38,
+        "keepResult": 0.69,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.5,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.36,
+        "keepResult": 0.56,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "cache",
+    "repeat": 1,
+    "seconds": 0.27200587499999995,
+    "before_bytes": 53245,
+    "after_bytes": 27061,
+    "recency_bytes": 27039,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      false,
+      false,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 17,
+      "charsBefore": 24951,
+      "charsAfter": 12768,
+      "calls": 14,
+      "kept": 4,
+      "resultsDropped": 0,
+      "callsDropped": 7,
+      "pinned": 3,
+      "stateTokens": 1537,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 272
+    },
+    "calls": [
+      {
+        "seconds": 0.271089875,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2720,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3612
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.3,
+        "keepResult": 0.51,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.51,
+        "keepResult": 0.77,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.44,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.24,
+        "keepResult": 0.41,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.51,
+        "keepResult": 0.8,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.24,
+        "keepResult": 0.39,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.2,
+        "keepResult": 0.28,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.21,
+        "keepResult": 0.35,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.6,
+        "keepResult": 0.85,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.23,
+        "keepResult": 0.4,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.3,
+        "keepResult": 0.44,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "retry",
+    "repeat": 1,
+    "seconds": 0.2499818750000002,
+    "before_bytes": 53221,
+    "after_bytes": 45790,
+    "recency_bytes": 45697,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      false,
+      true,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 27,
+      "charsBefore": 24927,
+      "charsAfter": 21455,
+      "calls": 14,
+      "kept": 9,
+      "resultsDropped": 0,
+      "callsDropped": 2,
+      "pinned": 3,
+      "stateTokens": 1523,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 250
+    },
+    "calls": [
+      {
+        "seconds": 0.249223833,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2708,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3588
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.4,
+        "keepResult": 0.73,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.31,
+        "keepResult": 0.6,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.57,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.25,
+        "keepResult": 0.53,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.31,
+        "keepResult": 0.58,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.54,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.23,
+        "keepResult": 0.49,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.23,
+        "keepResult": 0.49,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.4,
+        "keepResult": 0.71,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.54,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.34,
+        "keepResult": 0.61,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "unicode",
+    "repeat": 1,
+    "seconds": 0.259560125,
+    "before_bytes": 54935,
+    "after_bytes": 27911,
+    "recency_bytes": 27885,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      false,
+      false,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 17,
+      "charsBefore": 25797,
+      "charsAfter": 13194,
+      "calls": 14,
+      "kept": 4,
+      "resultsDropped": 0,
+      "callsDropped": 7,
+      "pinned": 3,
+      "stateTokens": 1539,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 259
+    },
+    "calls": [
+      {
+        "seconds": 0.258448584,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2720,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3616
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.3,
+        "keepResult": 0.53,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.49,
+        "keepResult": 0.76,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.25,
+        "keepResult": 0.46,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.25,
+        "keepResult": 0.42,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.53,
+        "keepResult": 0.79,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.42,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.2,
+        "keepResult": 0.29,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.21,
+        "keepResult": 0.38,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.53,
+        "keepResult": 0.83,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.22,
+        "keepResult": 0.4,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.32,
+        "keepResult": 0.47,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "pagination",
+    "repeat": 1,
+    "seconds": 0.29924566699999994,
+    "before_bytes": 57446,
+    "after_bytes": 53408,
+    "recency_bytes": 53408,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      true,
+      true,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 28,
+      "charsBefore": 27042,
+      "charsAfter": 25156,
+      "calls": 14,
+      "kept": 10,
+      "resultsDropped": 0,
+      "callsDropped": 1,
+      "pinned": 3,
+      "stateTokens": 1525,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 299
+    },
+    "calls": [
+      {
+        "seconds": 0.2984659590000001,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2708,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3598
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.41,
+        "keepResult": 0.71,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.31,
+        "keepResult": 0.58,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.55,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.56,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.31,
+        "keepResult": 0.58,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.54,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.23,
+        "keepResult": 0.5,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.22,
+        "keepResult": 0.48,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.41,
+        "keepResult": 0.69,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.28,
+        "keepResult": 0.53,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.39,
+        "keepResult": 0.62,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "migration",
+    "repeat": 2,
+    "seconds": 0.2699035829999998,
+    "before_bytes": 56625,
+    "after_bytes": 28761,
+    "recency_bytes": 28731,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      false,
+      false,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 17,
+      "charsBefore": 26643,
+      "charsAfter": 13620,
+      "calls": 14,
+      "kept": 4,
+      "resultsDropped": 0,
+      "callsDropped": 7,
+      "pinned": 3,
+      "stateTokens": 1539,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 268
+    },
+    "calls": [
+      {
+        "seconds": 0.26832687499999974,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2720,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3620
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.32,
+        "keepResult": 0.52,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.5,
+        "keepResult": 0.77,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.24,
+        "keepResult": 0.44,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.24,
+        "keepResult": 0.42,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.5,
+        "keepResult": 0.79,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.24,
+        "keepResult": 0.37,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.2,
+        "keepResult": 0.3,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.2,
+        "keepResult": 0.36,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.59,
+        "keepResult": 0.86,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.22,
+        "keepResult": 0.4,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.29,
+        "keepResult": 0.43,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "parser",
+    "repeat": 2,
+    "seconds": 0.3127112080000002,
+    "before_bytes": 54066,
+    "after_bytes": 50268,
+    "recency_bytes": 50268,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      true,
+      true,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 28,
+      "charsBefore": 25350,
+      "charsAfter": 23584,
+      "calls": 14,
+      "kept": 10,
+      "resultsDropped": 0,
+      "callsDropped": 1,
+      "pinned": 3,
+      "stateTokens": 1523,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 312
+    },
+    "calls": [
+      {
+        "seconds": 0.3118520830000002,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2708,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3590
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.41,
+        "keepResult": 0.73,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.32,
+        "keepResult": 0.59,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.57,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.53,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.29,
+        "keepResult": 0.57,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.54,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.24,
+        "keepResult": 0.5,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.23,
+        "keepResult": 0.48,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.41,
+        "keepResult": 0.71,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.53,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.33,
+        "keepResult": 0.58,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "cache",
+    "repeat": 2,
+    "seconds": 0.29498470799999993,
+    "before_bytes": 53245,
+    "after_bytes": 27061,
+    "recency_bytes": 27039,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      false,
+      false,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 17,
+      "charsBefore": 24951,
+      "charsAfter": 12768,
+      "calls": 14,
+      "kept": 4,
+      "resultsDropped": 0,
+      "callsDropped": 7,
+      "pinned": 3,
+      "stateTokens": 1537,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 294
+    },
+    "calls": [
+      {
+        "seconds": 0.2937571670000002,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2720,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3612
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.32,
+        "keepResult": 0.52,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.54,
+        "keepResult": 0.77,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.46,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.28,
+        "keepResult": 0.43,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.53,
+        "keepResult": 0.8,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.42,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.21,
+        "keepResult": 0.32,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.23,
+        "keepResult": 0.4,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.58,
+        "keepResult": 0.84,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.25,
+        "keepResult": 0.42,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.34,
+        "keepResult": 0.46,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "retry",
+    "repeat": 2,
+    "seconds": 0.28101608299999997,
+    "before_bytes": 53221,
+    "after_bytes": 53221,
+    "recency_bytes": 53221,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      true,
+      true,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 30,
+      "charsBefore": 24927,
+      "charsAfter": 24927,
+      "calls": 14,
+      "kept": 11,
+      "resultsDropped": 0,
+      "callsDropped": 0,
+      "pinned": 3,
+      "stateTokens": 1523,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 281
+    },
+    "calls": [
+      {
+        "seconds": 0.28024937499999986,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2708,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3588
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.4,
+        "keepResult": 0.74,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.31,
+        "keepResult": 0.61,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.3,
+        "keepResult": 0.59,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.29,
+        "keepResult": 0.56,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.31,
+        "keepResult": 0.61,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.57,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.25,
+        "keepResult": 0.51,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.25,
+        "keepResult": 0.52,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.41,
+        "keepResult": 0.7,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.55,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.36,
+        "keepResult": 0.59,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "unicode",
+    "repeat": 2,
+    "seconds": 0.23532629099999985,
+    "before_bytes": 54935,
+    "after_bytes": 27911,
+    "recency_bytes": 27885,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      false,
+      false,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 17,
+      "charsBefore": 25797,
+      "charsAfter": 13194,
+      "calls": 14,
+      "kept": 4,
+      "resultsDropped": 0,
+      "callsDropped": 7,
+      "pinned": 3,
+      "stateTokens": 1539,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 235
+    },
+    "calls": [
+      {
+        "seconds": 0.23427145900000004,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2720,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3616
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.34,
+        "keepResult": 0.55,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.57,
+        "keepResult": 0.77,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.27,
+        "keepResult": 0.49,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.46,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.56,
+        "keepResult": 0.81,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.29,
+        "keepResult": 0.45,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.21,
+        "keepResult": 0.33,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.22,
+        "keepResult": 0.41,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.61,
+        "keepResult": 0.84,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.24,
+        "keepResult": 0.43,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.33,
+        "keepResult": 0.47,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  },
+  {
+    "id": "pagination",
+    "repeat": 2,
+    "seconds": 0.35624154199999974,
+    "before_bytes": 57446,
+    "after_bytes": 49415,
+    "recency_bytes": 49312,
+    "retained": [
+      true,
+      true,
+      true
+    ],
+    "recency_retained": [
+      false,
+      true,
+      true
+    ],
+    "pairs_valid": true,
+    "recency_pairs_valid": true,
+    "stats": {
+      "messagesBefore": 30,
+      "messagesAfter": 27,
+      "charsBefore": 27042,
+      "charsAfter": 23270,
+      "calls": 14,
+      "kept": 9,
+      "resultsDropped": 0,
+      "callsDropped": 2,
+      "pinned": 3,
+      "stateTokens": 1525,
+      "stateStage": "full",
+      "requests": 1,
+      "ms": 356
+    },
+    "calls": [
+      {
+        "seconds": 0.35569675000000006,
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 2708,
+          "output_tokens": 404
+        },
+        "questions": 22,
+        "state_bytes": 3598
+      }
+    ],
+    "decisions": [
+      {
+        "id": "t1",
+        "tool": "Bash",
+        "keepCall": 0.38,
+        "keepResult": 0.72,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t2",
+        "tool": "Bash",
+        "keepCall": 0.29,
+        "keepResult": 0.56,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t3",
+        "tool": "Bash",
+        "keepCall": 0.24,
+        "keepResult": 0.54,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t4",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.54,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t5",
+        "tool": "Bash",
+        "keepCall": 0.29,
+        "keepResult": 0.56,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t6",
+        "tool": "Bash",
+        "keepCall": 0.24,
+        "keepResult": 0.52,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t7",
+        "tool": "Bash",
+        "keepCall": 0.22,
+        "keepResult": 0.48,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t8",
+        "tool": "Bash",
+        "keepCall": 0.21,
+        "keepResult": 0.47,
+        "action": "drop_call",
+        "reason": "call_dropped"
+      },
+      {
+        "id": "t9",
+        "tool": "Bash",
+        "keepCall": 0.37,
+        "keepResult": 0.67,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t10",
+        "tool": "Bash",
+        "keepCall": 0.26,
+        "keepResult": 0.53,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t11",
+        "tool": "Bash",
+        "keepCall": 0.36,
+        "keepResult": 0.59,
+        "action": "keep",
+        "reason": "kept"
+      },
+      {
+        "id": "t12",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t13",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      },
+      {
+        "id": "t14",
+        "tool": "Bash",
+        "keepCall": 1,
+        "keepResult": 1,
+        "action": "keep",
+        "reason": "pinned"
+      }
+    ],
+    "recency_budget_met": true
+  }
+]

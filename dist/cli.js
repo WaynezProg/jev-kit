@@ -27426,7 +27426,7 @@ function resultRow(candidate, querySha, score, rank, selected, requiresReview) {
 function receipt(data, start, status, results, calls, method) {
   const selected = results.filter((row) => row.selected).map((row) => row.id);
   return {
-    version: "0.3.0",
+    version: "0.4.0",
     tool: "jev_rerank",
     status,
     scope,
@@ -27617,7 +27617,7 @@ async function run(mode, input2, backend) {
     const review = rec.escalate || !candidate || conflicting;
     results = [{ ...projection(rec), selected: candidate?.id ?? null, escape: candidate ? null : rec.answer, checks, requires_review: !!review, review_reason: review ? rec.reason ?? (!candidate ? "escape_hatch" : "unresolved_requirement") : null }];
   }
-  return { version: "0.3.0", tool: `jev_${mode}`, status: calls.some((c) => c.error) ? "partial" : "ok", scope: "Advisory judgments over supplied text; not truth, permission, or task acceptance.", results, calls, elapsed_ms: performance.now() - start };
+  return { version: "0.4.0", tool: `jev_${mode}`, status: calls.some((c) => c.error) ? "partial" : "ok", scope: "Advisory judgments over supplied text; not truth, permission, or task acceptance.", results, calls, elapsed_ms: performance.now() - start };
 }
 
 // node_modules/zod/v3/helpers/util.js
@@ -37233,7 +37233,7 @@ var StdioServerTransport = class {
 
 // src/server.js
 function createServer(backend) {
-  const server = new McpServer({ name: "jev-kit", version: "0.3.0" });
+  const server = new McpServer({ name: "jev-kit", version: "0.4.0" });
   for (const mode of Object.keys(schemas)) server.registerTool(`jev_${mode}`, {
     description: descriptions[mode],
     inputSchema: schemas[mode],

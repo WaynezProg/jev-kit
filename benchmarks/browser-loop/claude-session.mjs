@@ -15,11 +15,11 @@ export class ClaudeSession {
    if(event.type==='assistant'&&event.message?.model)this.observed.add(event.message.model);
    if(event.type==='result'&&this.waiter){const waiter=this.waiter;this.waiter=null;clearTimeout(waiter.timer);this.lastResult=event;event.is_error?waiter.reject(Error('native_model_error')):waiter.resolve(event);}
   });
-  this.process.on('error',error=>{if(this.waiter){clearTimeout(this.waiter.timer);this.waiter.reject(error);this.waiter=null;}});
-  this.process.on('exit',()=>{if(this.waiter){clearTimeout(this.waiter.timer);this.waiter.reject(Error('native_model_exit'));this.waiter=null;}});
+  this.process.on('error',error=>{this.startError=error;if(this.waiter){clearTimeout(this.waiter.timer);this.waiter.reject(error);this.waiter=null;}});
+  this.process.on('exit',()=>{this.startError??=Error('native_model_exit');if(this.waiter){clearTimeout(this.waiter.timer);this.waiter.reject(this.startError);this.waiter=null;}});
  }
  async ask(prompt){
-  if(this.waiter)throw Error('overlapping_requests');this.turns++;
+  if(this.startError)throw this.startError;if(this.waiter)throw Error('overlapping_requests');this.turns++;
   const result=await new Promise((resolve,reject)=>{
    const timer=setTimeout(()=>{this.waiter=null;reject(Error('native_model_timeout'));},45000);
    this.waiter={resolve,reject,timer};this.process.stdin.write(JSON.stringify({type:'user',message:{role:'user',content:prompt}})+'\n');

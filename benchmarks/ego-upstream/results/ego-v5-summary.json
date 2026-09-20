@@ -1,0 +1,91 @@
+{
+  "groups": [
+    {
+      "cohort": "local",
+      "arm": "jev",
+      "attempts": 6,
+      "verified": 6,
+      "median_total_s": 6.348463437500002,
+      "claude_calls": 6,
+      "decision_calls": 34,
+      "executed_actions": 28,
+      "discarded_actions": 0,
+      "models": [
+        "jev-1.13.0",
+        "claude-fable-5-1"
+      ]
+    },
+    {
+      "cohort": "local",
+      "arm": "claude-step-inline",
+      "attempts": 6,
+      "verified": 6,
+      "median_total_s": 10.739107666000011,
+      "claude_calls": 34,
+      "decision_calls": 34,
+      "executed_actions": 28,
+      "discarded_actions": 0,
+      "models": [
+        "claude-fable-5-1"
+      ]
+    },
+    {
+      "cohort": "local",
+      "arm": "claude-batch-inline",
+      "attempts": 6,
+      "verified": 6,
+      "median_total_s": 7.298863333499991,
+      "claude_calls": 18,
+      "decision_calls": 18,
+      "executed_actions": 28,
+      "discarded_actions": 0,
+      "models": [
+        "claude-fable-5-1"
+      ]
+    },
+    {
+      "cohort": "public",
+      "arm": "jev",
+      "attempts": 4,
+      "verified": 3,
+      "median_total_s": 6.010252062500018,
+      "claude_calls": 5,
+      "decision_calls": 14,
+      "executed_actions": 7,
+      "discarded_actions": 3,
+      "models": [
+        "jev-1.13.0",
+        "claude-fable-5-1"
+      ]
+    },
+    {
+      "cohort": "public",
+      "arm": "claude-step-inline",
+      "attempts": 4,
+      "verified": 4,
+      "median_total_s": 10.0026851875,
+      "claude_calls": 20,
+      "decision_calls": 20,
+      "executed_actions": 12,
+      "discarded_actions": 4,
+      "models": [
+        "claude-fable-5-1"
+      ]
+    },
+    {
+      "cohort": "public",
+      "arm": "claude-batch-inline",
+      "attempts": 4,
+      "verified": 4,
+      "median_total_s": 9.641752562499983,
+      "claude_calls": 16,
+      "decision_calls": 16,
+      "executed_actions": 11,
+      "discarded_actions": 6,
+      "models": [
+        "claude-fable-5-1"
+      ]
+    }
+  ],
+  "interpretation": "Tiny repeated diagnostic cohort. Inline text and planning differ by arm intentionally: this compares complete practical control strategies, not isolated model inference latency. No total API cost claim."
+}

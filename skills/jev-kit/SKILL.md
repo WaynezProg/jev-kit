@@ -9,7 +9,7 @@ Use for repeated, bounded semantic judgments where the evidence is already avail
 
 ## Choose one tool
 
-| Need | MCP / Pi tool | CLI mode |
+| Need | Registered tool | CLI mode |
 |---|---|---|
 | Check claims against their own sources | `jev_evidence` | `evidence` |
 | Classify texts using a shared catalog | `jev_classify` | `classify` |
@@ -17,7 +17,7 @@ Use for repeated, bounded semantic judgments where the evidence is already avail
 | Compare 2–6 known alternatives | `jev_decide` | `decide` |
 | Optionally rank 1–30 existing search candidates | `jev_rerank` | `rerank` |
 
-Prefer the registered MCP or Pi tool when available. Otherwise use `jev-kit MODE --input /absolute/input.json --output /absolute/new-receipt.json`. Without that local command, resolve this Skill directory's symlink to its actual source and run `node ../../dist/cli.js MODE ...` relative to that source directory; the bundle requires Node 22+ and no dependency installation. See [schemas and examples](references/inputs.md) for the selected mode only. `--validate-only` checks locally without API calls.
+Prefer the registered native or MCP tool when available. Otherwise use `jev-kit MODE --input /absolute/input.json --output /absolute/new-receipt.json`. For a managed installation, the shared CLI is `node "$HOME/.local/share/jev-kit/current/dist/cli.js" MODE ...`. Native packages contain a copy of this Skill, so do not assume its parent directory contains the runtime. Only for a checkout-based Skill, resolve its symlink and run `node ../../dist/cli.js MODE ...` relative to that source directory. The bundle requires Node 22+ and no dependency installation. See [schemas and examples](references/inputs.md) for the selected mode only. `--validate-only` checks locally without API calls.
 
 Reuse raw sources and existing structured outputs; do not ask another LLM to summarize sources just to call Jev. Preserve qualifiers, corrections and contradictory context. Batch existing records in one call; the runtime splits classification/evidence requests; reranking uses one bounded batch. It rejects oversized input instead of silently truncating evidence. Supplied text goes to TypeSafe; include only material relevant and authorized for the current task, never credentials.
 

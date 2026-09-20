@@ -1,0 +1,87 @@
+{
+  "upstream_sha": "1231850a0bf1a0c0341fe408ef1668dbbfdfac46",
+  "cases": [
+    {
+      "id": "wikipedia-0",
+      "title": "Compiler",
+      "goal": "Find and open the English Wikipedia article titled exactly \"Compiler\". Stop on the article page."
+    },
+    {
+      "id": "wikipedia-1",
+      "title": "Garbage collection (computer science)",
+      "goal": "Find and open the English Wikipedia article titled exactly \"Garbage collection (computer science)\". Stop on the article page."
+    }
+  ],
+  "trials": [
+    {
+      "id": "wikipedia-0",
+      "repeat": 1,
+      "arm": "claude-step-inline"
+    },
+    {
+      "id": "wikipedia-0",
+      "repeat": 1,
+      "arm": "claude-batch-inline"
+    },
+    {
+      "id": "wikipedia-0",
+      "repeat": 1,
+      "arm": "jev"
+    },
+    {
+      "id": "wikipedia-1",
+      "repeat": 1,
+      "arm": "claude-batch-inline"
+    },
+    {
+      "id": "wikipedia-1",
+      "repeat": 1,
+      "arm": "jev"
+    },
+    {
+      "id": "wikipedia-1",
+      "repeat": 1,
+      "arm": "claude-step-inline"
+    },
+    {
+      "id": "wikipedia-0",
+      "repeat": 2,
+      "arm": "claude-batch-inline"
+    },
+    {
+      "id": "wikipedia-0",
+      "repeat": 2,
+      "arm": "jev"
+    },
+    {
+      "id": "wikipedia-0",
+      "repeat": 2,
+      "arm": "claude-step-inline"
+    },
+    {
+      "id": "wikipedia-1",
+      "repeat": 2,
+      "arm": "jev"
+    },
+    {
+      "id": "wikipedia-1",
+      "repeat": 2,
+      "arm": "claude-step-inline"
+    },
+    {
+      "id": "wikipedia-1",
+      "repeat": 2,
+      "arm": "claude-batch-inline"
+    }
+  ],
+  "maxSteps": 14,
+  "maxSeconds": 120,
+  "maxBatch": 5,
+  "publicOnly": true,
+  "models": {
+    "jev": "jev-latest",
+    "claude": "claude-fable-5-1",
+    "effort": "low"
+  },
+  "scope": "Stronger product baseline: Fable emits field text in its own one-action or up-to-five-action plan; Jev calls the same Fable model separately for text. Same Ego executor, per-action identity/semantic checks, observations and independent verifier. Guard invalidation discards remaining plan. Public-only recovery follow-up: two familiar Wikipedia tasks x2 repeats per arm; diagnostic follow-up, not held-out/general browsing evidence. Total timing starts before model session initialization and includes navigation, verification and cleanup dispatch. No Chrome arm. All failures retained."
+}

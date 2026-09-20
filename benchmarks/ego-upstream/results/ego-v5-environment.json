@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-20",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "node": "v26.8.2",
+  "claude": "2.1.277 (Claude Code)",
+  "upstream_sha": "1231850a0bf1a0c0341fe408ef1668dbbfdfac46",
+  "sources": {
+    "integrations/ego-browser/adapter.mjs": "4b0245f3d34c3602c2edb95fa64cf38767ff8f9596d5214c9d2e17ffaf234de6",
+    "integrations/ego-browser/claude-session.mjs": "a07a96f1beb86fa1a111edf30ffe62a03c4b1245e97c851e8b21e35fdcd25cb2",
+    "integrations/ego-browser/policy.py": "08abff594595c67b1f8d5925ddbcb9372ca3d64877d7ee6851690de3b4bf00a4",
+    "benchmarks/ego-upstream/batch-study.mjs": "4c82e9bca1d68dec71bda1142f9ceaaeb6b2442cb7b607af0f5cff8aa6a6e744",
+    "benchmarks/ego-upstream/server.mjs": "71cddba612611f36ea7c5eecd282000eebe34b435e5d1d54b6244304e80b78f0",
+    "benchmarks/ego-upstream/live-regressions.mjs": "086fcaa0ed9b74e52ef26536ec2f98295df276951c68b479a36565298124af28"
+  },
+  "note": "Source hashes captured during the frozen batch study; these files were not edited during model trials.",
+  "ego_runtime_version": "0.5.0.32"
+}

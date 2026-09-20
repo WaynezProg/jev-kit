@@ -18,6 +18,31 @@ The current evidence supports a narrow candidate: [bounded browser decision loop
 
 ## Quick start
 
+### New upstream evaluation and Ego Lite prototype
+
+Jev Kit remains the common entry point. An optional `./jev browser --input job.json`
+command now runs the pinned **jev-ultrafast policy on Ego Lite**, using Ego Page
+actions and an independent completion check. The five MCP judgment tools are unchanged.
+
+The stronger comparison now allows Fable to batch up to five actions and generate
+field text in the same response. Six local form attempts all passed: Jev median
+**6.35 s**, batch Fable low **7.30 s** (13.0% lower). On Wikipedia, Jev initially
+passed **3/4** against batch Fable's **4/4**. After a narrowly tested target-disappearance
+fix, both passed 4/4, **5.42 s vs 7.23 s** (25.1% lower). These are tiny, familiar-task
+diagnostics, not a general reliability or model-capability claim. All failures stay
+in the [browser report](benchmarks/ego-upstream/README.md).
+
+Original fast-jev-compaction preserved required facts in 12/12 synthetic replays
+with median **31.6% serialized-size reduction**, but compaction plus continuation
+was **2.87 s vs 2.66 s** for full context. Real Foreman/Codex tests did not improve
+correctness or speed: both arms passed 2/2 external checks, while Foreman finished
+only 1/2 and took longer. Neither hook is enabled by default.
+
+[Full evaluation and limitations](docs/upstream-evaluation.md) ·
+[Ego adapter setup](integrations/ego-browser/README.md)
+
+### Existing judgment tools
+
 Requires Node.js 22+. The checked-in bundles run without installing dependencies. Host setup also requires Python 3.11+ and a POSIX shell; the installer has been exercised on macOS, not Windows.
 
 ```sh
@@ -43,6 +68,8 @@ Supplied task text is sent to TypeSafe for model judgments. Include only relevan
 
 ## One-command host management
 
+Version 0.4.0 adds native packages and migration for the supported hosts.
+
 For macOS/Linux with Git, Node.js 22+ and Python 3.11+ already installed:
 
 ```sh
@@ -62,19 +89,21 @@ Select one host, several hosts, or explicitly create integrations for all nine:
 ./jev install --hosts all
 ```
 
-| Host selector | Integration |
+`--integration auto` is the default. It prefers a host's native package and falls back to MCP + Skill only when that host CLI is missing or reports native plugins unavailable. `--integration native` is strict and fails instead of falling back. `--integration mcp` is the explicit compatibility mode. A native integration must be uninstalled before changing that host to MCP mode.
+
+| Host selector | Managed integration |
 |---|---|
 | `codex` | Native plugin, installed using Codex CLI into a dedicated local marketplace |
-| `claude` | MCP + Skill |
-| `opencode` | MCP + Skill |
-| `muse` | No-argument launcher + MCP + Skill |
-| `grok` | MCP + Skill |
-| `gemini` | MCP + Skill |
-| `cursor` | MCP + Skill |
-| `vscode` | MCP for Copilot Agent; macOS/Linux configuration paths |
+| `claude` | Native plugin through Claude CLI |
+| `opencode` | JavaScript native plugin exposing the five tools, plus a standalone Skill |
+| `muse` | Native plugin when enabled by the host; otherwise explicit MCP + Skill fallback |
+| `grok` | Native plugin through Grok CLI |
+| `gemini` | Native extension through Gemini CLI |
+| `cursor` | Local native plugin package discovery |
+| `vscode` | Agent Plugin registered through `chat.pluginLocations` |
 | `pi` | Native extension + Skill |
 
-All integrations expose the same five tools. This is a unified lifecycle manager, not a claim that all hosts use the same native plugin format. Codex requires a CLI version with `plugin` commands. Other host configuration formats are JSON, and Grok uses TOML. JSONC/commented JSON is currently refused safely; convert that configuration to strict JSON before using the manager. Windows is not supported by this POSIX installer.
+Native packages copy actual Skill files and use the shared absolute runtime launcher; they contain no API key. Codex and Pi retain their existing native integrations. Native package files, registrations, MCP entries and Skill links are ownership-checked: a changed or unowned source/file stops the operation rather than being replaced. Explicitly disabled host policy is never overridden. This is a unified lifecycle manager, not a claim that every host uses the same package format or has live UI acceptance. JSONC/commented JSON is currently refused safely; convert that configuration to strict JSON before using the manager. Windows is not supported by this POSIX installer.
 
 After installation, the manager works without the original checkout:
 
@@ -85,9 +114,9 @@ After installation, the manager works without the original checkout:
 ~/.local/share/jev-kit/jev uninstall
 ```
 
-`update` downloads the current GitHub `main` into a temporary directory and updates all managed hosts together. The temporary clone is discarded; it does not run npm scripts or install dependencies. `--source /absolute/checkout` selects a local release instead. A content-addressed release is staged and checked before switching the shared runtime. Codex refreshes its plugin cache through its native CLI.
+`update` downloads the current GitHub `main` into a temporary directory and updates all managed hosts together. The temporary clone is discarded; it does not run npm scripts or install dependencies. `--source /absolute/checkout` selects a local release instead. A content-addressed release is staged and checked before switching the shared runtime. `./jev update --source "$PWD"` also migrates all existing format-1 managed records in one transaction. Update the shared release before adding a host from a newer checkout. Codex refreshes its plugin cache through its native CLI.
 
-`uninstall` removes only entries and Skill/extension links recorded as managed. It preserves unrelated settings, credentials, release snapshots, the manager itself, and private receipts. It does not restore an old whole-file backup over new user settings. If an owned entry/link was manually changed, it refuses and reports the conflict. Keep the runtime directory until all integrations have been removed.
+`uninstall` removes only entries, registrations, native package files and Skill/extension links recorded as managed. It preserves unrelated settings, credentials, release snapshots, the manager itself, and private receipts. It does not restore an old whole-file backup over new user settings. If an owned entry/link/file was manually changed, it refuses and reports the conflict. Ordinary write or native-CLI failures trigger best-effort rollback; this is not crash-atomic, so concurrent edits or a machine crash may require receipt-guided repair. Keep the runtime directory until all integrations have been removed.
 
 `status` reports configuration drift and the installed release. It is not a live MCP connectivity test. Existing sessions may retain old tools; restart them after install/update/removal and start a new Codex task.
 
@@ -101,11 +130,11 @@ Existing entries are never silently claimed. If you used the previous `scripts/i
 
 This also migrates a matching Codex Jev plugin to the dedicated managed marketplace, preserving other plugins. Any mismatch stops before editing host settings. The old source directory is retained. Use `./jev update --source "$PWD"` before adding new hosts from a newer checkout to an existing managed runtime.
 
-Private backups and operation receipts are stored under `~/.local/share/jev-kit/receipts`; backups can contain credentials for unrelated servers. Never share that directory. Ordinary write/native-CLI failures trigger rollback; machine crashes or concurrent external configuration edits may require inspecting the private receipt and repairing the affected installation.
+Private backups and operation receipts are stored under `~/.local/share/jev-kit/receipts`; backups can contain credentials for unrelated servers. Never share that directory. See the [native integration notes](docs/native-integrations.md) for host-specific package and acceptance details.
 
 ### Compatibility evidence
 
-Nine-host lifecycle fixtures cover install, update, selective removal, repeat operations, legacy migration, manual drift, unrelated settings added after installation, and failure rollback. On the development Mac, Codex native CLI was additionally exercised in an isolated home through a full lifecycle. Earlier host-native diagnostics connected for Claude Code, OpenCode, Muse, Grok and Gemini; Pi's actual SDK loaded its tools and completed a real Jev call. Cursor and VS Code have config-driven protocol evidence, not editor UI acceptance. Host versions may differ.
+Nine-host lifecycle fixtures cover install, update, selective removal, repeat operations, format-1 migration, manual drift, unrelated settings and state-write rollback. On the development Mac, isolated CLI lifecycle tests passed for Claude 2.1.277, Gemini 0.60.0 and Grok 1.0.34. Their installed manifests completed MCP `tools/list` and an offline quote check. OpenCode 1.18.31 native host discovery passed in an isolated HOME (`/experimental/tool/ids` and catalog exposed all five Jev tools and schemas); its V2 contract remains a test, and no host-triggered Jev call was available. Cursor and VS Code package/schema/config/MCP checks passed, but editor UI discovery is not accepted yet. Muse 1.3.0-R3401.1 passed project-scope install, changed-version update, MCP approval readback and removal in the configured user environment. The same binary rejects plugins in an empty HOME; capability probing determines fallback. Pi's actual SDK loaded its tools and completed a real Jev call. Host versions may differ.
 
 For manual integration, `node scripts/configure-mcp.mjs` creates a local `.mcp.json`; copy its command/args into a host configuration. `node dist/cli.js serve` is stdio, not HTTP. The Pi extension is `dist/pi-extension.js`, and the shared Skill is in `skills/jev-kit/`.
 

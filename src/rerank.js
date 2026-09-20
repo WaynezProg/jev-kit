@@ -56,7 +56,7 @@ function resultRow(candidate,querySha,score,rank,selected,requiresReview){
 function receipt(data,start,status,results,calls,method){
  const selected=results.filter(row=>row.selected).map(row=>row.id);
  return {
-  version:'0.3.0',tool:'jev_rerank',status,scope,query_sha256:sha(data.query),
+  version:'0.4.0',tool:'jev_rerank',status,scope,query_sha256:sha(data.query),
   results,selected_ids:selected,remaining_ids:results.filter(row=>!row.selected).map(row=>row.id),
   calls,elapsed_ms:performance.now()-start,method,
  };

@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-20",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "node": "v26.8.2",
+  "claude": "2.1.277 (Claude Code)",
+  "codex": "codex-cli 0.155.0",
+  "base_repo_commit": "f552f8f2da7aa6840c3c34955fd8c4dd10526f8c",
+  "sources": {
+    "integrations/ego-browser/adapter.mjs": "92798f8d8dd165515c058f4be46f23358041eaad3ddad8f59d4ec6d65aa0aa45",
+    "integrations/ego-browser/claude-session.mjs": "a07a96f1beb86fa1a111edf30ffe62a03c4b1245e97c851e8b21e35fdcd25cb2",
+    "integrations/ego-browser/native-text.mjs": "b1eccd014c50aae3e42680e1b619582783ea2a5ccb44c681ba56dd8168f5ec26",
+    "integrations/ego-browser/cli.mjs": "69fd014a0612cb9331117166261a7bbe43ca6eb25772ba76dedddd15411fa3af",
+    "integrations/ego-browser/policy.py": "08abff594595c67b1f8d5925ddbcb9372ca3d64877d7ee6851690de3b4bf00a4",
+    "benchmarks/ego-upstream/run.mjs": "12485c55300f8c8346f754aa33cc7297b8e69c9cf524279b5e69b935b4024a4c",
+    "benchmarks/upstream-compaction/run.mjs": "d42f66e18c7c131a32b37dca782fc067f74166ef3676ea40ab3706d402f43868",
+    "benchmarks/upstream-foreman/native.py": "88a0bee4dce09cbade73fbf31b5fdaafc7b8dea56d853d539802245ad07adb15"
+  },
+  "browser_dependencies": {
+    "httpx": "0.28.1",
+    "browser-harness": "0.1.13"
+  },
+  "foreman_dependencies": {
+    "typesafe-sdk": "0.7.0",
+    "pydantic": "2.13.5"
+  }
+}
