@@ -1,0 +1,3464 @@
+[
+  {
+    "id": "r1-fable_cascade",
+    "arm": "fable_cascade",
+    "repeat": 1,
+    "profile": {
+      "host": "claude",
+      "model": "claude-fable-5-1",
+      "effort": "low"
+    },
+    "wall_s": 6.345313166995766,
+    "jev_s": 2.0047147080185823,
+    "llm_s": 4.337932249996811,
+    "schema_valid": true,
+    "correct": 46,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "contradicts",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-fable-5-1"
+    ],
+    "usage": {
+      "input": 3113,
+      "output": 214,
+      "cache_read": 0,
+      "cache_write": 3111,
+      "reasoning": 0
+    },
+    "host_reported_cost_usd": 0.07293999999999999,
+    "llm_items": 11,
+    "automated_items": 37,
+    "automated_errors": 1,
+    "audited_ids": [
+      "case-06",
+      "case-25",
+      "case-28",
+      "case-38",
+      "case-44"
+    ],
+    "jev_api_calls": 6,
+    "jev_models": [
+      "jev-1.13.0"
+    ],
+    "provider_failure": false,
+    "jev_input_tokens": 18009,
+    "jev_output_tokens": 2066,
+    "jev_raw_correct": 42,
+    "jev_bound_rows": 48,
+    "jev_review_items": 6,
+    "jev_unflagged_errors": 1
+  },
+  {
+    "id": "r1-fable_direct",
+    "arm": "fable_direct",
+    "repeat": 1,
+    "profile": {
+      "host": "claude",
+      "model": "claude-fable-5-1",
+      "effort": "low"
+    },
+    "wall_s": 9.646370540984208,
+    "jev_s": 0,
+    "llm_s": 9.644275625003502,
+    "schema_valid": true,
+    "correct": 48,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-fable-5-1"
+    ],
+    "usage": {
+      "input": 6645,
+      "output": 891,
+      "cache_read": 0,
+      "cache_write": 6643,
+      "reasoning": 0
+    },
+    "host_reported_cost_usd": 0.17742999999999998,
+    "llm_items": 48,
+    "automated_items": 0,
+    "automated_errors": 0,
+    "audited_ids": [],
+    "jev_api_calls": 0,
+    "jev_models": [],
+    "provider_failure": false,
+    "jev_input_tokens": 0,
+    "jev_output_tokens": 0,
+    "jev_raw_correct": 0,
+    "jev_bound_rows": 0,
+    "jev_review_items": 0,
+    "jev_unflagged_errors": 0
+  },
+  {
+    "id": "r1-haiku_assisted",
+    "arm": "haiku_assisted",
+    "repeat": 1,
+    "profile": {
+      "host": "claude",
+      "model": "claude-haiku-4-5-20251001",
+      "effort": null
+    },
+    "wall_s": 115.44620570802363,
+    "jev_s": 2.032402791985078,
+    "llm_s": 113.41031141701387,
+    "schema_valid": true,
+    "correct": 47,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-haiku-4-5-20251001"
+    ],
+    "usage": {
+      "input": 6742,
+      "output": 10232,
+      "cache_read": 0,
+      "cache_write": 6732,
+      "reasoning": 9425
+    },
+    "host_reported_cost_usd": 0.064634,
+    "llm_items": 48,
+    "automated_items": 0,
+    "automated_errors": 0,
+    "audited_ids": [],
+    "jev_api_calls": 6,
+    "jev_models": [
+      "jev-1.13.0"
+    ],
+    "provider_failure": false,
+    "jev_input_tokens": 18009,
+    "jev_output_tokens": 2066,
+    "jev_raw_correct": 42,
+    "jev_bound_rows": 48,
+    "jev_review_items": 8,
+    "jev_unflagged_errors": 1
+  },
+  {
+    "id": "r1-haiku_direct",
+    "arm": "haiku_direct",
+    "repeat": 1,
+    "profile": {
+      "host": "claude",
+      "model": "claude-haiku-4-5-20251001",
+      "effort": null
+    },
+    "wall_s": 102.35094854200725,
+    "jev_s": 0,
+    "llm_s": 102.34923233400332,
+    "schema_valid": true,
+    "correct": 46,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-haiku-4-5-20251001"
+    ],
+    "usage": {
+      "input": 5312,
+      "output": 9537,
+      "cache_read": 0,
+      "cache_write": 5302,
+      "reasoning": 8729
+    },
+    "host_reported_cost_usd": 0.05829900000000001,
+    "llm_items": 48,
+    "automated_items": 0,
+    "automated_errors": 0,
+    "audited_ids": [],
+    "jev_api_calls": 0,
+    "jev_models": [],
+    "provider_failure": false,
+    "jev_input_tokens": 0,
+    "jev_output_tokens": 0,
+    "jev_raw_correct": 0,
+    "jev_bound_rows": 0,
+    "jev_review_items": 0,
+    "jev_unflagged_errors": 0
+  },
+  {
+    "id": "r2-fable_cascade",
+    "arm": "fable_cascade",
+    "repeat": 2,
+    "profile": {
+      "host": "claude",
+      "model": "claude-fable-5-1",
+      "effort": "low"
+    },
+    "wall_s": 6.3261078750074375,
+    "jev_s": 2.085745499993209,
+    "llm_s": 4.237793709005928,
+    "schema_valid": true,
+    "correct": 46,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-fable-5-1"
+    ],
+    "usage": {
+      "input": 3069,
+      "output": 195,
+      "cache_read": 0,
+      "cache_write": 3067,
+      "reasoning": 0
+    },
+    "host_reported_cost_usd": 0.07110999999999999,
+    "llm_items": 10,
+    "automated_items": 38,
+    "automated_errors": 1,
+    "audited_ids": [
+      "case-08",
+      "case-22",
+      "case-24",
+      "case-27",
+      "case-35"
+    ],
+    "jev_api_calls": 6,
+    "jev_models": [
+      "jev-1.13.0"
+    ],
+    "provider_failure": false,
+    "jev_input_tokens": 18009,
+    "jev_output_tokens": 2066,
+    "jev_raw_correct": 45,
+    "jev_bound_rows": 48,
+    "jev_review_items": 5,
+    "jev_unflagged_errors": 1
+  },
+  {
+    "id": "r2-fable_direct",
+    "arm": "fable_direct",
+    "repeat": 2,
+    "profile": {
+      "host": "claude",
+      "model": "claude-fable-5-1",
+      "effort": "low"
+    },
+    "wall_s": 9.554995999991661,
+    "jev_s": 0,
+    "llm_s": 9.553850124997552,
+    "schema_valid": true,
+    "correct": 47,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-fable-5-1"
+    ],
+    "usage": {
+      "input": 6645,
+      "output": 891,
+      "cache_read": 0,
+      "cache_write": 6643,
+      "reasoning": 0
+    },
+    "host_reported_cost_usd": 0.17742999999999998,
+    "llm_items": 48,
+    "automated_items": 0,
+    "automated_errors": 0,
+    "audited_ids": [],
+    "jev_api_calls": 0,
+    "jev_models": [],
+    "provider_failure": false,
+    "jev_input_tokens": 0,
+    "jev_output_tokens": 0,
+    "jev_raw_correct": 0,
+    "jev_bound_rows": 0,
+    "jev_review_items": 0,
+    "jev_unflagged_errors": 0
+  },
+  {
+    "id": "r2-haiku_assisted",
+    "arm": "haiku_assisted",
+    "repeat": 2,
+    "profile": {
+      "host": "claude",
+      "model": "claude-haiku-4-5-20251001",
+      "effort": null
+    },
+    "wall_s": 87.6663702079968,
+    "jev_s": 2.191409916995326,
+    "llm_s": 85.47256212501088,
+    "schema_valid": true,
+    "correct": 46,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-haiku-4-5-20251001"
+    ],
+    "usage": {
+      "input": 6739,
+      "output": 7666,
+      "cache_read": 0,
+      "cache_write": 6729,
+      "reasoning": 6857
+    },
+    "host_reported_cost_usd": 0.051798000000000004,
+    "llm_items": 48,
+    "automated_items": 0,
+    "automated_errors": 0,
+    "audited_ids": [],
+    "jev_api_calls": 6,
+    "jev_models": [
+      "jev-1.13.0"
+    ],
+    "provider_failure": false,
+    "jev_input_tokens": 18009,
+    "jev_output_tokens": 2066,
+    "jev_raw_correct": 45,
+    "jev_bound_rows": 48,
+    "jev_review_items": 5,
+    "jev_unflagged_errors": 1
+  },
+  {
+    "id": "r2-haiku_direct",
+    "arm": "haiku_direct",
+    "repeat": 2,
+    "profile": {
+      "host": "claude",
+      "model": "claude-haiku-4-5-20251001",
+      "effort": null
+    },
+    "wall_s": 73.42425358298351,
+    "jev_s": 0,
+    "llm_s": 73.4222825409961,
+    "schema_valid": true,
+    "correct": 47,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-haiku-4-5-20251001"
+    ],
+    "usage": {
+      "input": 5312,
+      "output": 6384,
+      "cache_read": 0,
+      "cache_write": 5302,
+      "reasoning": 5576
+    },
+    "host_reported_cost_usd": 0.042534,
+    "llm_items": 48,
+    "automated_items": 0,
+    "automated_errors": 0,
+    "audited_ids": [],
+    "jev_api_calls": 0,
+    "jev_models": [],
+    "provider_failure": false,
+    "jev_input_tokens": 0,
+    "jev_output_tokens": 0,
+    "jev_raw_correct": 0,
+    "jev_bound_rows": 0,
+    "jev_review_items": 0,
+    "jev_unflagged_errors": 0
+  },
+  {
+    "id": "r3-fable_cascade",
+    "arm": "fable_cascade",
+    "repeat": 3,
+    "profile": {
+      "host": "claude",
+      "model": "claude-fable-5-1",
+      "effort": "low"
+    },
+    "wall_s": 6.510776666982565,
+    "jev_s": 2.2770021250180434,
+    "llm_s": 4.230877499998314,
+    "schema_valid": true,
+    "correct": 47,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-fable-5-1"
+    ],
+    "usage": {
+      "input": 3117,
+      "output": 212,
+      "cache_read": 0,
+      "cache_write": 3115,
+      "reasoning": 0
+    },
+    "host_reported_cost_usd": 0.07292,
+    "llm_items": 11,
+    "automated_items": 37,
+    "automated_errors": 0,
+    "audited_ids": [
+      "case-03",
+      "case-18",
+      "case-22",
+      "case-31",
+      "case-47"
+    ],
+    "jev_api_calls": 6,
+    "jev_models": [
+      "jev-1.13.0"
+    ],
+    "provider_failure": false,
+    "jev_input_tokens": 18009,
+    "jev_output_tokens": 2068,
+    "jev_raw_correct": 44,
+    "jev_bound_rows": 48,
+    "jev_review_items": 6,
+    "jev_unflagged_errors": 0
+  },
+  {
+    "id": "r3-fable_direct",
+    "arm": "fable_direct",
+    "repeat": 3,
+    "profile": {
+      "host": "claude",
+      "model": "claude-fable-5-1",
+      "effort": "low"
+    },
+    "wall_s": 9.917486416990869,
+    "jev_s": 0,
+    "llm_s": 9.915945042012027,
+    "schema_valid": true,
+    "correct": 47,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-fable-5-1"
+    ],
+    "usage": {
+      "input": 6645,
+      "output": 891,
+      "cache_read": 0,
+      "cache_write": 6643,
+      "reasoning": 0
+    },
+    "host_reported_cost_usd": 0.17742999999999998,
+    "llm_items": 48,
+    "automated_items": 0,
+    "automated_errors": 0,
+    "audited_ids": [],
+    "jev_api_calls": 0,
+    "jev_models": [],
+    "provider_failure": false,
+    "jev_input_tokens": 0,
+    "jev_output_tokens": 0,
+    "jev_raw_correct": 0,
+    "jev_bound_rows": 0,
+    "jev_review_items": 0,
+    "jev_unflagged_errors": 0
+  },
+  {
+    "id": "r3-haiku_assisted",
+    "arm": "haiku_assisted",
+    "repeat": 3,
+    "profile": {
+      "host": "claude",
+      "model": "claude-haiku-4-5-20251001",
+      "effort": null
+    },
+    "wall_s": 77.61640100000659,
+    "jev_s": 2.0738792920019478,
+    "llm_s": 75.54015791602433,
+    "schema_valid": true,
+    "correct": 47,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-haiku-4-5-20251001"
+    ],
+    "usage": {
+      "input": 6742,
+      "output": 6456,
+      "cache_read": 0,
+      "cache_write": 6732,
+      "reasoning": 5648
+    },
+    "host_reported_cost_usd": 0.045754,
+    "llm_items": 48,
+    "automated_items": 0,
+    "automated_errors": 0,
+    "audited_ids": [],
+    "jev_api_calls": 6,
+    "jev_models": [
+      "jev-1.13.0"
+    ],
+    "provider_failure": false,
+    "jev_input_tokens": 18009,
+    "jev_output_tokens": 2068,
+    "jev_raw_correct": 44,
+    "jev_bound_rows": 48,
+    "jev_review_items": 5,
+    "jev_unflagged_errors": 1
+  },
+  {
+    "id": "r3-haiku_direct",
+    "arm": "haiku_direct",
+    "repeat": 3,
+    "profile": {
+      "host": "claude",
+      "model": "claude-haiku-4-5-20251001",
+      "effort": null
+    },
+    "wall_s": 51.00348045802093,
+    "jev_s": 0,
+    "llm_s": 51.00151729100617,
+    "schema_valid": true,
+    "correct": 47,
+    "total": 48,
+    "predictions": [
+      {
+        "id": "case-01",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-02",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-03",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-04",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-05",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-06",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-07",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-08",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-09",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-10",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-11",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-12",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-13",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-14",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-15",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-16",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-17",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-18",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-19",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-20",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-21",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-22",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-23",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-24",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-25",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-26",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-27",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-28",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-29",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-30",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-31",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-32",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-33",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-34",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-35",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-36",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-37",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-38",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-39",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-40",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-41",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-42",
+        "choice": "contradicts",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-43",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-44",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-45",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      },
+      {
+        "id": "case-46",
+        "choice": "supports",
+        "expected": "supports"
+      },
+      {
+        "id": "case-47",
+        "choice": "contradicts",
+        "expected": "contradicts"
+      },
+      {
+        "id": "case-48",
+        "choice": "insufficient",
+        "expected": "insufficient"
+      }
+    ],
+    "complete": true,
+    "exit_code": 0,
+    "timeout": false,
+    "native_tool_attempts": 0,
+    "observed_models": [
+      "claude-haiku-4-5-20251001"
+    ],
+    "usage": {
+      "input": 5312,
+      "output": 5903,
+      "cache_read": 0,
+      "cache_write": 5302,
+      "reasoning": 5095
+    },
+    "host_reported_cost_usd": 0.040129,
+    "llm_items": 48,
+    "automated_items": 0,
+    "automated_errors": 0,
+    "audited_ids": [],
+    "jev_api_calls": 0,
+    "jev_models": [],
+    "provider_failure": false,
+    "jev_input_tokens": 0,
+    "jev_output_tokens": 0,
+    "jev_raw_correct": 0,
+    "jev_bound_rows": 0,
+    "jev_review_items": 0,
+    "jev_unflagged_errors": 0
+  }
+]

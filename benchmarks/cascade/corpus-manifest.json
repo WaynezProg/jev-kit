@@ -1,0 +1,477 @@
+{
+  "source": "openai/codex closed GitHub issues",
+  "sampling": {
+    "auth": {
+      "retrieved": 100,
+      "eligible": 55,
+      "selected": 16
+    },
+    "mcp": {
+      "retrieved": 100,
+      "eligible": 41,
+      "selected": 16
+    },
+    "sandbox": {
+      "retrieved": 100,
+      "eligible": 32,
+      "selected": 16
+    },
+    "windows-os": {
+      "retrieved": 100,
+      "eligible": 69,
+      "selected": 16
+    }
+  },
+  "records": [
+    {
+      "id": "issue-32552",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/32552",
+      "updated_at": "2026-08-03T05:45:55Z",
+      "sha256": "538153bb375ab46705ec50030aac6bad8b16b8b5db2bab029ecec69e9c825cbb"
+    },
+    {
+      "id": "issue-34046",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/34046",
+      "updated_at": "2026-07-18T18:18:55Z",
+      "sha256": "5f0e2437a0b962b91dfb217b6918a8a4fe21030e71d54678bd3b5391ea84e15c"
+    },
+    {
+      "id": "issue-37798",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/37798",
+      "updated_at": "2026-08-10T09:40:41Z",
+      "sha256": "3f5da94358b066bb28190059d7946a72a7d4f4624f2ee26ff2539686a8852909"
+    },
+    {
+      "id": "issue-35316",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/35316",
+      "updated_at": "2026-07-25T09:14:17Z",
+      "sha256": "b13d42cb33b39e4eb555fa364ab5e6b5fdb19b93d7f0332d1734686b962456c6"
+    },
+    {
+      "id": "issue-37755",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/37755",
+      "updated_at": "2026-08-10T02:26:58Z",
+      "sha256": "e2026f4f6879b45e3ec3f28f0a4df6c2de174057cd17cb4db5e2e98ee8045934"
+    },
+    {
+      "id": "issue-20161",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/20161",
+      "updated_at": "2026-09-08T15:05:23Z",
+      "sha256": "1c69ba43809273b19301aeecbe7a63ed9e8444f7044f4d1749b76a89a2facacd"
+    },
+    {
+      "id": "issue-45380",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/45380",
+      "updated_at": "2026-09-14T09:07:59Z",
+      "sha256": "79ee3dd30d6355e492c2b415c3c6e45d6ce0e55d5329d580ec2393fb218e8e23"
+    },
+    {
+      "id": "issue-6790",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/6790",
+      "updated_at": "2026-07-16T05:24:36Z",
+      "sha256": "976b4f5c7c8d07c6f612c05ba3754166f1a94aa0792873d1b15f978cab2b8667"
+    },
+    {
+      "id": "issue-21387",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/21387",
+      "updated_at": "2026-08-11T01:32:26Z",
+      "sha256": "394f600edc22b9544daa99341d9a345d623c8638db5d9a9b7a2736ec6d96ab02"
+    },
+    {
+      "id": "issue-9282",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/9282",
+      "updated_at": "2026-09-14T07:17:16Z",
+      "sha256": "d4f6b605f735d482565b55a221a0d0295b2c5842dd3cd539b485c6f164d39958"
+    },
+    {
+      "id": "issue-23953",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/23953",
+      "updated_at": "2026-08-04T04:24:34Z",
+      "sha256": "a591f180d344ccebb96067ab349d83573cba7c9ddbc2339d62b9fd519ab55b2c"
+    },
+    {
+      "id": "issue-43010",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/43010",
+      "updated_at": "2026-09-05T15:42:08Z",
+      "sha256": "c521ca22d4c0496bb393ede0597e1f5e271961e25e55311e4285f0578816235a"
+    },
+    {
+      "id": "issue-16522",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/16522",
+      "updated_at": "2026-09-17T19:18:03Z",
+      "sha256": "7929265b746e8631e4e87ffc3c29e9f38d6bf8b213bcaf2aafb5377807cc6b38"
+    },
+    {
+      "id": "issue-15151",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/15151",
+      "updated_at": "2026-08-05T03:08:14Z",
+      "sha256": "6198e3993322d8b68f4c61f5ede3bc179b9b9d2eec0544b9beec4a6a8552e799"
+    },
+    {
+      "id": "issue-33706",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/33706",
+      "updated_at": "2026-07-17T04:13:28Z",
+      "sha256": "f1c77bc89f4768c4ad92a45156d698acf99dbb21dd039e8a2e3f0b6531332126"
+    },
+    {
+      "id": "issue-33920",
+      "gold": "auth",
+      "url": "https://github.com/openai/codex/issues/33920",
+      "updated_at": "2026-07-18T02:37:30Z",
+      "sha256": "da3ed3c904b7492c48528b32cfa19b52953128b9a1e19a79deb89004b0f48518"
+    },
+    {
+      "id": "issue-7953",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/7953",
+      "updated_at": "2026-09-10T22:24:08Z",
+      "sha256": "d9523622a8f30a8796fadb15f7d53f2836f4c12a2fd95328ab9ba9cf5907bd3f"
+    },
+    {
+      "id": "issue-7150",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/7150",
+      "updated_at": "2026-09-04T00:35:29Z",
+      "sha256": "a0b0c3cc605b0b4634d24a77b630310e9705b16c79aaba124af5c5a10c587d26"
+    },
+    {
+      "id": "issue-11980",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/11980",
+      "updated_at": "2026-08-30T08:41:21Z",
+      "sha256": "3f15f3bd6c045717edb63624061c046997523d2038f5d31d4f71403b35f56a65"
+    },
+    {
+      "id": "issue-33951",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/33951",
+      "updated_at": "2026-08-16T21:54:58Z",
+      "sha256": "57da5cda7c85da6632b9c78a9526d6452482a141015314228c3dce1cdbfc0342"
+    },
+    {
+      "id": "issue-46402",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/46402",
+      "updated_at": "2026-09-18T10:04:08Z",
+      "sha256": "46a112969d9d54ff25d99a0463085252f32786b54d4865a83381e1e91ee6271c"
+    },
+    {
+      "id": "issue-34110",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/34110",
+      "updated_at": "2026-07-25T15:59:54Z",
+      "sha256": "248103e8b805992a6809dde8500c9688bed274166d3f44d74da49355d658c664"
+    },
+    {
+      "id": "issue-46098",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/46098",
+      "updated_at": "2026-09-18T02:21:27Z",
+      "sha256": "14500bf6d22fad72182be5bd823ea7019d83879f6ed00aa8a9177a518da17d78"
+    },
+    {
+      "id": "issue-40860",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/40860",
+      "updated_at": "2026-08-28T06:25:04Z",
+      "sha256": "64f4cdc74d077fdb94baaf5caae38aec8fb958deeae6a7316c13c37c8462fa95"
+    },
+    {
+      "id": "issue-38311",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/38311",
+      "updated_at": "2026-08-13T06:05:28Z",
+      "sha256": "c9ecf278e005b81e73523f57c18ad675be802a63ea035bb444ab9924ecf83d13"
+    },
+    {
+      "id": "issue-38438",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/38438",
+      "updated_at": "2026-09-15T11:55:44Z",
+      "sha256": "f3cb515bf8f0a021fd8918a3b61238b35094af37ab64cfa8d39408535bc1ed9b"
+    },
+    {
+      "id": "issue-8342",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/8342",
+      "updated_at": "2026-08-06T02:27:16Z",
+      "sha256": "0e0814bde193770222357376634b9f69c8d5b6e3d24b00e2409598bef48036df"
+    },
+    {
+      "id": "issue-20771",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/20771",
+      "updated_at": "2026-08-24T09:21:46Z",
+      "sha256": "4fa5634e8373cae34c80994df20f8228cdbe8498a6a1cb8edc664fd6118caccd"
+    },
+    {
+      "id": "issue-15508",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/15508",
+      "updated_at": "2026-07-04T08:51:43Z",
+      "sha256": "a94892cbf3131aad628cf9d10dce2d121fb28ca7728be9c5c70dbaf2b22a5e1e"
+    },
+    {
+      "id": "issue-21019",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/21019",
+      "updated_at": "2026-08-05T03:51:41Z",
+      "sha256": "99f440346a24382b7d4982c226ce1544698afc0e13c8e7946b3f0a0ea9b1a4b4"
+    },
+    {
+      "id": "issue-2901",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/2901",
+      "updated_at": "2026-07-18T10:24:55Z",
+      "sha256": "19116b2848d5ff2303878d6bfc7efb8a03e29c1443298a00d0a37736a179c447"
+    },
+    {
+      "id": "issue-13056",
+      "gold": "mcp",
+      "url": "https://github.com/openai/codex/issues/13056",
+      "updated_at": "2026-08-05T03:14:03Z",
+      "sha256": "a8fe59f1a4a4a8d95ad32e2b985d7cfecd637902713af31748400b0cf4c0778e"
+    },
+    {
+      "id": "issue-45175",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/45175",
+      "updated_at": "2026-09-13T08:49:48Z",
+      "sha256": "1e7ed2c311c5f520e0ec4ec0bf7d5f0a11afb3d9dc1d3c8af4f61720d81c0ee7"
+    },
+    {
+      "id": "issue-16334",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/16334",
+      "updated_at": "2026-08-22T08:23:02Z",
+      "sha256": "ed5bd7e6d15d6604ad44515a31f1f7af7bd690bed95c7b37e98880f065ebf863"
+    },
+    {
+      "id": "issue-10797",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/10797",
+      "updated_at": "2026-08-04T04:23:53Z",
+      "sha256": "12cad0414b30ab58bce7c083f231a2d6f66cc3e1ecbbeee0c77eaa1befd5e3d0"
+    },
+    {
+      "id": "issue-41212",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/41212",
+      "updated_at": "2026-08-27T22:13:36Z",
+      "sha256": "6f83a138165952403bbacec8a56e22c41ef4483f1bb5dad02305685c77ee2fa7"
+    },
+    {
+      "id": "issue-10482",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/10482",
+      "updated_at": "2026-08-05T03:07:52Z",
+      "sha256": "ae81453604e6afe4718831b5062151e048de88309627d96fb15f284a7af9ba46"
+    },
+    {
+      "id": "issue-45349",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/45349",
+      "updated_at": "2026-09-16T23:45:53Z",
+      "sha256": "019d7ea14505cbff4b4e91c1806d6596930de55654f5decf691cad10fad2b444"
+    },
+    {
+      "id": "issue-44892",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/44892",
+      "updated_at": "2026-09-12T07:56:36Z",
+      "sha256": "21d84d0bb4e1938e7f12989b0c5ec7737a4b2da999e642b9ed3599061ca0f3db"
+    },
+    {
+      "id": "issue-18694",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/18694",
+      "updated_at": "2026-08-03T23:00:26Z",
+      "sha256": "72325c2fe51b4e068c243771218964df2fa9b79ba0f0fbd26f50bcc87973dbca"
+    },
+    {
+      "id": "issue-23211",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/23211",
+      "updated_at": "2026-08-04T22:09:15Z",
+      "sha256": "2d7aa277d99b4b50a2b1aed335e3d9a3df896f7f8f2bdf1039fdf118c0d27678"
+    },
+    {
+      "id": "issue-33055",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/33055",
+      "updated_at": "2026-08-07T21:05:07Z",
+      "sha256": "f7f587ccf31ac345809c8613380d3d7855bd36279a06c5794bfcb4b3415b15c1"
+    },
+    {
+      "id": "issue-16759",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/16759",
+      "updated_at": "2026-09-06T03:17:11Z",
+      "sha256": "8a889cf10bd7c213e1704c28416d08e1fdf69c400d8fe4fc38fd971cb6d447d2"
+    },
+    {
+      "id": "issue-36399",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/36399",
+      "updated_at": "2026-08-13T17:10:00Z",
+      "sha256": "03174c480b9ff88246b2b46a8e0b9cac21724641e32b9b57e8327e88602741cb"
+    },
+    {
+      "id": "issue-31547",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/31547",
+      "updated_at": "2026-08-06T02:27:15Z",
+      "sha256": "0360bcace3bc1fd43baa56642c295513fd14249667ca055d4fba6863d705ccac"
+    },
+    {
+      "id": "issue-15680",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/15680",
+      "updated_at": "2026-09-01T21:14:25Z",
+      "sha256": "f88afb398c5b0de8797c3c5c05be7a6b9633ba58850aac3e3c255041b7dd434a"
+    },
+    {
+      "id": "issue-16908",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/16908",
+      "updated_at": "2026-08-03T05:42:31Z",
+      "sha256": "4895d4a041a2e17d276da7f2fc7d6dc80780d3629257f06daf83401c89cf3d14"
+    },
+    {
+      "id": "issue-6737",
+      "gold": "sandbox",
+      "url": "https://github.com/openai/codex/issues/6737",
+      "updated_at": "2026-08-05T03:34:57Z",
+      "sha256": "cb112bb14d95f1cccaaeeb7ba7c689b06f40d5898c1aee5d6abb95ef94cd842c"
+    },
+    {
+      "id": "issue-44727",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/44727",
+      "updated_at": "2026-09-11T22:30:38Z",
+      "sha256": "37bf49102c1a2e13d1156c2034220921713e157147010bd1dce9287057e27bbc"
+    },
+    {
+      "id": "issue-45703",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/45703",
+      "updated_at": "2026-09-16T13:21:47Z",
+      "sha256": "c9a12bca75b2ad2a54e5d76fc5639e1d62a472d9d47f227387addaf8a919468b"
+    },
+    {
+      "id": "issue-44719",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/44719",
+      "updated_at": "2026-09-14T22:55:33Z",
+      "sha256": "3f7d672c36b681870b090665abe0c41034df7e2e318944c464d3404e7b9161c6"
+    },
+    {
+      "id": "issue-44490",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/44490",
+      "updated_at": "2026-09-14T15:19:18Z",
+      "sha256": "fe3d1dd406d2c589dbda956713d9cda05cf996a790e462323d3957d9ae8373f9"
+    },
+    {
+      "id": "issue-46455",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/46455",
+      "updated_at": "2026-09-18T16:47:41Z",
+      "sha256": "357fb31ce0778cd353f34257374f9f142e18e98de19b4321a9577be34e47b6c4"
+    },
+    {
+      "id": "issue-45929",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/45929",
+      "updated_at": "2026-09-16T12:00:37Z",
+      "sha256": "52d2f1b5e4083a77d18a84b95e5688777bb79f636ef341fefd94722347cf4eb2"
+    },
+    {
+      "id": "issue-45786",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/45786",
+      "updated_at": "2026-09-15T20:46:18Z",
+      "sha256": "911befa957e91ef113b5c6bd50235ae655d3a41e67d50dd9c8df4d9ed1999517"
+    },
+    {
+      "id": "issue-40855",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/40855",
+      "updated_at": "2026-09-15T06:44:32Z",
+      "sha256": "39b1e016bc4d05907e6fb350f6b7934d580139683d5bf5c2665013c6aa386823"
+    },
+    {
+      "id": "issue-44860",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/44860",
+      "updated_at": "2026-09-11T16:38:17Z",
+      "sha256": "09fa1916c18f894c8b26599403a551799943f36ad347229ce55a677729d275e4"
+    },
+    {
+      "id": "issue-36538",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/36538",
+      "updated_at": "2026-09-18T19:52:45Z",
+      "sha256": "4421c201e46ba982b05f7465866fea3ea0813a78a533c1c51e21f7147574ebdd"
+    },
+    {
+      "id": "issue-45022",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/45022",
+      "updated_at": "2026-09-12T13:39:50Z",
+      "sha256": "c573be7cbe04d23b5be24176f350bbfce70739e82ca5d1ba0bc6ff2d47e08fe0"
+    },
+    {
+      "id": "issue-44900",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/44900",
+      "updated_at": "2026-09-16T00:04:21Z",
+      "sha256": "9fc5458572d66a267e97cbf60a3d7ce8263d068fd409d12624d6b0d677376ebe"
+    },
+    {
+      "id": "issue-44590",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/44590",
+      "updated_at": "2026-09-17T15:40:34Z",
+      "sha256": "f4318065bdd3db1ecc9dc65fac331c5e08eaacbc6e887cfadf383e346665dda7"
+    },
+    {
+      "id": "issue-44589",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/44589",
+      "updated_at": "2026-09-13T07:01:51Z",
+      "sha256": "1cd00c4695349693657e2d4c4d02420447b2471dfdc15f5fff0e0651cc7263e1"
+    },
+    {
+      "id": "issue-45886",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/45886",
+      "updated_at": "2026-09-18T09:08:00Z",
+      "sha256": "e23cd602d8feb39f33ae4d42429bf6aa4700bdd4fdb040d6f921cc27be248971"
+    },
+    {
+      "id": "issue-42927",
+      "gold": "windows",
+      "url": "https://github.com/openai/codex/issues/42927",
+      "updated_at": "2026-09-10T06:26:44Z",
+      "sha256": "415c031395c3e3d9a1566c986cbf9041bbf4b10644396016dddacaccf0503d35"
+    }
+  ],
+  "input_sha256": "fe75e7069ec6b781988192e588334110570eed930d370d6b9ab769bcb64c576d",
+  "reference": "Existing GitHub subsystem labels are weak reference labels, not independently verified semantic ground truth."
+}

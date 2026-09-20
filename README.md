@@ -13,6 +13,8 @@ Jev Kit combines the batch engine from [jev-use](https://github.com/shitianfang/
 
 Use existing sources and tool outputs. You do not need an extra LLM summary before calling Jev. The host still constructs the tool input and reviews the result, so this does not establish lower total token cost, faster development, or a lower required thinking level.
 
+The current measurements do not justify an always-on integration: inline calls often add substantial overhead, and program-driven evidence routing traded accuracy for speed in the model-tier screening. Keep Jev optional and validate the workload-specific benefit. See [model-tier results](benchmarks/model-tiers/results/RESULTS.md).
+
 ## Quick start
 
 Requires Node.js 22+. The checked-in bundles run without installing dependencies. Host setup also requires Python 3.11+ and a POSIX shell; the installer has been exercised on macOS, not Windows.
@@ -178,6 +180,23 @@ With already prepared input and no host/model review, Jev was fast. We also repe
 - Keep Jev optional. File-based transport is a promising integration improvement; lower thinking levels, better coding quality and lower total monetary cost still need separate experiments.
 
 Full [results and token tables](benchmarks/agent-ab/results/RESULTS.md), [per-run data](benchmarks/agent-ab/results/runs.json), [fixtures, methodology and reproduction commands](benchmarks/agent-ab/README.md) are public. Small repeat counts, authored gold labels, different host contexts and provider caching limit generalization. These tests do not establish that adding Jev lets you lower the model thinking level.
+
+## Separate model-tier goals: quality versus speed
+
+A follow-up uses the same Claude Code harness and 48 newly authored source-bound cases, with three repeats per path. Programmatic input avoids the expensive LLM argument-copying step. Haiku receives all original evidence plus advisory Jev judgments; Fable's cascade reviews only unresolved rows and a deterministic 10% sample of unflagged rows. Total wall time includes Jev and main-model review.
+
+| Goal / comparison | Correct: direct → with Jev | Median total seconds: direct → with Jev | Result |
+|---|---:|---:|---|
+| Lower-tier quality: Haiku 4.5 | 140/144 → 140/144 | 73.42 → 87.67 | No net accuracy gain; slower |
+| Higher-tier speed: Fable 5.1 low | 142/144 → 139/144 | 9.65 → 6.35 | 34.2% faster, but quality regressed |
+
+**Neither path passed its frozen gate.** Lower-tier assistance needed at least a 5-percentage-point gain; higher-tier routing needed at least 30% lower median wall time without aggregate or per-repeat accuracy loss and at most 1% observed unreviewed error. Two of 112 automatically accepted judgments in the Fable cascade were wrong. Confidence plus a small audit did not preserve quality.
+
+These are 48 distinct authored examples repeated three times, not 144 independent production cases. Haiku's native default used substantial thinking tokens; Fable was explicitly set to low effort. Model tier and thinking level are different variables, and this experiment does not show that thinking levels can be reduced. The high direct scores also leave little room to demonstrate a large lower-tier improvement. Full [protocol](benchmarks/model-tiers/README.md), [results](benchmarks/model-tiers/results/RESULTS.md), and [per-run predictions](benchmarks/model-tiers/results/runs.json) are public.
+
+A separate [24-run real GitHub issue study](benchmarks/cascade/README.md) compared direct LLM, rules-first, Jev-first, and rules-plus-Jev paths. No Jev path passed the combined gate against both no-Jev baselines. Existing GitHub tags proved to be weak reference labels rather than reliable semantic answers, so those agreement scores must not be presented as decision accuracy. One failed Jev API call fell back to main-model review and remains in the results.
+
+The practical next step is an independently adjudicated production sample for an optional batch classifier or ranker, with a cheap rules baseline and explicit error tolerance. These results do not support default automatic acceptance of evidence claims, universal installation, or a general coding-productivity claim. The experimental runners do not change shipped plugin/MCP behavior.
 
 ## Results and limits
 
