@@ -1,0 +1,290 @@
+[
+  {
+    "id": "collection_tools.unique_in_order",
+    "path": "modules/collection_tools.py",
+    "symbol": "unique_in_order",
+    "text": "def unique_in_order(values):\n    return list(dict.fromkeys(values))"
+  },
+  {
+    "id": "collection_tools.chunks",
+    "path": "modules/collection_tools.py",
+    "symbol": "chunks",
+    "text": "def chunks(values, size):\n    return [values[index:index + size] for index in range(0, len(values), size)]"
+  },
+  {
+    "id": "collection_tools.count_by",
+    "path": "modules/collection_tools.py",
+    "symbol": "count_by",
+    "text": "def count_by(values):\n    counts = {}\n    for value in values:\n        counts[value] = counts.get(value, 0) + 1\n    return counts"
+  },
+  {
+    "id": "collection_tools.flatten",
+    "path": "modules/collection_tools.py",
+    "symbol": "flatten",
+    "text": "def flatten(groups):\n    return [item for group in groups for item in group]"
+  },
+  {
+    "id": "collection_tools.merge_defaults",
+    "path": "modules/collection_tools.py",
+    "symbol": "merge_defaults",
+    "text": "def merge_defaults(defaults, overrides):\n    result = dict(defaults)\n    result.update(overrides)\n    return result"
+  },
+  {
+    "id": "collection_tools.pairs",
+    "path": "modules/collection_tools.py",
+    "symbol": "pairs",
+    "text": "def pairs(values):\n    return list(zip(values[::2], values[1::2]))"
+  },
+  {
+    "id": "number_tools.clamp",
+    "path": "modules/number_tools.py",
+    "symbol": "clamp",
+    "text": "def clamp(value, low, high):\n    return max(low, min(high, value))"
+  },
+  {
+    "id": "number_tools.average",
+    "path": "modules/number_tools.py",
+    "symbol": "average",
+    "text": "def average(values):\n    return sum(values) / len(values)"
+  },
+  {
+    "id": "number_tools.percent",
+    "path": "modules/number_tools.py",
+    "symbol": "percent",
+    "text": "def percent(part, whole):\n    return part / whole * 100"
+  },
+  {
+    "id": "number_tools.sign",
+    "path": "modules/number_tools.py",
+    "symbol": "sign",
+    "text": "def sign(value):\n    return (value > 0) - (value < 0)"
+  },
+  {
+    "id": "number_tools.within",
+    "path": "modules/number_tools.py",
+    "symbol": "within",
+    "text": "def within(value, target, tolerance):\n    if tolerance < 0:\n        raise ValueError('tolerance must be non-negative')\n    return abs(value - target) < tolerance"
+  },
+  {
+    "id": "number_tools.round_down",
+    "path": "modules/number_tools.py",
+    "symbol": "round_down",
+    "text": "def round_down(value, step):\n    return value // step * step"
+  },
+  {
+    "id": "path_tools.extension",
+    "path": "modules/path_tools.py",
+    "symbol": "extension",
+    "text": "def extension(path):\n    name = path.rsplit('/', 1)[-1]\n    return name.rsplit('.', 1)[-1] if '.' in name else ''"
+  },
+  {
+    "id": "path_tools.parent_path",
+    "path": "modules/path_tools.py",
+    "symbol": "parent_path",
+    "text": "def parent_path(path):\n    return path.rsplit('/', 1)[0] if '/' in path else ''"
+  },
+  {
+    "id": "path_tools.join_url_path",
+    "path": "modules/path_tools.py",
+    "symbol": "join_url_path",
+    "text": "def join_url_path(base, child):\n    return base.rstrip('/') + '/' + child.lstrip('/')"
+  },
+  {
+    "id": "path_tools.strip_leading_slash",
+    "path": "modules/path_tools.py",
+    "symbol": "strip_leading_slash",
+    "text": "def strip_leading_slash(path):\n    return path.lstrip('/')"
+  },
+  {
+    "id": "path_tools.relative_path",
+    "path": "modules/path_tools.py",
+    "symbol": "relative_path",
+    "text": "def relative_path(path, root):\n    clean_root = root.rstrip('/')\n    if path == clean_root:\n        return ''\n    if path.startswith(clean_root):\n        return path[len(clean_root):].lstrip('/')\n    raise ValueError('path is outside root')"
+  },
+  {
+    "id": "path_tools.filename",
+    "path": "modules/path_tools.py",
+    "symbol": "filename",
+    "text": "def filename(path):\n    return path.rsplit('/', 1)[-1]"
+  },
+  {
+    "id": "query_tools.parse_pairs",
+    "path": "modules/query_tools.py",
+    "symbol": "parse_pairs",
+    "text": "def parse_pairs(query):\n    return [tuple(part.split('=', 1)) for part in query.split('&') if '=' in part]"
+  },
+  {
+    "id": "query_tools.has_parameter",
+    "path": "modules/query_tools.py",
+    "symbol": "has_parameter",
+    "text": "def has_parameter(query, key):\n    return any((name == key for name, _ in parse_pairs(query)))"
+  },
+  {
+    "id": "query_tools.drop_parameter",
+    "path": "modules/query_tools.py",
+    "symbol": "drop_parameter",
+    "text": "def drop_parameter(query, key):\n    return '&'.join((f'{name}={value}' for name, value in parse_pairs(query) if name != key))"
+  },
+  {
+    "id": "query_tools.first_parameter",
+    "path": "modules/query_tools.py",
+    "symbol": "first_parameter",
+    "text": "def first_parameter(query, key, default=None):\n    return next((value for name, value in parse_pairs(query) if name == key), default)"
+  },
+  {
+    "id": "query_tools.add_parameter",
+    "path": "modules/query_tools.py",
+    "symbol": "add_parameter",
+    "text": "def add_parameter(query, key, value):\n    separator = '&' if query else ''\n    return f'{query}{separator}{key}={value}'"
+  },
+  {
+    "id": "query_tools.replace_parameter",
+    "path": "modules/query_tools.py",
+    "symbol": "replace_parameter",
+    "text": "def replace_parameter(query, key, value):\n    pairs = parse_pairs(query)\n    found = False\n    output = []\n    for name, old_value in pairs:\n        if name == key:\n            if not found:\n                output.append((key, value))\n                found = True\n        else:\n            output.append((name, old_value))\n    return '&'.join((f'{name}={item}' for name, item in output))"
+  },
+  {
+    "id": "record_tools.get_nested",
+    "path": "modules/record_tools.py",
+    "symbol": "get_nested",
+    "text": "def get_nested(record, keys, default=None):\n    current = record\n    for key in keys:\n        if not isinstance(current, dict) or key not in current:\n            return default\n        current = current[key]\n    return current"
+  },
+  {
+    "id": "record_tools.pick",
+    "path": "modules/record_tools.py",
+    "symbol": "pick",
+    "text": "def pick(record, keys):\n    return {key: record[key] for key in keys if key in record}"
+  },
+  {
+    "id": "record_tools.omit",
+    "path": "modules/record_tools.py",
+    "symbol": "omit",
+    "text": "def omit(record, keys):\n    return {key: value for key, value in record.items() if key not in keys}"
+  },
+  {
+    "id": "record_tools.required",
+    "path": "modules/record_tools.py",
+    "symbol": "required",
+    "text": "def required(record, key):\n    if key not in record:\n        raise KeyError(key)\n    return record[key]"
+  },
+  {
+    "id": "record_tools.coerce_flag",
+    "path": "modules/record_tools.py",
+    "symbol": "coerce_flag",
+    "text": "def coerce_flag(value):\n    if isinstance(value, bool):\n        return value\n    if isinstance(value, str):\n        normalized = value.lower()\n        if normalized in {'true', 'yes', '1', 'on'}:\n            return True\n        if normalized in {'false', 'no', '0', 'off'}:\n            return False\n    raise ValueError('not a boolean flag')"
+  },
+  {
+    "id": "record_tools.rename_key",
+    "path": "modules/record_tools.py",
+    "symbol": "rename_key",
+    "text": "def rename_key(record, old, new):\n    result = dict(record)\n    if old in result:\n        result[new] = result.pop(old)\n    return result"
+  },
+  {
+    "id": "security_tools.mask_email",
+    "path": "modules/security_tools.py",
+    "symbol": "mask_email",
+    "text": "def mask_email(value):\n    local, domain = value.split('@', 1)\n    return local[:1] + '***@' + domain"
+  },
+  {
+    "id": "security_tools.redact_token",
+    "path": "modules/security_tools.py",
+    "symbol": "redact_token",
+    "text": "def redact_token(value):\n    return value[:4] + '...' if len(value) > 4 else '...'"
+  },
+  {
+    "id": "security_tools.is_safe_redirect",
+    "path": "modules/security_tools.py",
+    "symbol": "is_safe_redirect",
+    "text": "def is_safe_redirect(url):\n    return url.startswith('/') and (not url.startswith('//'))"
+  },
+  {
+    "id": "security_tools.constant_label",
+    "path": "modules/security_tools.py",
+    "symbol": "constant_label",
+    "text": "def constant_label(value):\n    return 'set' if value else 'missing'"
+  },
+  {
+    "id": "security_tools.safe_header_value",
+    "path": "modules/security_tools.py",
+    "symbol": "safe_header_value",
+    "text": "def safe_header_value(value):\n    if '\\n' in value:\n        raise ValueError('header value contains a line break')\n    return value.strip()"
+  },
+  {
+    "id": "security_tools.require_origin",
+    "path": "modules/security_tools.py",
+    "symbol": "require_origin",
+    "text": "def require_origin(origin, allowed):\n    if origin not in allowed:\n        raise PermissionError('origin is not allowed')\n    return origin"
+  },
+  {
+    "id": "text_tools.normalize_whitespace",
+    "path": "modules/text_tools.py",
+    "symbol": "normalize_whitespace",
+    "text": "def normalize_whitespace(value):\n    return ' '.join(value.split())"
+  },
+  {
+    "id": "text_tools.truncate_words",
+    "path": "modules/text_tools.py",
+    "symbol": "truncate_words",
+    "text": "def truncate_words(value, limit):\n    words = value.split()\n    return ' '.join(words[:limit])"
+  },
+  {
+    "id": "text_tools.first_nonempty",
+    "path": "modules/text_tools.py",
+    "symbol": "first_nonempty",
+    "text": "def first_nonempty(lines):\n    return next((line for line in lines if line.strip()), '')"
+  },
+  {
+    "id": "text_tools.split_csv_line",
+    "path": "modules/text_tools.py",
+    "symbol": "split_csv_line",
+    "text": "def split_csv_line(value):\n    return [part.strip() for part in value.split(',') if part.strip()]"
+  },
+  {
+    "id": "text_tools.clamp_excerpt",
+    "path": "modules/text_tools.py",
+    "symbol": "clamp_excerpt",
+    "text": "def clamp_excerpt(value, limit):\n    if limit <= 0:\n        return ''\n    if len(value) <= limit:\n        return value\n    return value[:limit - 3] + '...'"
+  },
+  {
+    "id": "text_tools.is_blank",
+    "path": "modules/text_tools.py",
+    "symbol": "is_blank",
+    "text": "def is_blank(value):\n    return not value or value.isspace()"
+  },
+  {
+    "id": "time_tools.seconds_to_minutes",
+    "path": "modules/time_tools.py",
+    "symbol": "seconds_to_minutes",
+    "text": "def seconds_to_minutes(seconds):\n    return seconds / 60"
+  },
+  {
+    "id": "time_tools.format_duration",
+    "path": "modules/time_tools.py",
+    "symbol": "format_duration",
+    "text": "def format_duration(seconds):\n    minutes, remainder = divmod(int(seconds), 60)\n    return f'{minutes}:{remainder:02d}'"
+  },
+  {
+    "id": "time_tools.is_weekend",
+    "path": "modules/time_tools.py",
+    "symbol": "is_weekend",
+    "text": "def is_weekend(weekday):\n    return weekday >= 5"
+  },
+  {
+    "id": "time_tools.add_seconds",
+    "path": "modules/time_tools.py",
+    "symbol": "add_seconds",
+    "text": "def add_seconds(timestamp, seconds):\n    return timestamp + seconds"
+  },
+  {
+    "id": "time_tools.retry_delays",
+    "path": "modules/time_tools.py",
+    "symbol": "retry_delays",
+    "text": "def retry_delays(attempts, base_seconds):\n    if attempts < 0 or base_seconds < 0:\n        raise ValueError('attempts and base_seconds must be non-negative')\n    return [base_seconds * 2 ** attempt for attempt in range(attempts + 1)]"
+  },
+  {
+    "id": "time_tools.elapsed",
+    "path": "modules/time_tools.py",
+    "symbol": "elapsed",
+    "text": "def elapsed(start, end):\n    return end - start"
+  }
+]

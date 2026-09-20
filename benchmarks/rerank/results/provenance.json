@@ -1,0 +1,52 @@
+{
+  "dataset": "mteb/CodeSearchNetRetrieval",
+  "revision": "68e8f0731a656fa4bd5b7c81936d95ad48a39bfe",
+  "retrieved_at_utc": "2026-09-20T08:26:52.584631+00:00",
+  "source": "https://datasets-server.huggingface.co/rows",
+  "license": "mit",
+  "seed": 20260920,
+  "raw_rows": {
+    "corpus": 1000,
+    "queries": 1000,
+    "qrels": 1000
+  },
+  "raw_sha256": {
+    "python-corpus.json": "a0d52f7456b11e787859a4caaa1fac3f91cda1f51a1b504121e065117bc6fcd3",
+    "python-qrels.json": "b2b784af31a9e2f2ecb9dc0588485bad541bcfbc266edf773c398d358e25a3ae",
+    "python-queries.json": "dd131c63874fa69e6deeb6952569595c22434648e1e4a01a30b9a04d2f2c8572"
+  },
+  "cleaning": {
+    "method": "ast.parse(textwrap.dedent(source)); remove leading docstrings in module/class/function scopes; ast.unparse",
+    "unparseable_or_empty_corpus": 11,
+    "deduplicated_exact_cleaned_functions": 0,
+    "clean_unique_corpus": 989
+  },
+  "leak_audit": {
+    "normalization": "lowercase and collapse whitespace; exact normalized query substring in cleaned candidate",
+    "query_candidate_pairs": 0,
+    "candidates_removed": 0,
+    "affected_queries": 0,
+    "removed_candidate_ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "eligible": {
+    "corpus": 989,
+    "queries": 989,
+    "queries_lost_to_unparseable_gold": 11,
+    "sampled_queries": 64
+  },
+  "bm25": {
+    "implementation": "benchmarks/rerank/run.py retrieve-equivalent BM25; top_k=30; full eligible cleaned corpus",
+    "all_case_candidate_recall_at_30": {
+      "hits": 61,
+      "total": 64,
+      "rate": 0.953125
+    }
+  },
+  "artifacts": {
+    "input_sha256": "7731a33a2092ffa50efeb2d70f305c9a0b7946068b471ee839357d80f2875362"
+  },
+  "notes": [
+    "Cases with no gold candidate in BM25 top 30 are retained.",
+    "Raw source rows are outside the repository; review the derived input's dataset licensing before committing it."
+  ]
+}

@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "604",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 11918,
+      "outputTokens": 444
+    },
+    "api_ms": 1027,
+    "wall_ms": 1027.901084,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L875-L886",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L1002-L1098",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L905-L999",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/dtype_util.py#L132-L139",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L642-L683"
+    ]
+  },
+  {
+    "id": "651",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12607,
+      "outputTokens": 444
+    },
+    "api_ms": 482,
+    "wall_ms": 482.7657909999998,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/vae.py#L228-L268",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/conv_variational.py#L249-L284",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/internal/distribution_tensor_coercible.py#L71-L128",
+      "https://github.com/deepmipt/DeepPavlov/blob/f3e4a69a3764d25d2f5bad4f1f1aebc872b00f9c/deeppavlov/core/layers/tf_layers.py#L447-L472",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/disentangled_vae.py#L358-L391"
+    ]
+  },
+  {
+    "id": "731",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13441,
+      "outputTokens": 444
+    },
+    "api_ms": 365,
+    "wall_ms": 365.25649999999996,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_container_hook.py#L111-L129",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_container_hook.py#L170-L219",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/executors/kubernetes_executor.py#L493-L511",
+      "https://github.com/intel-analytics/BigDL/blob/e9c19788285986ab789a2e2998f9a85d7524779f/pyspark/bigdl/util/common.py#L306-L345",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/file_to_gcs.py#L68-L82"
+    ]
+  },
+  {
+    "id": "286",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 17605,
+      "outputTokens": 444
+    },
+    "api_ms": 361,
+    "wall_ms": 362.198208,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/taskinstance.py#L550-L586",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/databricks_operator.py#L61-L92",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/taskinstance.py#L690-L822",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/dagrun.py#L242-L329",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L897-L954"
+    ]
+  },
+  {
+    "id": "130",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13814,
+      "outputTokens": 444
+    },
+    "api_ms": 322,
+    "wall_ms": 322.7747909999998,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/soimort/you-get/blob/b746ac01c9f39de94cac2d56f665285b0523b974/src/you_get/extractors/youtube.py#L135-L143",
+      "https://github.com/asciimoo/searx/blob/a84caa22cf947e973c10aa968d35fb2bdda6d048/searx/webapp.py#L668-L725",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/sts/forecast.py#L35-L169",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/sagemaker_hook.py#L180-L201",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/blockwise.py#L229-L269"
+    ]
+  },
+  {
+    "id": "466",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 11139,
+      "outputTokens": 444
+    },
+    "api_ms": 321,
+    "wall_ms": 320.9948750000003,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/sagemaker_hook.py#L134-L155",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/sagemaker_hook.py#L157-L178",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/S3_hook.py#L316-L350",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/mysql_to_gcs.py#L210-L253",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/mongo_to_s3.py#L71-L103"
+    ]
+  },
+  {
+    "id": "932",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12223,
+      "outputTokens": 444
+    },
+    "api_ms": 328,
+    "wall_ms": 328.8420420000002,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/intel-analytics/BigDL/blob/e9c19788285986ab789a2e2998f9a85d7524779f/pyspark/bigdl/models/local_lenet/local_lenet.py#L25-L35",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/bayesian_neural_network.py#L190-L210",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/bayesian_neural_network.py#L161-L187",
+      "https://github.com/pytorch/vision/blob/3afcf3cd49661c466c75ea536b0b2a7ff57f9a05/torchvision/datasets/mnist.py#L132-L164",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/vae.py#L462-L476"
+    ]
+  },
+  {
+    "id": "840",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 16771,
+      "outputTokens": 444
+    },
+    "api_ms": 327,
+    "wall_ms": 327.88216699999975,
+    "top1": false,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/taskinstance.py#L550-L586",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/ti_deps/deps/base_ti_dep.py#L78-L107",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/ti_deps/deps/ready_to_reschedule.py#L34-L69",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/ti_deps/deps/base_ti_dep.py#L110-L125",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/__init__.py#L32-L65"
+    ]
+  },
+  {
+    "id": "422",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 11490,
+      "outputTokens": 444
+    },
+    "api_ms": 283,
+    "wall_ms": 283.100375,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/joint_distribution_sequential.py#L475-L487",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/joint_distribution_named.py#L245-L267",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/edward2/generated_random_variables.py#L148-L175",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/distribution_layer.py#L696-L720",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/S3_hook.py#L384-L422"
+    ]
+  },
+  {
+    "id": "355",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12990,
+      "outputTokens": 444
+    },
+    "api_ms": 310,
+    "wall_ms": 310.4940410000004,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/settings.py#L220-L235",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/sagemaker_hook.py#L627-L686",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/plugins_manager.py#L79-L98",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/taskinstance.py#L825-L943",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/dense_variational.py#L193-L213"
+    ]
+  },
+  {
+    "id": "247",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 15652,
+      "outputTokens": 444
+    },
+    "api_ms": 300,
+    "wall_ms": 300.25633299999936,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/api/common/experimental/mark_tasks.py#L243-L280",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L1282-L1322",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/xcom.py#L188-L218",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/taskinstance.py#L295-L361",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L1362-L1399"
+    ]
+  },
+  {
+    "id": "991",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 14782,
+      "outputTokens": 444
+    },
+    "api_ms": 316,
+    "wall_ms": 316.3306250000005,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/api/experimental/endpoints.py#L198-L232",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/macros/__init__.py#L28-L46",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/macros/hive.py#L83-L118",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/ftp_hook.py#L274-L288",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/mlengine_operator.py#L29-L62"
+    ]
+  },
+  {
+    "id": "451",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 10688,
+      "outputTokens": 444
+    },
+    "api_ms": 293,
+    "wall_ms": 293.12433299999975,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/decorators.py#L61-L94",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/utils/compression.py#L26-L43",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/security.py#L344-L363",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/prefer_static.py#L41-L56",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/decorators.py#L97-L127"
+    ]
+  },
+  {
+    "id": "356",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13043,
+      "outputTokens": 444
+    },
+    "api_ms": 318,
+    "wall_ms": 317.76483299999927,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/spark_submit_hook.py#L322-L376",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/spark_submit_hook.py#L448-L511",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/spark_submit_operator.py#L147-L176",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/task/task_runner/base_task_runner.py#L101-L135",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/hive_hooks.py#L171-L255"
+    ]
+  },
+  {
+    "id": "21",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13699,
+      "outputTokens": 444
+    },
+    "api_ms": 332,
+    "wall_ms": 332.2380409999996,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/bin/cli.py#L579-L600",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/sqoop_hook.py#L92-L116",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L1042-L1214",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L1282-L1322",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/dagrun.py#L115-L160"
+    ]
+  },
+  {
+    "id": "129",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12428,
+      "outputTokens": 444
+    },
+    "api_ms": 272,
+    "wall_ms": 272.7457910000003,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_function_hook.py#L89-L107",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/__init__.py#L32-L65",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_sql_hook.py#L205-L226",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_sql_hook.py#L115-L133",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_compute_hook.py#L189-L220"
+    ]
+  },
+  {
+    "id": "746",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 17112,
+      "outputTokens": 444
+    },
+    "api_ms": 334,
+    "wall_ms": 335.07166700000016,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L1442-L1484",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L2445-L2458",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/executors/kubernetes_executor.py#L606-L653",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L766-L894",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L897-L954"
+    ]
+  },
+  {
+    "id": "299",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13585,
+      "outputTokens": 444
+    },
+    "api_ms": 330,
+    "wall_ms": 330.5735829999994,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_spanner_hook.py#L163-L181",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/security.py#L366-L438",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_spanner_hook.py#L291-L325",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_spanner_hook.py#L212-L244",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_spanner_hook.py#L247-L288"
+    ]
+  },
+  {
+    "id": "526",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 9584,
+      "outputTokens": 444
+    },
+    "api_ms": 368,
+    "wall_ms": 368.22120799999993,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/internal/slicing.py#L145-L155",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/distribution_layer.py#L1084-L1103",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/bigquery_hook.py#L1832-L1843",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/distribution_layer.py#L696-L720",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/distribution_layer.py#L349-L360"
+    ]
+  },
+  {
+    "id": "944",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 11426,
+      "outputTokens": 444
+    },
+    "api_ms": 322,
+    "wall_ms": 322.1965,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/sagemaker_hook.py#L180-L201",
+      "https://github.com/soimort/you-get/blob/b746ac01c9f39de94cac2d56f665285b0523b974/src/you_get/common.py#L285-L299",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/sagemaker_hook.py#L398-L426",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/S3_hook.py#L185-L202",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/wasb_hook.py#L50-L64"
+    ]
+  },
+  {
+    "id": "484",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12063,
+      "outputTokens": 444
+    },
+    "api_ms": 314,
+    "wall_ms": 314.3799170000002,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/postgres_to_gcs_operator.py#L207-L224",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/datadog_hook.py#L88-L111",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/salesforce_hook.py#L186-L293",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/sts/internal/util.py#L201-L252",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/sts/internal/util.py#L296-L329"
+    ]
+  },
+  {
+    "id": "911",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 14081,
+      "outputTokens": 444
+    },
+    "api_ms": 295,
+    "wall_ms": 295.8063749999992,
+    "top1": false,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/bin/cli.py#L240-L257",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/mcmc/internal/util.py#L74-L111",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/experimental/mcmc/elliptical_slice_sampler.py#L405-L417",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/mcmc/diagnostic.py#L401-L410",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/mcmc/diagnostic.py#L35-L143"
+    ]
+  },
+  {
+    "id": "995",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 15338,
+      "outputTokens": 444
+    },
+    "api_ms": 317,
+    "wall_ms": 317.06483300000036,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/vector_diffeomixture.py#L108-L199",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/poisson_lognormal.py#L88-L152",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/stats/quantiles.py#L626-L723",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L1864-L1929",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/vector_diffeomixture.py#L776-L811"
+    ]
+  },
+  {
+    "id": "843",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 14595,
+      "outputTokens": 444
+    },
+    "api_ms": 390,
+    "wall_ms": 390.3169169999983,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/independent.py#L279-L339",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/distribution_layer.py#L1309-L1349",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/blockwise.py#L229-L269",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/normal.py#L241-L261",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/bijectors/chain.py#L40-L109"
+    ]
+  },
+  {
+    "id": "896",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 10743,
+      "outputTokens": 444
+    },
+    "api_ms": 293,
+    "wall_ms": 293.46137500000077,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/soimort/you-get/blob/b746ac01c9f39de94cac2d56f665285b0523b974/src/you_get/extractors/ixigua.py#L34-L78",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/bijectors/masked_autoregressive.py#L903-L954",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/edward2/generated_random_variables.py#L83-L94",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/vae.py#L462-L476",
+      "https://github.com/pytorch/vision/blob/3afcf3cd49661c466c75ea536b0b2a7ff57f9a05/torchvision/transforms/transforms.py#L1064-L1089"
+    ]
+  },
+  {
+    "id": "404",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 11931,
+      "outputTokens": 444
+    },
+    "api_ms": 318,
+    "wall_ms": 318.25091599999905,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/static_config.py#L29-L68",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/configuration.py#L484-L491",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/docs/exts/docroles.py#L58-L88",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_api_base_hook.py#L82-L129",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/http_hook.py#L85-L131"
+    ]
+  },
+  {
+    "id": "127",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 9765,
+      "outputTokens": 444
+    },
+    "api_ms": 278,
+    "wall_ms": 278.02220900000066,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_spanner_hook.py#L163-L181",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_spanner_hook.py#L247-L288",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/presto_hook.py#L67-L78",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/bin/cli.py#L240-L257",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/api/experimental/endpoints.py#L198-L232"
+    ]
+  },
+  {
+    "id": "70",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 9129,
+      "outputTokens": 444
+    },
+    "api_ms": 263,
+    "wall_ms": 263.87987500000054,
+    "top1": false,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_sql_hook.py#L343-L368",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_dataproc_hook.py#L243-L247",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/dataflow_operator.py#L363-L380",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_sql_hook.py#L163-L180",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_sql_hook.py#L282-L310"
+    ]
+  },
+  {
+    "id": "192",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 14950,
+      "outputTokens": 444
+    },
+    "api_ms": 320,
+    "wall_ms": 320.1940419999992,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/_vendor/nvd3/NVD3Chart.py#L374-L383",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/bin/cli.py#L240-L257",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/opsgenie_alert_operator.py#L107-L124",
+      "https://github.com/soimort/you-get/blob/b746ac01c9f39de94cac2d56f665285b0523b974/src/you_get/extractors/bigthink.py#L22-L49",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/ssh_hook.py#L144-L185"
+    ]
+  },
+  {
+    "id": "257",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 14346,
+      "outputTokens": 444
+    },
+    "api_ms": 344,
+    "wall_ms": 343.8734170000007,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/security.py#L440-L453",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/security.py#L366-L438",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/security.py#L236-L244",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/security.py#L246-L266",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/sqoop_operator.py#L166-L234"
+    ]
+  },
+  {
+    "id": "442",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 17811,
+      "outputTokens": 444
+    },
+    "api_ms": 335,
+    "wall_ms": 335.7610000000004,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L897-L954",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L1042-L1214",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L1325-L1359",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L223-L298",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L2118-L2366"
+    ]
+  },
+  {
+    "id": "868",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 10912,
+      "outputTokens": 444
+    },
+    "api_ms": 316,
+    "wall_ms": 316.83416699999907,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/distribution_layer.py#L696-L720",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_vision_hook.py#L128-L161",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/distribution_layer.py#L1084-L1103",
+      "https://github.com/deepmipt/DeepPavlov/blob/f3e4a69a3764d25d2f5bad4f1f1aebc872b00f9c/deeppavlov/core/commands/train.py#L61-L66",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/independent.py#L279-L339"
+    ]
+  },
+  {
+    "id": "189",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 9522,
+      "outputTokens": 444
+    },
+    "api_ms": 300,
+    "wall_ms": 300.2306249999983,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/discord_webhook_operator.py#L85-L98",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/discord_webhook_hook.py#L126-L140",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/discord_webhook_hook.py#L102-L124",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/slack_webhook_operator.py#L84-L99",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/operators/slack_operator.py#L79-L87"
+    ]
+  },
+  {
+    "id": "389",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12077,
+      "outputTokens": 444
+    },
+    "api_ms": 297,
+    "wall_ms": 297.06624999999985,
+    "top1": false,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcs_hook.py#L54-L96",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/wasb_hook.py#L50-L64",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcs_hook.py#L208-L221",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/mysql_to_gcs.py#L290-L310",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L905-L999"
+    ]
+  },
+  {
+    "id": "508",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12791,
+      "outputTokens": 444
+    },
+    "api_ms": 312,
+    "wall_ms": 312.1850839999988,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/asciimoo/searx/blob/a84caa22cf947e973c10aa968d35fb2bdda6d048/searx/engines/duden.py#L26-L39",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/http_hook.py#L85-L131",
+      "https://github.com/asciimoo/searx/blob/a84caa22cf947e973c10aa968d35fb2bdda6d048/searx/webapp.py#L668-L725",
+      "https://github.com/soimort/you-get/blob/b746ac01c9f39de94cac2d56f665285b0523b974/src/you_get/common.py#L457-L501",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/opsgenie_alert_hook.py#L61-L74"
+    ]
+  },
+  {
+    "id": "954",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 10561,
+      "outputTokens": 444
+    },
+    "api_ms": 291,
+    "wall_ms": 291.6521670000002,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/datastore_hook.py#L213-L233",
+      "https://github.com/pytorch/vision/blob/3afcf3cd49661c466c75ea536b0b2a7ff57f9a05/torchvision/datasets/utils.py#L139-L171",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_sql_hook.py#L163-L180",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_transfer_hook.py#L246-L262",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_transfer_hook.py#L235-L243"
+    ]
+  },
+  {
+    "id": "492",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 14120,
+      "outputTokens": 444
+    },
+    "api_ms": 319,
+    "wall_ms": 318.5446670000001,
+    "top1": false,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/disentangled_vae.py#L488-L515",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/disentangled_vae.py#L283-L315",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/disentangled_vae.py#L216-L229",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/batch_reshape.py#L294-L377",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/layers/distribution_layer.py#L349-L360"
+    ]
+  },
+  {
+    "id": "577",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13641,
+      "outputTokens": 444
+    },
+    "api_ms": 364,
+    "wall_ms": 365.19845800000076,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/stats/sample_stats.py#L646-L661",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/poisson_lognormal.py#L88-L152",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/math/linalg.py#L898-L911",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/finite_discrete.py#L248-L297",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/sts/internal/util.py#L255-L293"
+    ]
+  },
+  {
+    "id": "930",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12507,
+      "outputTokens": 444
+    },
+    "api_ms": 302,
+    "wall_ms": 301.6270829999994,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/math/linalg.py#L898-L911",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/hidden_markov_model.py#L908-L911",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/sts/seasonal.py#L573-L604",
+      "https://github.com/pytorch/vision/blob/3afcf3cd49661c466c75ea536b0b2a7ff57f9a05/torchvision/transforms/functional.py#L410-L432",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/math/linalg.py#L323-L445"
+    ]
+  },
+  {
+    "id": "225",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 15491,
+      "outputTokens": 444
+    },
+    "api_ms": 335,
+    "wall_ms": 335.08074999999917,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/api/common/experimental/get_task_instance.py#L25-L55",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/scripts/perf/scheduler_ops_metrics.py#L65-L101",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/api/experimental/endpoints.py#L198-L232",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcs_hook.py#L54-L96",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/dagrun.py#L191-L206"
+    ]
+  },
+  {
+    "id": "330",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12442,
+      "outputTokens": 444
+    },
+    "api_ms": 306,
+    "wall_ms": 306.67062500000065,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/datastore_hook.py#L123-L152",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_mlengine_hook.py#L165-L183",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/datastore_hook.py#L83-L100",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/datastore_hook.py#L154-L168",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_mlengine_hook.py#L185-L200"
+    ]
+  },
+  {
+    "id": "715",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 10799,
+      "outputTokens": 444
+    },
+    "api_ms": 301,
+    "wall_ms": 301.36512500000026,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/azure_fileshare_hook.py#L64-L81",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/wasb_hook.py#L50-L64",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/azure_fileshare_hook.py#L47-L62",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/azure_fileshare_hook.py#L83-L99",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/bigquery_hook.py#L124-L147"
+    ]
+  },
+  {
+    "id": "673",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12607,
+      "outputTokens": 444
+    },
+    "api_ms": 299,
+    "wall_ms": 298.65179200000057,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_natural_language_hook.py#L56-L80",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_natural_language_hook.py#L163-L195",
+      "https://github.com/asciimoo/searx/blob/a84caa22cf947e973c10aa968d35fb2bdda6d048/searx/webapp.py#L668-L725",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_vision_hook.py#L527-L548",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/bigquery_hook.py#L1533-L1598"
+    ]
+  },
+  {
+    "id": "822",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13786,
+      "outputTokens": 444
+    },
+    "api_ms": 310,
+    "wall_ms": 310.95187499999884,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/optimizer/bfgs.py#L327-L352",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/optimizer/lbfgs.py#L80-L260",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/optimizer/bfgs.py#L289-L319",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/taskinstance.py#L644-L650",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/optimizer/linesearch/hager_zhang.py#L545-L576"
+    ]
+  },
+  {
+    "id": "538",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13578,
+      "outputTokens": 444
+    },
+    "api_ms": 311,
+    "wall_ms": 311.33370900000045,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/independent.py#L279-L339",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/vi/csiszar_divergence.py#L620-L661",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L2103-L2159",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/math/linalg.py#L898-L911",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/lkj.py#L371-L410"
+    ]
+  },
+  {
+    "id": "844",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 14935,
+      "outputTokens": 444
+    },
+    "api_ms": 388,
+    "wall_ms": 387.7317920000005,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L2162-L2195",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L905-L999",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_transfer_hook.py#L323-L348",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/bin/cli.py#L240-L257",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/vector_diffeomixture.py#L776-L811"
+    ]
+  },
+  {
+    "id": "514",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12197,
+      "outputTokens": 444
+    },
+    "api_ms": 302,
+    "wall_ms": 302.6376249999994,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/vae.py#L191-L225",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/joint_distribution_named.py#L245-L267",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/disentangled_vae.py#L488-L515",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/latent_dirichlet_allocation_distributions.py#L164-L194",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/latent_dirichlet_allocation_edward2.py#L194-L223"
+    ]
+  },
+  {
+    "id": "365",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 16136,
+      "outputTokens": 444
+    },
+    "api_ms": 323,
+    "wall_ms": 324.4954999999991,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/utils/cli_action_loggers.py#L72-L86",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/models/taskinstance.py#L825-L943",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L609-L738",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/__init__.py#L32-L65",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/ftp_hook.py#L152-L223"
+    ]
+  },
+  {
+    "id": "481",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12287,
+      "outputTokens": 444
+    },
+    "api_ms": 358,
+    "wall_ms": 358.12945800000125,
+    "top1": false,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/hdfs_hook.py#L57-L98",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/webhdfs_hook.py#L56-L79",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/hive_hooks.py#L489-L524",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcs_hook.py#L477-L513",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/sensors/hdfs_sensor.py#L57-L74"
+    ]
+  },
+  {
+    "id": "233",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 10763,
+      "outputTokens": 444
+    },
+    "api_ms": 306,
+    "wall_ms": 307.09150000000227,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_container_hook.py#L96-L108",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_sql_hook.py#L343-L368",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_sql_hook.py#L282-L310",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_compute_hook.py#L69-L97",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_compute_hook.py#L189-L220"
+    ]
+  },
+  {
+    "id": "563",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 10928,
+      "outputTokens": 444
+    },
+    "api_ms": 396,
+    "wall_ms": 396.88941599999816,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/utils.py#L193-L201",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/api/experimental/endpoints.py#L198-L232",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/mssql_to_gcs.py#L201-L211",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/databricks_operator.py#L34-L58",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/salesforce_hook.py#L186-L293"
+    ]
+  },
+  {
+    "id": "431",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13377,
+      "outputTokens": 444
+    },
+    "api_ms": 318,
+    "wall_ms": 317.79241700000057,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/macros/hive.py#L58-L80",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/macros/hive.py#L83-L118",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/ti_deps/deps/ready_to_reschedule.py#L34-L69",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/mysql_to_gcs.py#L290-L310",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/utils/dates.py#L36-L111"
+    ]
+  },
+  {
+    "id": "638",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 14543,
+      "outputTokens": 444
+    },
+    "api_ms": 294,
+    "wall_ms": 293.9669580000009,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/hive_hooks.py#L608-L638",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/macros/hive.py#L83-L118",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/hive_hooks.py#L529-L554",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/aws_glue_catalog_hook.py#L95-L118",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/macros/hive.py#L23-L55"
+    ]
+  },
+  {
+    "id": "222",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13086,
+      "outputTokens": 444
+    },
+    "api_ms": 309,
+    "wall_ms": 309.4001250000001,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/ti_deps/deps/ready_to_reschedule.py#L34-L69",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_container_hook.py#L170-L219",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_container_hook.py#L131-L168",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/postgres_to_gcs_operator.py#L207-L224",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_vision_hook.py#L128-L161"
+    ]
+  },
+  {
+    "id": "35",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 10312,
+      "outputTokens": 444
+    },
+    "api_ms": 363,
+    "wall_ms": 363.28079100000105,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/mysql_hook.py#L62-L105",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/mysql_to_gcs.py#L134-L142",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/spark_submit_hook.py#L215-L297",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/cloudant_hook.py#L40-L59",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/S3_hook.py#L459-L518"
+    ]
+  },
+  {
+    "id": "151",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 13963,
+      "outputTokens": 444
+    },
+    "api_ms": 364,
+    "wall_ms": 364.62404199999946,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/security/kerberos.py#L100-L110",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L1864-L1929",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/hive_hooks.py#L489-L524",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/bijectors/blockwise.py#L151-L172",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L2637-L2673"
+    ]
+  },
+  {
+    "id": "366",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12421,
+      "outputTokens": 444
+    },
+    "api_ms": 318,
+    "wall_ms": 318.59300000000076,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/imap_hook.py#L49-L66",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/imap_hook.py#L68-L102",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/imap_hook.py#L104-L141",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/operators/imap_attachment_to_s3_operator.py#L67-L88",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/utils/email.py#L53-L96"
+    ]
+  },
+  {
+    "id": "457",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 15746,
+      "outputTokens": 444
+    },
+    "api_ms": 329,
+    "wall_ms": 329.2833329999994,
+    "top1": false,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/configuration.py#L346-L405",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/special_math.py#L186-L288",
+      "https://github.com/soimort/you-get/blob/b746ac01c9f39de94cac2d56f665285b0523b974/src/you_get/common.py#L457-L501",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_sql_hook.py#L282-L310",
+      "https://github.com/soimort/you-get/blob/b746ac01c9f39de94cac2d56f665285b0523b974/src/you_get/extractors/ixigua.py#L34-L78"
+    ]
+  },
+  {
+    "id": "581",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 16281,
+      "outputTokens": 444
+    },
+    "api_ms": 363,
+    "wall_ms": 363.9169589999983,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/bijectors/affine.py#L238-L309",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L180-L278",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/internal/distribution_util.py#L1198-L1271",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/vector_diffeomixture.py#L899-L933",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/vector_diffeomixture.py#L882-L896"
+    ]
+  },
+  {
+    "id": "697",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12288,
+      "outputTokens": 444
+    },
+    "api_ms": 350,
+    "wall_ms": 350.2704169999997,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/pytorch/vision/blob/3afcf3cd49661c466c75ea536b0b2a7ff57f9a05/torchvision/datasets/mnist.py#L262-L304",
+      "https://github.com/pytorch/vision/blob/3afcf3cd49661c466c75ea536b0b2a7ff57f9a05/torchvision/datasets/mnist.py#L132-L164",
+      "https://github.com/pytorch/vision/blob/3afcf3cd49661c466c75ea536b0b2a7ff57f9a05/torchvision/datasets/utils.py#L54-L90",
+      "https://github.com/pytorch/vision/blob/3afcf3cd49661c466c75ea536b0b2a7ff57f9a05/torchvision/datasets/utils.py#L139-L171",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/hooks/S3_hook.py#L384-L422"
+    ]
+  },
+  {
+    "id": "547",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12247,
+      "outputTokens": 444
+    },
+    "api_ms": 303,
+    "wall_ms": 302.9756249999991,
+    "top1": false,
+    "recall5": false,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/security.py#L246-L266",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/security.py#L236-L244",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/security.py#L294-L301",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/www/security.py#L366-L438",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/distributions/joint_distribution.py#L324-L341"
+    ]
+  },
+  {
+    "id": "798",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 17484,
+      "outputTokens": 444
+    },
+    "api_ms": 419,
+    "wall_ms": 419.36483299999963,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L342-L417",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/executors/kubernetes_executor.py#L606-L653",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/utils/dag_processing.py#L810-L854",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L1526-L1666",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/jobs.py#L1669-L1787"
+    ]
+  },
+  {
+    "id": "623",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 17098,
+      "outputTokens": 444
+    },
+    "api_ms": 329,
+    "wall_ms": 329.3620840000003,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/bayesian_neural_network.py#L124-L158",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/logistic_regression.py#L89-L131",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/bayesian_neural_network.py#L90-L121",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/examples/vq_vae.py#L324-L350",
+      "https://github.com/tensorflow/probability/blob/e87fe34111d68c35db0f9eeb4935f1ece9e1a8f5/tensorflow_probability/python/sts/structural_time_series.py#L161-L209"
+    ]
+  },
+  {
+    "id": "78",
+    "status": "ok",
+    "model": "jev-1.13.0",
+    "usage": {
+      "inputTokens": 12315,
+      "outputTokens": 444
+    },
+    "api_ms": 508,
+    "wall_ms": 508.7079169999997,
+    "top1": true,
+    "recall5": true,
+    "top5": [
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/executors/__init__.py#L64-L95",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/executors/__init__.py#L39-L53",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_sql_hook.py#L524-L565",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/contrib/hooks/gcp_compute_hook.py#L189-L220",
+      "https://github.com/apache/airflow/blob/b69c686ad8a0c89b9136bb4b31767257eb7b2597/airflow/executors/__init__.py#L31-L36"
+    ]
+  }
+]

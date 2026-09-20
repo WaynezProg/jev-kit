@@ -13,7 +13,7 @@ Jev Kit combines the batch engine from [jev-use](https://github.com/shitianfang/
 
 Use existing sources and tool outputs. You do not need an extra LLM summary before calling Jev. The host still constructs the tool input and reviews the result, so this does not establish lower total token cost, faster development, or a lower required thinking level.
 
-The current evidence supports a narrow candidate: [bounded browser decision loops](#where-jev-helped-bounded-browser-decision-loops). General inline review still added overhead, and evidence routing traded accuracy for speed in the [model-tier screening](benchmarks/model-tiers/results/RESULTS.md). Keep Jev optional and validate the workload. The positive browser result uses an experimental internal loop; simply installing the current four-tool MCP server does not provide that loop.
+The current evidence supports a narrow candidate: [bounded browser decision loops](#where-jev-helped-bounded-browser-decision-loops). [Code-search reranking](#code-search-reranking-results) improves paired-target ordering over lexical search, but trails Fable and did not speed up the small repair workflow. General inline review still added overhead, and evidence routing traded accuracy for speed in the [model-tier screening](benchmarks/model-tiers/results/RESULTS.md). Keep Jev optional and validate the workload. These browser/search integrations are experimental; installing the current four-tool MCP server does not provide them.
 
 ## Quick start
 
@@ -111,6 +111,49 @@ For manual integration, `node scripts/configure-mcp.mjs` creates a local `.mcp.j
 Example request after installation:
 
 > Use jev-kit to classify these issues into bug, feature, or manual review. Preserve IDs and unresolved items.
+
+## Code-search reranking results
+
+We tested a search-internal design: retrieve 30 candidates, have Jev score all
+30 in one request, then give the original top-five snippets to the main model.
+The agent does not retype or summarize sources for Jev. Original IDs/order are
+preserved, provider failure falls back to the original order, and remaining
+candidates stay available for expansion. This is an experimental adapter;
+`search_code`/`search_docs` are not shipped MCP tools. Only code was measured.
+
+The public retrieval screen samples 64 queries from CodeSearchNet Python, using
+989 functions after removing docstrings/comments and excluding unparseable
+items. All 64 are scored, including three whose target is absent from top30.
+Gold identifies the paired function; it is not exhaustive human relevance.
+
+| Assigned pipeline | Target ranked first | Target in top5 | Median added rank wall |
+|---|---:|---:|---:|
+| Original BM25 order | 30/64 (46.9%) | 48/64 (75.0%) | No model call |
+| Jev batched Score | 45/64 (70.3%) | 54/64 (84.4%) | 1.13 s |
+| Fable low, one top5 selection call | 60/64 (93.8%) | 61/64 (95.3%) | 3.32 s |
+
+Jev improves Top-1 by 23.4 percentage points over BM25, but remains 23.4 points
+behind Fable. The assigned Jev pipeline includes five raw-order fallbacks; the
+Fable pipeline includes two session-limit fallbacks with no model response.
+Timing includes process/network overhead; valid-response API medians are 1.07 s
+(Jev, n=59) and 1.55 s (Fable, n=62). **The frozen retrieval gate fails.**
+
+Eight authored Python repair tasks were then run twice across four arms. Every
+arm passes 16/16 hidden-test runs, but median total time is **4.42 s for BM25
+top5, 5.25 s for Jev top5, 7.64 s for Fable-reranked top5, and 4.36 s for direct
+top30**. All eight targets were already in BM25 top5, so this is an easy
+cost/regression screen. Jev cuts main-model input by about 45% versus full30,
+but BM25 top5 already achieves similar input size and is faster. **The frozen
+coding gate fails.** Repeats do not turn eight tasks into 16 independent tasks.
+
+A separate validation fix and rerun on all 64 queries produced 64/64 valid Jev
+responses, but Top-1 was 44/64 and Recall@5 was 51/64. This post-hoc diagnostic
+does not replace the original results or support a matched latency comparison.
+The recommendation remains **optional semantic search, with no default coding
+speedup claim**. Broader repository repair and documentation retrieval remain
+unverified.
+
+[Design](benchmarks/rerank/DESIGN.md) · [Reproduction](benchmarks/rerank/README.md) · [Results and failures](benchmarks/rerank/results/RESULTS.md) · [Rounding follow-up](benchmarks/rerank/results/ROUNDING.md) · [All attempts](benchmarks/rerank/results/runs.json)
 
 ## Where Jev helped: bounded browser decision loops
 
