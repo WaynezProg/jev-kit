@@ -110,6 +110,75 @@ Example request after installation:
 
 > Use jev-kit to classify these issues into bug, feature, or manual review. Preserve IDs and unresolved items.
 
+## Real coding-agent measurements (2026-09-20)
+
+Real authenticated CLI/model calls, using the same 18 source-evidence records and 25 issue-routing records in each A/B pair. These are controlled judgments inside coding agents, **not a benchmark of end-to-end coding productivity**. All profiles request low effort; provider effort labels are not equivalent.
+
+The full study contains **76 agent runs across six CLIs and four requested models**, plus 12 standalone Jev batches. The primary cohort has three repeats per task/arm (48 runs). Correct-label counts below aggregate repeated observations of the same records; times are per-batch medians.
+
+| Host / requested model | Task | Correct labels: direct → Jev | Seconds: direct → Jev | Valid Jev interventions |
+|---|---|---:|---:|---:|
+| Claude Code / Fable 5.1 | Issue routing | 75/75 → 75/75 | 6.31 → 23.19 | 3/3 |
+| Claude Code / Fable 5.1 | Code evidence | 54/54 → 54/54 | 5.47 → 97.42 | 3/3 |
+| Codex / GPT-5.6 Luna | Issue routing | 75/75 → 75/75 | 10.64 → 43.25 | 3/3 |
+| Codex / GPT-5.6 Luna | Code evidence | 52/54 → 52/54 | 12.76 → 146.58 | 0/3 |
+| Muse / Spark 1.3 Contributor | Issue routing | 75/75 → 75/75 | 32.10 → 37.43 | 3/3 |
+| Muse / Spark 1.3 Contributor | Code evidence | 53/54 → 51/54 | 24.57 → 58.00 | 2/3 |
+| Pi / GPT-5.6 Luna | Issue routing | 75/75 → 75/75 | 12.01 → 33.99 | 3/3 |
+| Pi / GPT-5.6 Luna | Code evidence | 52/54 → 53/54 | 15.19 → 140.45 | 0/3 |
+
+**The standard inline MCP/extension path did not show a consistent accuracy or speed benefit.** All primary issue-routing answers were correct in both arms. Code-evidence outcomes were mixed. One Codex direct run omitted a record; missing records count as wrong.
+
+Only 5 of 12 inline code-evidence interventions completed with preserved input: six calls changed source bytes and one was rejected for duplicate IDs. Correct final answers after failed/altered calls remain in the table; they do not establish that Jev helped. Harmless item reordering and absent/null optional quotes are normalized, but source text is compared exactly.
+
+Jev service work usually took about 1–2 seconds per batch. Host startup, argument generation and final review accounted for the rest. Where main-model usage was reported, inline delegation increased input and output tokens on these workloads. Muse did not report main-model token usage. Cached tokens are counted once, and token totals are not dollar charges.
+
+### Additional hosts
+
+A later, separate cohort used two repeats per task/arm (16 runs). It is not pooled with primary timing.
+
+| Host / requested model | Task | Correct labels: direct → Jev | Seconds: direct → Jev | Valid Jev interventions |
+|---|---|---:|---:|---:|
+| Grok Build / Grok 4.6 | Issue routing | 50/50 → 50/50 | 18.70 → 47.74 | 2/2 |
+| Grok Build / Grok 4.6 | Code evidence | 36/36 → 36/36 | 23.20 → 129.52 | 0/2 |
+| OpenCode / GPT-5.6 Luna | Issue routing | 50/50 → 50/50 | 9.14 → 32.49 | 2/2 |
+| OpenCode / GPT-5.6 Luna | Code evidence | 35/36 → 36/36 | 14.02 → 139.49 | 0/2 |
+
+The initially selected OpenCode Spark free endpoint returned HTTP 403 in its availability probe. Luna through existing OpenAI OAuth was selected before any scored additional-host run. The failed probe is [disclosed separately](benchmarks/agent-ab/results/availability.json).
+
+### Experimental fixed-file input
+
+A separate 12-run study used an empty-argument tool that reads the exact runner-provided input. It had fresh direct baselines, the same code-evidence records, and three repeats. All six file-tool calls preserved input.
+
+| Host / model | Correct labels: direct → file tool | Seconds: direct → file tool |
+|---|---:|---:|
+| Codex / GPT-5.6 Luna | 54/54 → 51/54 | 13.43 → 23.45 |
+| Pi / GPT-5.6 Luna | 51/54 → 51/54 | 16.15 → 15.94 |
+
+The file adapter greatly reduced the long inline-call overhead observed in the earlier phase, but did not establish an accuracy gain or a general advantage over direct judgment. **This adapter is benchmark code, not a shipped MCP feature.** The existing CLI already accepts input files.
+
+### Standalone Jev and batch composition
+
+With already prepared input and no host/model review, Jev was fast. We also repeated the direct-engine check with the exact shuffled orders used by the agents; input content and gold labels stayed fixed. Each cell has three repeats.
+
+| Input order / task | Median seconds | Raw correct | Unflagged correct | Held for review |
+|---|---:|---:|---:|---:|
+| Grouped / code evidence | 0.90 | 54/54 | 50/50 | 4 |
+| Grouped / issue routing | 1.06 | 75/75 | 60/60 | 15 |
+| Shuffled / code evidence | 0.91 | 50/54 | 36/37 | 17 |
+| Shuffled / issue routing | 1.14 | 75/75 | 60/60 | 15 |
+
+**One wrong code-evidence judgment was not flagged for review.** Confidence is not a correctness guarantee. Grouping/order and batch composition showed different outcomes in this small exploratory follow-up; the two order cohorts were sequential, not counterbalanced, so this is not a controlled causal estimate. Standalone timings exclude input preparation and agent review and must not be presented as completed-agent speedups.
+
+### How to use these findings
+
+- Prefer batches that already exist as structured data. Pass their original text through code or the CLI's `--input` path, then review unresolved rows. Avoid paying a model to rewrite long sources merely to invoke Jev.
+- Use inline MCP for compact, bounded judgments when the additional check is worth a tool round trip. Routine questions that the main model already handles well can stay on the direct path.
+- Test grouping related records by source or task; this sample suggests batch composition matters, but the improvement is not established generally.
+- Keep Jev optional. File-based transport is a promising integration improvement; lower thinking levels, better coding quality and lower total monetary cost still need separate experiments.
+
+Full [results and token tables](benchmarks/agent-ab/results/RESULTS.md), [per-run data](benchmarks/agent-ab/results/runs.json), [fixtures, methodology and reproduction commands](benchmarks/agent-ab/README.md) are public. Small repeat counts, authored gold labels, different host contexts and provider caching limit generalization. These tests do not establish that adding Jev lets you lower the model thinking level.
+
 ## Results and limits
 
 - Inspect `status` and each item's `requires_review`. A tentative answer marked for review is unresolved.
@@ -137,7 +206,7 @@ The offline suite exercises malformed responses, source/quote binding, batching,
 node scripts/smoke.mjs /tmp/new-jev-live-smoke.json
 ```
 
-Tests establish covered behavior, not semantic reliability on arbitrary tasks. No private benchmark dataset or local installation receipts are included in this repository.
+Tests establish covered behavior, not semantic reliability on arbitrary tasks. Only the public benchmark fixtures and sanitized metrics are included; private agent logs and local installation receipts are excluded.
 
 ## License and provenance
 

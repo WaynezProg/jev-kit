@@ -1,0 +1,1778 @@
+[
+  {
+    "workload": "issue-triage",
+    "repeat": 1,
+    "wall_s": 1.1151258750000002,
+    "status": "ok",
+    "correct": 25,
+    "total": 25,
+    "accepted": 20,
+    "accepted_correct": 20,
+    "review": 5,
+    "input_tokens": 7708,
+    "output_tokens": 1412,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "predictions": [
+      {
+        "id": "issue-01",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-02",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-03",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-04",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-05",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-06",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-07",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-08",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-09",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-10",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-11",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-12",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-13",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-14",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-15",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-16",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-17",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-18",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-19",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-20",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-21",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-22",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-23",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-24",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-25",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      }
+    ],
+    "order": "source-grouped"
+  },
+  {
+    "workload": "issue-triage",
+    "repeat": 2,
+    "wall_s": 1.043872292,
+    "status": "ok",
+    "correct": 25,
+    "total": 25,
+    "accepted": 20,
+    "accepted_correct": 20,
+    "review": 5,
+    "input_tokens": 7708,
+    "output_tokens": 1412,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "predictions": [
+      {
+        "id": "issue-01",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-02",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-03",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-04",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-05",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-06",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-07",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-08",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-09",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-10",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-11",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-12",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-13",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-14",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-15",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-16",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-17",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-18",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-19",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-20",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-21",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-22",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-23",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-24",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-25",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      }
+    ],
+    "order": "source-grouped"
+  },
+  {
+    "workload": "issue-triage",
+    "repeat": 3,
+    "wall_s": 1.0577849580000003,
+    "status": "ok",
+    "correct": 25,
+    "total": 25,
+    "accepted": 20,
+    "accepted_correct": 20,
+    "review": 5,
+    "input_tokens": 7708,
+    "output_tokens": 1412,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "predictions": [
+      {
+        "id": "issue-01",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-02",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-03",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-04",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-05",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-06",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-07",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-08",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-09",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-10",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-11",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-12",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-13",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-14",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-15",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-16",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-17",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-18",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-19",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-20",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-21",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-22",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-23",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-24",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-25",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      }
+    ],
+    "order": "source-grouped"
+  },
+  {
+    "workload": "repository-evidence",
+    "repeat": 1,
+    "wall_s": 1.2902435,
+    "status": "ok",
+    "correct": 18,
+    "total": 18,
+    "accepted": 16,
+    "accepted_correct": 16,
+    "review": 2,
+    "input_tokens": 13534,
+    "output_tokens": 777,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "predictions": [
+      {
+        "id": "probability-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "probability-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "probability-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "provider-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "provider-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "provider-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "batching-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "batching-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "batching-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "schema-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "schema-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "schema-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "projection-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "projection-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "projection-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      }
+    ],
+    "order": "source-grouped"
+  },
+  {
+    "workload": "repository-evidence",
+    "repeat": 2,
+    "wall_s": 0.8981707080000001,
+    "status": "ok",
+    "correct": 18,
+    "total": 18,
+    "accepted": 17,
+    "accepted_correct": 17,
+    "review": 1,
+    "input_tokens": 13534,
+    "output_tokens": 777,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "predictions": [
+      {
+        "id": "probability-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "probability-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "probability-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "provider-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "provider-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "provider-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "batching-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "batching-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "batching-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "schema-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "schema-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "schema-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "projection-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "projection-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "projection-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      }
+    ],
+    "order": "source-grouped"
+  },
+  {
+    "workload": "repository-evidence",
+    "repeat": 3,
+    "wall_s": 0.7667959590000001,
+    "status": "ok",
+    "correct": 18,
+    "total": 18,
+    "accepted": 17,
+    "accepted_correct": 17,
+    "review": 1,
+    "input_tokens": 13534,
+    "output_tokens": 777,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "predictions": [
+      {
+        "id": "probability-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "probability-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "probability-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "provider-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "provider-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "provider-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "batching-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "batching-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "batching-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "schema-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "schema-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "schema-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "projection-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "projection-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "projection-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      }
+    ],
+    "order": "source-grouped"
+  },
+  {
+    "workload": "issue-triage",
+    "repeat": 1,
+    "wall_s": 1.291292625,
+    "status": "ok",
+    "correct": 25,
+    "total": 25,
+    "accepted": 20,
+    "accepted_correct": 20,
+    "review": 5,
+    "input_tokens": 7708,
+    "output_tokens": 1412,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "order": "agent-shuffled",
+    "predictions": [
+      {
+        "id": "issue-25",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-09",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-22",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-16",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-10",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-19",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-18",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-01",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-04",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-17",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-14",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-05",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-15",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-21",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-20",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-11",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-23",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-12",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-13",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-06",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-24",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-03",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-07",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-02",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-08",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      }
+    ]
+  },
+  {
+    "workload": "issue-triage",
+    "repeat": 2,
+    "wall_s": 1.143747875,
+    "status": "ok",
+    "correct": 25,
+    "total": 25,
+    "accepted": 20,
+    "accepted_correct": 20,
+    "review": 5,
+    "input_tokens": 7708,
+    "output_tokens": 1412,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "order": "agent-shuffled",
+    "predictions": [
+      {
+        "id": "issue-14",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-13",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-18",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-09",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-06",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-05",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-15",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-25",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-20",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-07",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-08",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-10",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-11",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-23",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-16",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-02",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-19",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-03",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-21",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-01",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-17",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-04",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-12",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-22",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-24",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      }
+    ]
+  },
+  {
+    "workload": "issue-triage",
+    "repeat": 3,
+    "wall_s": 1.0457677080000003,
+    "status": "ok",
+    "correct": 25,
+    "total": 25,
+    "accepted": 20,
+    "accepted_correct": 20,
+    "review": 5,
+    "input_tokens": 7708,
+    "output_tokens": 1412,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "order": "agent-shuffled",
+    "predictions": [
+      {
+        "id": "issue-03",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-22",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-19",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-05",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-11",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-18",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-06",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-21",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-17",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-23",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-15",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-04",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-13",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-20",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-09",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-02",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-01",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-07",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      },
+      {
+        "id": "issue-16",
+        "choice": "bug",
+        "expected": "bug",
+        "requires_review": false
+      },
+      {
+        "id": "issue-14",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-24",
+        "choice": "question",
+        "expected": "question",
+        "requires_review": false
+      },
+      {
+        "id": "issue-25",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-10",
+        "choice": "manual_review",
+        "expected": "manual_review",
+        "requires_review": true
+      },
+      {
+        "id": "issue-08",
+        "choice": "docs",
+        "expected": "docs",
+        "requires_review": false
+      },
+      {
+        "id": "issue-12",
+        "choice": "feature",
+        "expected": "feature",
+        "requires_review": false
+      }
+    ]
+  },
+  {
+    "workload": "repository-evidence",
+    "repeat": 1,
+    "wall_s": 1.4050479169999999,
+    "status": "ok",
+    "correct": 16,
+    "total": 18,
+    "accepted": 13,
+    "accepted_correct": 13,
+    "review": 5,
+    "input_tokens": 13534,
+    "output_tokens": 774,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "order": "agent-shuffled",
+    "predictions": [
+      {
+        "id": "receipts-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "provider-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "projection-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": true
+      },
+      {
+        "id": "projection-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "schema-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "schema-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "batching-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "provider-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "provider-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "probability-3",
+        "choice": "contradicts",
+        "expected": "insufficient",
+        "requires_review": true
+      },
+      {
+        "id": "schema-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "probability-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "projection-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "batching-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "probability-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "batching-2",
+        "choice": "supports",
+        "expected": "contradicts",
+        "requires_review": true
+      }
+    ]
+  },
+  {
+    "workload": "repository-evidence",
+    "repeat": 2,
+    "wall_s": 0.7833898340000001,
+    "status": "ok",
+    "correct": 18,
+    "total": 18,
+    "accepted": 12,
+    "accepted_correct": 12,
+    "review": 6,
+    "input_tokens": 13534,
+    "output_tokens": 777,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "order": "agent-shuffled",
+    "predictions": [
+      {
+        "id": "batching-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "probability-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": true
+      },
+      {
+        "id": "provider-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": true
+      },
+      {
+        "id": "schema-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "receipts-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": true
+      },
+      {
+        "id": "provider-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "batching-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "projection-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "projection-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "schema-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "projection-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "probability-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "batching-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "probability-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "provider-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "schema-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      }
+    ]
+  },
+  {
+    "workload": "repository-evidence",
+    "repeat": 3,
+    "wall_s": 0.9130500000000001,
+    "status": "ok",
+    "correct": 16,
+    "total": 18,
+    "accepted": 12,
+    "accepted_correct": 11,
+    "review": 6,
+    "input_tokens": 13534,
+    "output_tokens": 775,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "order": "agent-shuffled",
+    "predictions": [
+      {
+        "id": "probability-3",
+        "choice": "contradicts",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "projection-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": true
+      },
+      {
+        "id": "schema-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-3",
+        "choice": "contradicts",
+        "expected": "insufficient",
+        "requires_review": true
+      },
+      {
+        "id": "probability-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "provider-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "batching-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "probability-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "projection-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "receipts-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": false
+      },
+      {
+        "id": "batching-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "provider-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "projection-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": true
+      },
+      {
+        "id": "provider-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      },
+      {
+        "id": "schema-1",
+        "choice": "supports",
+        "expected": "supports",
+        "requires_review": false
+      },
+      {
+        "id": "batching-2",
+        "choice": "contradicts",
+        "expected": "contradicts",
+        "requires_review": true
+      },
+      {
+        "id": "schema-3",
+        "choice": "insufficient",
+        "expected": "insufficient",
+        "requires_review": false
+      }
+    ]
+  }
+]
