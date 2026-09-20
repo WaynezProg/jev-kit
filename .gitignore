@@ -12,3 +12,31 @@ receipts/
 backups/
 *.pem
 *.key
+
+# Local reports, experiments and generated scratch data.
+/benchmarks/
+/experiments/
+/artifacts/
+/coverage/
+/.cache/
+/.pytest_cache/
+/.ruff_cache/
+/build/
+/tmp/
+/temp/
+*.tsbuildinfo
+
+# Retired prototypes and their harness-only tests.
+/docs/agent-capability-next.md
+/docs/upstream-evaluation.md
+/scripts/install-hosts.py
+/test/benchmark_test.py
+/test/benchmark-file.test.js
+/test/model_tiers_test.py
+/test/cascade_test.py
+/test/rerank_test.py
+/test/rerank.test.js
+/test/browser-loop.test.js
+/test/install_hosts_test.py
+
+# dist/ and vendor/ are intentionally tracked: clean installs need them.

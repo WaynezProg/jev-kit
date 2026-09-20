@@ -7,4 +7,3 @@
 The two upstream gate implementations are not exposed. The five judgment MCP tools have no approval hook, arbitrary command execution, source retrieval, automatic pruning or model-setting mutation. This is an independent integration, not an upstream release.
 
 - Experimental Ego adapter: browser-use/jev-ultrafast at `1231850a0bf1a0c0341fe408ef1668dbbfdfac46`, MIT. Its policy and DOM reader are imported from a separate pinned checkout. Execution guards adapt its node identity, page-state and occlusion checks to Ego Page methods; notice retained in `integrations/ego-browser/UPSTREAM-LICENSE`. This optional CLI job executes browser actions and is separate from the five judgment tools.
-- Evaluation only: tamaratran/fast-jev-compaction at `e3f262a7f4d42bd8dd32ced30d26176f7cb545b0` and thruwire/foreman at `3de1556a59b7a7e14daa1f89b2fc49080bbb8cce`, both MIT. Benchmark scripts import separate checkouts; no source from either is bundled into the production judgment tools.

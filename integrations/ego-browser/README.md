@@ -40,8 +40,7 @@ For generated typing, configure upstream's `TEXT_MODEL_API_KEY`,
 text helper stops the job. Alternatively set `claude_path` in the job to an absolute
 Claude CLI path: this uses the signed-in native Fable 5.1 low session solely to
 generate field text, with tools/MCP/hooks disabled. No additional text API key is
-needed. The executor does not invent field values. Our benchmark
-injects the same native Claude text helper into both experimental arms instead.
+needed. The executor does not invent field values.
 
 ## Job example
 
@@ -67,9 +66,8 @@ injects the same native Claude text helper into both experimental arms instead.
 
 Validation checks schema, pinned checkout and Python path without network/browser
 calls. `expect_url` is exact; `expect_text` must occur in body text. If both are
-supplied, both must match. These checks verify only their explicit assertions;
-the benchmark uses stronger application-specific verification. Jev `DONE` alone
-is never reported as verified.
+supplied, both must match. These checks verify only their explicit assertions,
+not general task completion. Jev `DONE` alone is never reported as verified.
 
 Omit `space_id` to create a TaskSpace. A verified newly created space is finished
 once, keeping no pages. A supplied `space_id` reuses its `p1` (or the supplied
@@ -78,10 +76,10 @@ given URL**, and leaves lifecycle ownership to the caller. It does not resume th
 current page. Failure receipts identify the space to inspect; do not create another
 space to evade a blocked or user-controlled page.
 
-The CLI/study acquire an exclusive local per-page lease. Inspect stale locks before
+The CLI and programmatic runner acquire an exclusive local per-page lease. Inspect stale locks before
 removing them. Frontend exit alone is not proof that embedded execution has stopped.
 
-The CLI now writes a private cancellation flag on `SIGINT`/`SIGTERM`. The embedded
+The CLI writes a private cancellation flag on `SIGINT`/`SIGTERM`. The embedded
 loop checks it before each model request, after model responses and before every
 input. `cancelled` in the terminal receipt confirms that no later input will be
 dispatched by that run. A pending model/browser request must still return;
@@ -95,7 +93,7 @@ a job from being marked verified; `outcome_verified` retains any earlier success
 application check. Receipts contain action kind, timing, model usage and sanitized
 Ego dispatch information. They omit explicit field text, prompts and raw dialog
 content, but retain the final URL and runtime error message. Keep job receipts
-private; URLs can include search terms. Public benchmark exports omit these fields.
+private; URLs can include search terms.
 
 ## Tested boundary
 
@@ -127,11 +125,11 @@ private; URLs can include search terms. Public benchmark exports omit these fiel
 - The sequential policy bridge stops on timeout. Upstream HTTP retry behavior stays.
 
 The programmatic runner also accepts a bounded plan of up to five observed action
-IDs for benchmarking LLM control. Before each subsequent action it checks the
+IDs for caller-supplied control policies. Before each subsequent action it checks the
 original document, node identity and unchanged target semantics against a fresh
 observation. Own form edits can proceed; navigation, a replaced target or changed
 meaning discards the remaining plan. This does not make Jev a multi-action planner,
 and the CLI continues to use the upstream one-decision-at-a-time policy.
 
-See [browser results](../../benchmarks/ego-upstream/README.md) and the
-[cross-repo evaluation](../../docs/upstream-evaluation.md). This remains experimental.
+This adapter remains experimental. See the [main README](../../README.md) for the
+shared judgment tools and host installation.

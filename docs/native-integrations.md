@@ -4,7 +4,7 @@ Jev Kit shares one runtime and five judgment tools across hosts. Native packagin
 changes installation and discovery; it does not automatically intercept actions,
 prune context, lower reasoning effort, or enable the experimental browser loop.
 
-## Install, migrate, update, remove
+## Install, update, remove
 
 ```sh
 ./jev install --hosts claude,opencode
@@ -23,8 +23,8 @@ to MCP, uninstall that host, then install it with `--integration mcp`.
 
 Muse support is probed in the selected user environment. The same binary can reject plugins in an empty HOME and enable them in an existing configured environment. Native setup explicitly approves the owned `mcp_server` capability and verifies `trusted_enabled`; a later manual approval revocation stops managed updates.
 
-Updating a format-1 managed installation migrates its recorded MCP entries and
-Skill links automatically. Migration refuses foreign entries, changed links,
+Managed updates preserve ownership of recorded MCP entries and Skill links.
+They refuse foreign entries, changed links,
 modified native package files, and disabled registrations. Native packages carry
 physical Skill files, while MCP starts the shared absolute launcher. OpenCode
 registers the tools directly through its JavaScript adapter and keeps a standalone
@@ -43,7 +43,7 @@ Validated on macOS on 2026-09-20. These are separate acceptance layers:
 
 | Host | Native mechanism | Current evidence |
 |---|---|---|
-| Codex | `.codex-plugin/plugin.json`, dedicated local marketplace | Existing native integration; previous isolated CLI lifecycle proof retained |
+| Codex | `.codex-plugin/plugin.json`, dedicated local marketplace | Native CLI lifecycle checked in an isolated environment |
 | Claude Code 2.1.277 | `.claude-plugin/plugin.json`, relative marketplace source, `.mcp.json` | Real isolated CLI lifecycle; installed manifest MCP handshake, five tools and offline call |
 | OpenCode 1.18.31 | Config `plugin` array, bundled object export with `server()` | Real host API discovered five tools and object schemas; direct bundled executor offline call |
 | Muse 1.3.0-R3401.1 | `.muse-plugin/plugin.json`, explicit MCP capability | Real project-scope A-to-B lifecycle using the configured user environment, with MCP capability approval and `trusted_enabled` readback; empty HOME falls back to MCP + Skill |
@@ -51,7 +51,7 @@ Validated on macOS on 2026-09-20. These are separate acceptance layers:
 | Gemini CLI 0.60.0 | `gemini-extension.json`, native extension CLI | Real isolated CLI lifecycle; installed manifest MCP handshake, five tools and offline call |
 | Cursor 3.20.17 | Physical folder at `~/.cursor/plugins/local/jev-kit` | Package, lifecycle files, MCP transport and offline call verified; editor UI discovery remains unverified |
 | VS Code 1.138.0 | Agent Plugins 1.0 manifest, user `chat.pluginLocations` | Package/schema, settings lifecycle, MCP transport and offline call verified; Copilot UI discovery remains unverified |
-| Pi | Bundled native extension + Skill | Existing SDK integration and prior real Jev-call evidence retained |
+| Pi | Bundled native extension + Skill | SDK loaded the tools; real Jev call completed |
 
 The deterministic offline call supplies an absent quote and expects
 `quote_not_found` with zero provider requests. For Claude/Gemini/Grok, the MCP test
@@ -64,7 +64,7 @@ namespace and registers the same five operations. It has contract tests only;
 there is no live V2 acceptance claim. A runtime lacking the documented registrar
 fails explicitly rather than silently loading an empty plugin.
 
-The development profile was migrated from all nine managed format-1 integrations to native registrations. All nine passed configuration/inventory readback. The installed shared MCP runtime also completed a real Jev evidence request on synthetic text (`supports`, no review required); this verifies the common runtime, not model-triggered use in every host. Automated coverage passed 55 JavaScript tests and 57 Python tests.
+All nine native integrations passed configuration/inventory readback on the development Mac. The installed shared MCP runtime also completed a real Jev evidence request on synthetic text (`supports`, no review required). This verifies the common runtime, not model-triggered use in every host. The offline suites cover host lifecycle, ownership conflicts, rollback and runtime contracts.
 
 `status` checks package hashes, registration ownership and native CLI inventory.
 It is not a model-usage or editor-UI check. Restart affected hosts after changes.
