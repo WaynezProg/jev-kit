@@ -1,5 +1,7 @@
 # Jev Kit
 
+**English** | [繁體中文](README.zh-TW.md)
+
 Source-bound evidence checks and bounded batch judgments for coding agents, powered by [TypeSafe Jev](https://typesafe.ai/).
 
 Jev Kit combines the batch engine from [jev-use](https://github.com/shitianfang/jev-use), task patterns from [jev-mcp](https://github.com/jkudish/jev-mcp), and local source/quote validation. It is an independent integration, not an official release of either project or TypeSafe.
