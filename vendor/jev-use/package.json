@@ -1,0 +1,8 @@
+{
+  "name": "jev-use",
+  "version": "0.6.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT"
+}

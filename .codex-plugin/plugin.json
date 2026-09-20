@@ -1,0 +1,19 @@
+{
+  "name": "jev-kit",
+  "version": "0.1.0",
+  "description": "Batch evidence checks, classification, exact extraction and bounded decisions with validated Jev responses.",
+  "author": {
+    "name": "Jev Kit contributors"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Jev Kit",
+    "shortDescription": "Batch semantic judgments with source-bound evidence.",
+    "longDescription": "Combines jev-use batch processing, jev-mcp task patterns, and local evidence validation. Advisory results with explicit review handling.",
+    "developerName": "Jev Kit contributors",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Use $jev-kit to check these claims against their sources and keep uncertain items for review."
+  },
+  "mcpServers": "./.mcp.json"
+}

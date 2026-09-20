@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jev Kit"
+  short_description: "Batch evidence checks and bounded semantic judgments"
+  default_prompt: "Use $jev-kit to check these claims against their sources and keep uncertain items for review."

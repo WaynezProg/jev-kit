@@ -1,0 +1,1 @@
+{"items":[{"id":"deploy","claim":"Production deployment completed.","source_ref":"build-log:42","source_text":"Build passed. Production deployment has not started."},{"id":"quote","claim":"All tests passed.","source_ref":"test-log:1","source_text":"Two tests failed.","quote":"All tests passed."}]}

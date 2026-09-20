@@ -1,0 +1,35 @@
+{
+  "name": "jev-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Source-bound evidence and bounded batch judgments for coding agents",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "jev-kit": "dist/cli.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "smoke": "node scripts/smoke.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "jev-use": "file:vendor/jev-use",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WaynezProg/jev-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WaynezProg/jev-kit/issues"
+  },
+  "homepage": "https://github.com/WaynezProg/jev-kit#readme"
+}
