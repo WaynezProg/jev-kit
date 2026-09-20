@@ -1,0 +1,112 @@
+[
+  {
+    "id": "t9f3k2",
+    "split": "pilot",
+    "goal": "Find a compact keyboard with hot-swappable switches in the $90–$130 price band.",
+    "stages": [
+      {"prompt":"Choose the catalog department to start your search.","options":[{"id":"q7m2","label":"Keyboards"},{"id":"v1p8","label":"Computer mice"},{"id":"c4r6","label":"Monitor arms"}],"correct_id":"q7m2","rationale":"The request is for a keyboard."},
+      {"prompt":"Choose the layout filter.","options":[{"id":"h9w3","label":"Full-size (100%)"},{"id":"a5d1","label":"Compact (75%)"},{"id":"n6x4","label":"Tenkeyless (80%)"}],"correct_id":"a5d1","rationale":"Compact layout maps to 75% in this catalog."},
+      {"prompt":"Choose the switch feature.","options":[{"id":"e2k7","label":"Hot-swappable sockets"},{"id":"z8b5","label":"Soldered switch plate"},{"id":"l3s9","label":"Low-profile keycaps"}],"correct_id":"e2k7","rationale":"The goal explicitly requires hot-swappable switches."},
+      {"prompt":"Choose the price band.","options":[{"id":"u4j6","label":"Under $90"},{"id":"m7q2","label":"$90–$130"},{"id":"f1c8","label":"Over $130"}],"correct_id":"m7q2","rationale":"The requested ceiling is $130, while this band retains the requested feature set."}
+    ]
+  },
+  {
+    "id": "r6v8n1",
+    "split": "pilot",
+    "goal": "Locate the guide for adding a tool that asks before it writes files.",
+    "stages": [
+      {"prompt":"Open the documentation area that owns this topic.","options":[{"id":"b5h9","label":"Tutorials"},{"id":"p2d7","label":"Tool integrations"},{"id":"y4m1","label":"Release notes"}],"correct_id":"p2d7","rationale":"Adding a tool belongs in tool integrations."},
+      {"prompt":"Select the integration concern.","options":[{"id":"g8s3","label":"Tool permissions"},{"id":"k1w6","label":"Tool styling"},{"id":"c9a4","label":"Tool telemetry"}],"correct_id":"g8s3","rationale":"Asking before a write is a permission policy."},
+      {"prompt":"Choose the policy section.","options":[{"id":"x6r2","label":"Read-only commands"},{"id":"j3f8","label":"Approval-required writes"},{"id":"d7q5","label":"Background retries"}],"correct_id":"j3f8","rationale":"The tool must request approval before writes."},
+      {"prompt":"Choose the final guide.","options":[{"id":"s4n9","label":"Configure a confirmation callback"},{"id":"w2e6","label":"Stream tool logs to a dashboard"},{"id":"t8l1","label":"Cache read-only responses"}],"correct_id":"s4n9","rationale":"A confirmation callback implements the requested behavior."}
+    ]
+  },
+  {
+    "id": "k4z7c9",
+    "split": "heldout",
+    "goal": "Pick a 15-inch portable monitor with USB-C power delivery and a matte display.",
+    "stages": [
+      {"prompt":"Choose the catalog department.","options":[{"id":"m3q8","label":"Portable monitors"},{"id":"a7v2","label":"Laptop docks"},{"id":"f5k1","label":"Webcams"}],"correct_id":"m3q8","rationale":"The item requested is a portable monitor."},
+      {"prompt":"Choose the screen-size filter.","options":[{"id":"r1d6","label":"13-inch"},{"id":"x9p4","label":"15-inch"},{"id":"n2h7","label":"17-inch"}],"correct_id":"x9p4","rationale":"The stated requirement is 15-inch."},
+      {"prompt":"Choose the connection feature.","options":[{"id":"c8w3","label":"USB-C with power delivery"},{"id":"l4j9","label":"Mini HDMI only"},{"id":"e6s2","label":"DisplayPort only"}],"correct_id":"c8w3","rationale":"The laptop should power it over USB-C."},
+      {"prompt":"Choose the panel finish.","options":[{"id":"v7b5","label":"Glossy"},{"id":"q2t8","label":"Matte"},{"id":"h1g4","label":"Touch glass"}],"correct_id":"q2t8","rationale":"The goal requires a matte display."}
+    ]
+  },
+  {
+    "id": "d2m8x5",
+    "split": "heldout",
+    "goal": "Find a Wi-Fi router with Wi-Fi 6, parental controls, and no subscription required.",
+    "stages": [
+      {"prompt":"Choose the catalog department.","options":[{"id":"p6l2","label":"Wi-Fi routers"},{"id":"s9f4","label":"Network switches"},{"id":"w3c7","label":"Mesh extender accessories"}],"correct_id":"p6l2","rationale":"The goal is a router."},
+      {"prompt":"Choose the wireless standard.","options":[{"id":"j5n8","label":"Wi-Fi 5"},{"id":"u2r6","label":"Wi-Fi 6"},{"id":"b7k1","label":"Wi-Fi 7"}],"correct_id":"u2r6","rationale":"Wi-Fi 6 is requested."},
+      {"prompt":"Choose the family feature.","options":[{"id":"e9h3","label":"Parental controls"},{"id":"g4v7","label":"Rack mounting"},{"id":"a1q5","label":"Outdoor enclosure"}],"correct_id":"e9h3","rationale":"The requirement is parental controls."},
+      {"prompt":"Choose the service model.","options":[{"id":"z8d2","label":"No subscription required"},{"id":"t6m9","label":"Controls require a monthly plan"},{"id":"f3p4","label":"Business license only"}],"correct_id":"z8d2","rationale":"The goal excludes required subscriptions."}
+    ]
+  },
+  {
+    "id": "h7q1w6",
+    "split": "heldout",
+    "goal": "Select a USB microphone with cardioid pickup, a hardware mute button, and a desk stand.",
+    "stages": [
+      {"prompt":"Choose the catalog department.","options":[{"id":"n4b8","label":"USB microphones"},{"id":"r6k3","label":"Audio interfaces"},{"id":"c2y9","label":"Headphone amplifiers"}],"correct_id":"n4b8","rationale":"The requested product is a USB microphone."},
+      {"prompt":"Choose the pickup pattern.","options":[{"id":"v5j2","label":"Omnidirectional"},{"id":"p8s6","label":"Cardioid"},{"id":"l1d7","label":"Figure-eight"}],"correct_id":"p8s6","rationale":"Cardioid is explicitly required."},
+      {"prompt":"Choose the call-control feature.","options":[{"id":"x3f9","label":"Hardware mute button"},{"id":"m7q4","label":"RGB light ring"},{"id":"a6h1","label":"Bluetooth pairing"}],"correct_id":"x3f9","rationale":"The goal requires a physical mute button."},
+      {"prompt":"Choose the included mounting option.","options":[{"id":"g2w8","label":"Desk stand included"},{"id":"d9r5","label":"Boom arm only"},{"id":"k4e3","label":"Rack ears included"}],"correct_id":"g2w8","rationale":"The requested setup needs a desk stand."}
+    ]
+  },
+  {
+    "id": "p3a9j4",
+    "split": "heldout",
+    "goal": "Find an external SSD with 2 TB capacity, USB 3.2 Gen 2, and hardware encryption.",
+    "stages": [
+      {"prompt":"Choose the catalog department.","options":[{"id":"q6t1","label":"Portable SSDs"},{"id":"h8v5","label":"NAS enclosures"},{"id":"y2c7","label":"Memory cards"}],"correct_id":"q6t1","rationale":"The request is for an external SSD."},
+      {"prompt":"Choose the capacity.","options":[{"id":"b4m9","label":"1 TB"},{"id":"s7p3","label":"2 TB"},{"id":"e1k6","label":"4 TB"}],"correct_id":"s7p3","rationale":"The goal requires 2 TB."},
+      {"prompt":"Choose the transfer interface.","options":[{"id":"w5d2","label":"USB 3.2 Gen 2"},{"id":"r9n8","label":"USB 2.0"},{"id":"f3x4","label":"Thunderbolt dock bay"}],"correct_id":"w5d2","rationale":"The requested interface is USB 3.2 Gen 2."},
+      {"prompt":"Choose the security feature.","options":[{"id":"c6j7","label":"Hardware encryption"},{"id":"l2q5","label":"Cloud backup trial"},{"id":"v8h1","label":"Colored cable"}],"correct_id":"c6j7","rationale":"The goal requires hardware encryption."}
+    ]
+  },
+  {
+    "id": "u8r2e5",
+    "split": "heldout",
+    "goal": "Find the API guide for listing records a page at a time using a continuation token.",
+    "stages": [
+      {"prompt":"Open the documentation area that owns this topic.","options":[{"id":"t5b9","label":"API reference"},{"id":"m1x7","label":"UI components"},{"id":"q4d2","label":"Migration notes"}],"correct_id":"t5b9","rationale":"Record listing is an API operation."},
+      {"prompt":"Select the API resource family.","options":[{"id":"h6p3","label":"Records"},{"id":"a9k5","label":"Authentication"},{"id":"z2v8","label":"Webhooks"}],"correct_id":"h6p3","rationale":"The task concerns records."},
+      {"prompt":"Choose the operation type.","options":[{"id":"g7r1","label":"List records"},{"id":"c3n6","label":"Delete a record"},{"id":"w8f4","label":"Upload an attachment"}],"correct_id":"g7r1","rationale":"The user wants to list records."},
+      {"prompt":"Choose the final guide.","options":[{"id":"j5s2","label":"Paginate with continuation tokens"},{"id":"l9e7","label":"Filter records by date"},{"id":"p2h4","label":"Export all records to CSV"}],"correct_id":"j5s2","rationale":"Continuation tokens are the requested pagination method."}
+    ]
+  },
+  {
+    "id": "f5c1l8",
+    "split": "heldout",
+    "goal": "Locate the documentation for sending an event when a background job finishes, with a signed request.",
+    "stages": [
+      {"prompt":"Open the documentation area that owns this topic.","options":[{"id":"v3m6","label":"Event delivery"},{"id":"d8q1","label":"Command-line tools"},{"id":"n4w7","label":"SDK installation"}],"correct_id":"v3m6","rationale":"A completion event is event delivery."},
+      {"prompt":"Select the event source.","options":[{"id":"r2j9","label":"Background jobs"},{"id":"k6p4","label":"User profiles"},{"id":"s1h8","label":"File storage"}],"correct_id":"r2j9","rationale":"The event comes from a background job."},
+      {"prompt":"Choose the delivery mechanism.","options":[{"id":"x7c5","label":"Webhook notifications"},{"id":"b9t2","label":"Email digests"},{"id":"e4f6","label":"In-app banners"}],"correct_id":"x7c5","rationale":"The integration needs a machine-readable event request."},
+      {"prompt":"Choose the final guide.","options":[{"id":"a5v3","label":"Verify signed webhook requests"},{"id":"q8n1","label":"Replay failed email delivery"},{"id":"g2d7","label":"Design a notification template"}],"correct_id":"a5v3","rationale":"A signed request must be verified."}
+    ]
+  },
+  {
+    "id": "z1n6b3",
+    "split": "heldout",
+    "goal": "Find the deployment guide for releasing a service gradually and automatically rolling back when health checks fail.",
+    "stages": [
+      {"prompt":"Open the documentation area that owns this topic.","options":[{"id":"p7e2","label":"Deployments"},{"id":"w4h9","label":"Local development"},{"id":"c6r1","label":"Billing"}],"correct_id":"p7e2","rationale":"This is a deployment procedure."},
+      {"prompt":"Select the deployment strategy.","options":[{"id":"m8k4","label":"Progressive rollout"},{"id":"f2s7","label":"Manual file upload"},{"id":"j9v5","label":"Static export"}],"correct_id":"m8k4","rationale":"Releasing gradually is a progressive rollout."},
+      {"prompt":"Choose the safety mechanism.","options":[{"id":"r3d8","label":"Health-check monitoring"},{"id":"a1q6","label":"Release announcement"},{"id":"t5n2","label":"Build cache cleanup"}],"correct_id":"r3d8","rationale":"The rollback condition is failed health checks."},
+      {"prompt":"Choose the final guide.","options":[{"id":"l7x3","label":"Configure automatic rollback"},{"id":"v6b1","label":"Pin a deployment region"},{"id":"h4p9","label":"Export deployment logs"}],"correct_id":"l7x3","rationale":"Automatic rollback is explicitly requested."}
+    ]
+  },
+  {
+    "id": "m9d4s2",
+    "split": "heldout",
+    "goal": "Locate the guide for keeping an OAuth access token current without asking the user to sign in again.",
+    "stages": [
+      {"prompt":"Open the documentation area that owns this topic.","options":[{"id":"e8w5","label":"Authentication"},{"id":"q2c9","label":"Data modeling"},{"id":"b6r3","label":"UI theming"}],"correct_id":"e8w5","rationale":"OAuth token handling is authentication."},
+      {"prompt":"Select the authentication protocol.","options":[{"id":"n7j1","label":"OAuth 2.0"},{"id":"s3f6","label":"SAML"},{"id":"y9k4","label":"Passkeys"}],"correct_id":"n7j1","rationale":"The request explicitly names OAuth."},
+      {"prompt":"Choose the token lifecycle topic.","options":[{"id":"g4m8","label":"Refresh tokens"},{"id":"c1v7","label":"Token display names"},{"id":"p5d2","label":"API key rotation"}],"correct_id":"g4m8","rationale":"A refresh token obtains a new access token without a new sign-in."},
+      {"prompt":"Choose the final guide.","options":[{"id":"h2q6","label":"Refresh access tokens silently"},{"id":"x8t3","label":"Revoke a user session"},{"id":"l6a9","label":"Create a service account"}],"correct_id":"h2q6","rationale":"Silent refresh is the requested behavior."}
+    ]
+  }
+]

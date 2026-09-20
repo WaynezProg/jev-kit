@@ -1,0 +1,16 @@
+# Evidence behind the browser-loop hypothesis
+
+Reviewed 2026-09-20. Project existence, runnable code, author measurements and independently reproduced performance are different evidence levels.
+
+| Candidate | Useful implementation | What its public evidence establishes | Important limit |
+|---|---|---|---|
+| [browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast) | Indexed DOM controls; operation and compatible targets selected in one Jev request; text helper only when typing | [Matched report](https://github.com/browser-use/jev-ultrafast/blob/main/docs/performance.md): three pairs, same models, verified 3/3 each; median 9.450 → 7.092 seconds | Both versions already use Jev. The 25% gain includes runtime optimization and fewer browser calls; it is not a no-Jev A/B result. One task, one browser profile. |
+| [eriestra/almond-fastloop](https://github.com/eriestra/almond-fastloop/tree/1f5a8f5e1fb8a765358e29ac4fddb759dd552629) | Program-built executable choices, per-page instructions, observed values, explicit blocked path | Author's Olympics table reports a planner-free 12.6-second run completing five events; Codex and Claude entries also complete five events | Different browser harnesses and observations, sparse repetitions, unknown total failed attempts. This compares complete stacks, not Jev alone. Planner-assisted timing excludes advance planner work. |
+| [romaluev/jev-ego](https://github.com/romaluev/jev-ego/tree/12eaafe795db56da821d9268ee7b9ae9ea24b23b) | Persistent Ego daemon with observe, act, suggest, step, run and stop | Runnable integration architecture matching this user's browser environment; author reports its own Flights run separately | Its reported 31.6-second run is not upstream's 7.1-second Chrome measurement; no matched no-Jev evidence establishes the incremental benefit. |
+| [TokenTrim/jev-routing-experiment](https://github.com/TokenTrim/jev-routing-experiment) | Retrieval-informed routing and a useful no-Jev ablation | Reported held-out routing improvements over a best-single baseline | Retrieval-only ablation is approximately equivalent; improvement cannot be credited to Jev without its incremental comparison. |
+
+The strongest design candidate is a bounded action loop: **program-generated current state → executable candidates → Jev choice → executor → fresh observation → independent verification**. This is a hypothesis about integration placement, not proof that Jev makes a weak model more intelligent.
+
+For a coding tool, a suitable future interface would delegate a complete browser subtask once. The internal runtime would retain the browser session and return a verified outcome or an explicit unresolved state. Deterministic routes remain local; unexpected states can be handed back to the parent model. The parent does not need to generate Jev arguments and re-review every ordinary intermediate decision.
+
+This architecture should first be validated on the user's real tasks. The [local matched screen](README.md) isolates a narrower question with the same browser and executor. It does not establish open-web reliability, safe arbitrary actions, or a universal coding speedup. Generic approval gates, automatic thinking-level reductions, and universal post-hoc review are not recommended on the strength of these results.

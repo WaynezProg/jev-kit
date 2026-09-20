@@ -13,7 +13,7 @@ Jev Kit combines the batch engine from [jev-use](https://github.com/shitianfang/
 
 Use existing sources and tool outputs. You do not need an extra LLM summary before calling Jev. The host still constructs the tool input and reviews the result, so this does not establish lower total token cost, faster development, or a lower required thinking level.
 
-The current measurements do not justify an always-on integration: inline calls often add substantial overhead, and program-driven evidence routing traded accuracy for speed in the model-tier screening. Keep Jev optional and validate the workload-specific benefit. See [model-tier results](benchmarks/model-tiers/results/RESULTS.md).
+The current evidence supports a narrow candidate: [bounded browser decision loops](#where-jev-helped-bounded-browser-decision-loops). General inline review still added overhead, and evidence routing traded accuracy for speed in the [model-tier screening](benchmarks/model-tiers/results/RESULTS.md). Keep Jev optional and validate the workload. The positive browser result uses an experimental internal loop; simply installing the current four-tool MCP server does not provide that loop.
 
 ## Quick start
 
@@ -111,6 +111,27 @@ For manual integration, `node scripts/configure-mcp.mjs` creates a local `.mcp.j
 Example request after installation:
 
 > Use jev-kit to classify these issues into bug, feature, or manual review. Preserve IDs and unresolved items.
+
+## Where Jev helped: bounded browser decision loops
+
+The strongest positive result so far comes from **replacing repeated main-model decisions inside a browser tool**. Browser state and executable choices already exist; Jev selects the next action, the executor clicks, and the next observation drives the following decision. The parent coding agent does not rewrite tool arguments or review every intermediate choice.
+
+We ran eight authored local browser wizards (four catalog filters and four documentation-navigation tasks), three repeats, in actual Ego Lite. All arms used the same visible DOM, executor and final path verifier. Claude Fable 5.1 low stayed in one persistent process per task, avoiding a CLI restart on each step.
+
+| Path | Verified completion | Median attempt time | Main-model calls |
+|---|---:|---:|---:|
+| Local keyword rules | 6/24 | 0.65 s; 3.19 s among successes | 0 |
+| One LLM semantic plan + fixed matcher | 21/24 | 7.43 s | 24 |
+| Claude chooses every step | 24/24 | 8.40 s | 96 |
+| Jev chooses every step | **24/24** | **3.82 s** | **0**; 96 Jev calls |
+
+The Jev path was **54.6% faster** than stepwise Claude by median task time, with equal observed completion, and passed the frozen practical gate. All 96 attempts are retained. No arm made a wrong click; rules and the one-call plan abstained on cases they could not resolve. Jev was slower than local rules on the six pairs both could complete. The plan arm uses generated semantic terms plus a matcher; it does not represent every possible code-based automation strategy.
+
+This is a positive **synthetic browser-loop screening**, not general web reliability. The eight distinct tasks have fixed choices and an app that knows the correct route; typing, live network races, frames, login and long planning were not tested. Total timing includes model setup, decisions, browser work and final verification; it excludes initial navigation/observation. Browser work also differed across arms despite using the same executor, so the entire gain is not a pure API-latency effect.
+
+The candidate product is a persistent browser subtask executor: deterministic handling where possible, bounded Jev choices where semantics are needed, and an explicit handoff when unresolved. This mixed fallback policy still needs validation. **The browser loop is benchmark code, not a shipped MCP feature.** The existing four tools and host integrations remain unchanged.
+
+[Protocol and reproduction](benchmarks/browser-loop/README.md) · [Full results and timing components](benchmarks/browser-loop/results/RESULTS.md) · [Every attempt](benchmarks/browser-loop/results/runs.json) · [Comparison of existing browser projects](benchmarks/browser-loop/RESEARCH.md)
 
 ## Real coding-agent measurements (2026-09-20)
 
