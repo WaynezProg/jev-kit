@@ -320,7 +320,7 @@ class Manager:
                     raise ValueError('Run update before adding hosts from a different release; existing hosts share the runtime')
                 add(self.current, ('link', str(release), 0))
                 add(self.launcher, ('file', ('#!/bin/sh\nexec ' + shlex.quote(self.node) + ' ' + shlex.quote(str(self.current / 'dist/cli.js')) + ' serve "$@"\n').encode(), 0o755))
-                add(self.root / 'jev', ('file', ('#!/bin/sh\nexec python3 ' + shlex.quote(str(self.current / 'scripts/manage.py')) + ' "$@"\n').encode(), 0o755))
+                add(self.root / 'jev', ('file', ('#!/bin/sh\n' + 'for p in python3.14 python3.13 python3.12 python3.11 python3; do command -v "$p" >/dev/null 2>&1 && "$p" -c \'import sys; sys.exit(sys.version_info < (3, 11))\' 2>/dev/null && exec "$p" ' + shlex.quote(str(self.current / 'scripts/manage.py')) + ' "$@"; done\necho \'Jev Kit: Python 3.11+ required\' >&2\nexit 1\n').encode(), 0o755))
                 next_state['release'] = release_id
             if 'codex' in hosts and action != 'uninstall':
                 market = self.root / 'marketplace'

@@ -58,10 +58,10 @@ needed. The executor does not invent field values.
   "upstream": "/absolute/jev-ultrafast",
   "python": "/absolute/jev-ultrafast/.venv/bin/python",
   "url": "https://example.com",
-  "goal": "Read the Example Domain page and stop once its heading is visible.",
+  "goal": "Read the example.com page and stop once its documentation notice is visible.",
   "origins": ["https://example.com"],
   "expect_url": "https://example.com/",
-  "expect_text": "Example Domain",
+  "expect_text": "documentation examples",
   "max_steps": 8,
   "max_seconds": 180,
   "output": "/absolute/new-browser-receipt.json"
