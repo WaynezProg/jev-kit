@@ -19,12 +19,24 @@ export interface RawAnswer {
   confidence?: number;
 }
 
+/** An inline image for TypeSafe's experimental image input. */
+export interface ImageAsset {
+  type?: "image";
+  format: "png" | "jpg" | "jpeg";
+  /** Standard base64, no data: prefix, no whitespace. */
+  data_base64: string;
+}
+
 /** One batch as an adapter receives it. */
 export interface BackendRequest {
   state: State;
   /** Already screened; ids resolved and unique. */
   questions: (Question & { id: string })[];
   model?: string;
+  /** Reference string → image. Every reference must appear in state or questions. */
+  assets?: Record<string, ImageAsset>;
+  /** Extra HTTP headers for this request; cannot replace Authorization. */
+  headers?: Record<string, string>;
 }
 
 /** One batch as an adapter answers it. */

@@ -7,6 +7,8 @@ import { type HttpOptions } from "./http.js";
 import type { BackendRequest, BackendResponse, JevBackend } from "./types.js";
 export declare const TYPESAFE_BASE_URL = "https://api.typesafe.ai";
 export declare const TYPESAFE_DEFAULT_MODEL = "jev-latest";
+/** Required on every request that carries an image (experimental API). */
+export declare const TYPESAFE_IMAGES_HEADER = "TypeSafe-Danger-Zone-Images";
 /** How to reach the TypeSafe API. */
 export interface TypeSafeOptions extends HttpOptions {
     apiKey: string;
@@ -14,6 +16,8 @@ export interface TypeSafeOptions extends HttpOptions {
     baseUrl?: string;
     /** Model used when a call names none. Default "jev-latest". */
     defaultModel?: string;
+    /** Report only the provider's resolved model; never fall back to the requested one. */
+    strictModel?: boolean;
 }
 export declare class TypeSafeBackend implements JevBackend {
     private readonly options;

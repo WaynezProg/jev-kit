@@ -24,7 +24,7 @@ export { route } from "./dispatch.js";
 export type { Step, StepRoute } from "./dispatch.js";
 export type { AnswerOf, ChoiceQuestion, EscalationReason, GateAction, GateDecision, GateResult, JudgeResult, NoulCriteria, NoulQuestion, Question, QuestionType, ScoreQuestion, State, Usage, Verdict, } from "./protocol.js";
 export { BackendError } from "./backends/types.js";
-export type { BackendRequest, BackendResponse, JevBackend, RawAnswer, } from "./backends/types.js";
+export type { BackendRequest, BackendResponse, ImageAsset, JevBackend, RawAnswer, } from "./backends/types.js";
 export type { BackendName } from "./backends/index.js";
 export { MockBackend } from "./backends/mock.js";
 export type { MockScript } from "./backends/mock.js";

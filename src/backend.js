@@ -2,6 +2,9 @@ import {readFileSync} from 'node:fs';
 import {homedir} from 'node:os';
 import {BackendError,TypeSafeBackend} from 'jev-use';
 
+// Pinned: images need Jev 1.13+, and receipts should name what was requested.
+export const MODEL=process.env.JEV_KIT_MODEL?.trim()||'jev-1.14.0';
+export const isAlias=m=>m==='jev-latest'||m==='jev-preview';
 const probability=v=>typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=1;
 export function validateAnswer(q,a){
  if(!a||typeof a.answer!=='string'||!Object.hasOwn(q.options,a.answer)||!probability(a.confidence))throw Error('invalid_choice_or_confidence');
@@ -17,7 +20,7 @@ export class StrictBackend{
   try{
    const result=await this.inner.judge(request);
    if(!Array.isArray(result.answers)||result.answers.length!==request.questions.length)throw Error('answer_count');
-   if(typeof result.model!=='string'||!result.model.trim()||result.model==='jev-latest')throw Error('missing_resolved_model');
+   if(typeof result.model!=='string'||!result.model.trim()||isAlias(result.model))throw Error('missing_resolved_model');
    result.answers.forEach((a,i)=>validateAnswer(request.questions[i],a));
    return {...result,usage:Object.fromEntries(Object.entries(result.usage??{}).filter(([k,v])=>['inputTokens','outputTokens'].includes(k)&&Number.isSafeInteger(v)&&v>=0))};
   }catch{throw new BackendError('typesafe','provider_or_validation_error');}
@@ -27,10 +30,15 @@ export function createBackend(kind='choice'){
  let key='';
  try{key=(process.env.TYPESAFE_API_KEY||readFileSync(process.env.TYPESAFE_API_KEY_FILE||`${homedir()}/.config/jev-benchmark/typesafe-api-key`,'utf8')).trim();}catch{}
  if(!key||/\s/.test(key))return {name:'unconfigured',async judge(){throw new BackendError('unconfigured','missing_or_invalid_api_key');}};
- const inner=new TypeSafeBackend({apiKey:key,timeoutMs:15000,maxRetries:0,defaultModel:'jev-latest'});
+ const inner=new TypeSafeBackend({apiKey:key,timeoutMs:15000,maxRetries:0,defaultModel:MODEL,strictModel:true});
+ // Image uploads are larger and slower; TypeSafeBackend adds the images header itself.
+ const imageInner=new TypeSafeBackend({apiKey:key,timeoutMs:90000,maxRetries:0,defaultModel:MODEL,strictModel:true});
  const guarded={name:'typesafe',async judge(request){
-  if(JSON.stringify(request).includes(key))throw Error('credential_in_payload');
-  return inner.judge(request);
+  const hasAssets=!!request.assets&&Object.keys(request.assets).length>0;
+  // Base64 bodies are file bytes, not caller text: check keys/formats only.
+  const checked=hasAssets?{...request,assets:Object.fromEntries(Object.entries(request.assets).map(([k,a])=>[k,a.format]))}:request;
+  if(JSON.stringify(checked).includes(key))throw Error('credential_in_payload');
+  return (hasAssets?imageInner:inner).judge(request);
  }};
  // Score responses are validated by rerank.js before they become a ranking.
  return kind==='score'?guarded:new StrictBackend(guarded);

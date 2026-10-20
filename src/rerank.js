@@ -1,4 +1,5 @@
 import {createHash} from 'node:crypto';
+import {MODEL,isAlias} from './backend.js';
 
 export const levels=[
  'Unrelated: does not address the requested behavior or information.',
@@ -32,7 +33,7 @@ export function validateRerankInput(input){
 }
 
 export function validateScores(response,count){
- if(!response||typeof response.model!=='string'||!response.model.trim()||response.model==='jev-latest'||!Array.isArray(response.answers)||response.answers.length!==count)throw Error('invalid_response');
+ if(!response||typeof response.model!=='string'||!response.model.trim()||isAlias(response.model)||!Array.isArray(response.answers)||response.answers.length!==count)throw Error('invalid_response');
  return response.answers.map(answer=>{
   if(!answer||typeof answer.answer!=='number'||!Number.isFinite(answer.answer)||answer.answer<0||answer.answer>3)throw Error('invalid_score');
   const distribution=answer.distribution;
@@ -56,7 +57,7 @@ function resultRow(candidate,querySha,score,rank,selected,requiresReview){
 function receipt(data,start,status,results,calls,method){
  const selected=results.filter(row=>row.selected).map(row=>row.id);
  return {
-  version:'0.4.0',tool:'jev_rerank',status,scope,query_sha256:sha(data.query),
+  version:'0.4.1',tool:'jev_rerank',status,scope,query_sha256:sha(data.query),
   results,selected_ids:selected,remaining_ids:results.filter(row=>!row.selected).map(row=>row.id),
   calls,elapsed_ms:performance.now()-start,method,
  };
@@ -72,7 +73,7 @@ export async function runRerank(input,backend){
  }));
  const callStart=performance.now();
  try{
-  const response=await backend.judge({state:JSON.stringify(data.state),model:'jev-latest',questions});
+  const response=await backend.judge({state:JSON.stringify(data.state),model:MODEL,questions});
   const scores=validateScores(response,data.candidates.length);
   const ranked=data.candidates.map((candidate,index)=>({candidate,score:scores[index],originalIndex:index})).sort((left,right)=>right.score-left.score||left.originalIndex-right.originalIndex);
   const querySha=sha(data.query);
@@ -81,12 +82,12 @@ export async function runRerank(input,backend){
    row.original_rank=originalIndex+1;
    return row;
   });
-  const calls=[{requested_model:'jev-latest',model:response.model,question_count:questions.length,elapsed_ms:performance.now()-callStart,usage:safeUsage(response.usage),error:null}];
+  const calls=[{requested_model:MODEL,model:response.model,question_count:questions.length,elapsed_ms:performance.now()-callStart,usage:safeUsage(response.usage),error:null}];
   return receipt(data,start,'ok',results,calls,'jev_score_batch');
  }catch{
   const querySha=sha(data.query);
   const results=data.candidates.map((candidate,index)=>resultRow(candidate,querySha,null,index+1,index<data.top_k,true));
-  const calls=[{requested_model:'jev-latest',model:null,question_count:questions.length,elapsed_ms:performance.now()-callStart,usage:{},error:'provider_or_validation_error'}];
+  const calls=[{requested_model:MODEL,model:null,question_count:questions.length,elapsed_ms:performance.now()-callStart,usage:{},error:'provider_or_validation_error'}];
   return receipt(data,start,'partial',results,calls,'original_order_fallback');
  }
 }

@@ -20,6 +20,12 @@
 
 這些工具提供判斷建議。來源與選項由呼叫端提供，不會自行搜尋缺少的證據或執行選出的方案。[輸入 schemas 與範例](skills/jev-kit/references/inputs.md)。
 
+建議把同類資料一次提交，使用固定分類與問題。0.4.1 版每批維持最多 8 筆、每次工具呼叫最多同時處理 4 批，依長度拆分完整 evidence，並讓每批相同來源只傳一次。已有本機 JSON 時直接使用檔案 CLI，避免模型重新抄寫來源。少量來源已在主模型上下文時，兩種 host 的實測都是直接推理較快；也觀察到高信心錯誤，因此只複核 review 標記不能可靠地維持正確率。
+
+#### 圖片輸入——實驗性
+
+`jev_evidence`、`jev_classify`、`jev_decide` 的項目（evidence items、classify items、decide candidates）可加 `images: [{"path": "/absolute/file.png"}]`，每項最多 4 張；有圖片時 classify 的 `text`、evidence 的 `source_text` 可省略。只支援 PNG、JPEG，依檔案內容判斷格式；單張 ≤8 MiB、每邊 280–1568 px；每個 request 合計 ≤20 MiB、≤16 張。分批時圖片與所屬項目同批送出。jev-kit 自動加上必要的 `TypeSafe-Danger-Zone-Images` header。Receipt 只記圖片數量與 SHA-256，不含圖片內容。`--validate-only` 可離線檢查檔案。TypeSafe 圖片功能仍是實驗性，格式、限制與準確度可能變動。Request 使用 `jev-1.14.0`（可用 `JEV_KIT_MODEL` 覆寫）。
+
 ### Ego Lite 瀏覽器自動操作——實驗性
 
 提供目標、起始網址與預期結果，由固定版本的 `jev-ultrafast` policy 選擇動作，再交給 Ego Lite 執行。
@@ -76,13 +82,17 @@ curl -fsSL https://raw.githubusercontent.com/WaynezProg/jev-kit/main/install.sh 
 
 | 測試情境 | 結果 |
 |---|---|
+| 批次排程：32 筆雙語資料，各 3 次 | Evidence **1.106 → 0.315 秒**，classification **1.072 → 0.331 秒**；配對答案標籤不變。擴成每批 32 筆會降低準確率。這是判斷階段的耗時，不是整個 agent 的耗時 |
+| 共用來源 evidence：8 個主張，配對 CLI 各 3 次 | Input tokens **9,855 → 4,633**，減少 **53%**；兩版每次都答對 **8/8**。節省幅度取決於來源重複程度 |
+| 新瀏覽器任務：3 項，各 2 次 | Jev **4/6**，兩種 Fable policy 都 **6/6**。Jev 在可見語意選項較快（**4.17 vs 8.29 秒**）；文字輸入由 Fable batch 較快，Jev 在兩次動態相依欄位測試均停住 |
+| 兩種 host 的 evidence 流程：18 筆，各 2 次 | 直接使用 Codex/Luna、Claude/Fable 都是 **36/36**。Jev 輔助較慢；只複核標記項目分別降為 **33/36、35/36**。此項比較使用凍結的優化前 runtime |
 | Ego Lite：3 個表單任務，各跑 2 次 | 兩組皆通過 6/6；Jev **6.35 秒**，Fable **7.30 秒**，耗時減少 13.0% |
 | Ego Lite：2 個 Wikipedia 任務，各跑 2 次，修正後重測 | 兩組皆通過 4/4；Jev **5.42 秒**，Fable **7.23 秒**，耗時減少 25.1% |
 | 程式碼搜尋：64 個 queries | 配對目標排第一的比例：BM25 **46.9%**、Jev **70.3%**、Fable **93.8%**。另一次修復測試中，Jev 比 BM25 慢：**5.25 秒 vs 4.42 秒** |
 | 模型輔助 | Haiku 準確率沒有提升；Fable 分流雖較快，但準確率下降。尚未證明可降低所需 thinking level |
 
-瀏覽器樣本少且任務已熟悉，Wikipedia 在修正前只通過 3/4。目前結果支持繼續試用瀏覽器情境，尚不能宣稱普遍加速 coding 或降低成本。
+新測試以下的早期瀏覽器數據使用熟悉任務，Wikipedia 在修正前只通過 3/4。新的動態相依欄位失敗，讓適用範圍縮小為已觀察到的控制項與少量文字生成。樣本仍少，不能宣稱普遍加速 coding、降低成本或可靠地降低 thinking level。
 
 [瀏覽器數據](https://github.com/WaynezProg/jev-kit/blob/37e1265b55f772bdc880662da11b834ea54d5392/benchmarks/ego-upstream/README.md) · [搜尋與修復數據](https://github.com/WaynezProg/jev-kit/blob/37e1265b55f772bdc880662da11b834ea54d5392/benchmarks/rerank/results/RESULTS.md) · [模型比較](https://github.com/WaynezProg/jev-kit/blob/37e1265b55f772bdc880662da11b834ea54d5392/benchmarks/model-tiers/results/RESULTS.md) — 連結固定於測試當時的歷史版本。
 
-工程驗證：2026-09-21 通過 **47 個 JavaScript + 36 個 Python 測試**及 [macOS／Linux CI](https://github.com/WaynezProg/jev-kit/actions/runs/35521891562)。這些驗證實作品質，與上述任務效果分開計算。
+0.4.1 本機工程驗證：2026-09-21 通過 **51 個 JavaScript + 36 個 Python 測試**，涵蓋並行失敗隔離、固定結果順序、來源綁定與超大輸入處理。[最近發布的 macOS／Linux CI](https://github.com/WaynezProg/jev-kit/actions/runs/35521891562) 對應較早版本，不代表本次本機修改已通過遠端 CI。工程檢查與上述任務效果分開計算。

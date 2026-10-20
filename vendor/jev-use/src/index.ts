@@ -45,6 +45,7 @@ export type {
 export { BackendError } from "./backends/types.js";
 export type {
   BackendRequest,
+  ImageAsset,
   BackendResponse,
   JevBackend,
   RawAnswer,

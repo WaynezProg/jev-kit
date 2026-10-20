@@ -14,6 +14,8 @@ import type {
 
 export const TYPESAFE_BASE_URL = "https://api.typesafe.ai";
 export const TYPESAFE_DEFAULT_MODEL = "jev-latest";
+/** Required on every request that carries an image (experimental API). */
+export const TYPESAFE_IMAGES_HEADER = "TypeSafe-Danger-Zone-Images";
 
 /** How to reach the TypeSafe API. */
 export interface TypeSafeOptions extends HttpOptions {
@@ -22,6 +24,8 @@ export interface TypeSafeOptions extends HttpOptions {
   baseUrl?: string;
   /** Model used when a call names none. Default "jev-latest". */
   defaultModel?: string;
+  /** Report only the provider's resolved model; never fall back to the requested one. */
+  strictModel?: boolean;
 }
 
 interface NativeResponse {
@@ -37,18 +41,24 @@ export class TypeSafeBackend implements JevBackend {
 
   async judge(request: BackendRequest): Promise<BackendResponse> {
     const model = request.model ?? this.options.defaultModel ?? TYPESAFE_DEFAULT_MODEL;
-    const body = toNativeBody(request.state, request.questions, model);
+    const body: Record<string, unknown> = toNativeBody(request.state, request.questions, model);
+    const images = request.assets && Object.keys(request.assets).length > 0;
+    if (images) body.assets = request.assets;
     const started = Date.now();
     const response = (await postJson(
       this.name,
       `${this.options.baseUrl ?? TYPESAFE_BASE_URL}/v1/systemone`,
-      { Authorization: `Bearer ${this.options.apiKey}` },
+      {
+        ...request.headers,
+        ...(images ? { [TYPESAFE_IMAGES_HEADER]: "true" } : {}),
+        Authorization: `Bearer ${this.options.apiKey}`,
+      },
       body,
       this.options,
     )) as NativeResponse;
     return {
       answers: parseNativeAnswers(this.name, response.answers, request.questions),
-      model: response.model ?? model,
+      model: this.options.strictModel ? response.model : response.model ?? model,
       latencyMs: Date.now() - started,
       usage: {
         inputTokens: response.usage?.input_tokens,

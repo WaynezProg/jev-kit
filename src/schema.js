@@ -1,21 +1,31 @@
 import {z} from 'zod';
+import {isAbsolute} from 'node:path';
 import {validateRerankInput} from './rerank.js';
+import {loadImages,MAX_IMAGES_PER_ITEM} from './images.js';
 const text=(n)=>z.string().min(1).max(n).refine(v=>v.trim().length>0,'Text must not be blank');
 const id=text(128);
 const unique=(rows)=>new Set(rows.map(r=>r.id)).size===rows.length;
+// Experimental: local PNG/JPEG files; format, size and dimensions are checked by images.js.
+const images=z.array(z.object({path:z.string().min(1).max(4096).refine(isAbsolute,'Image path must be absolute')}).strict()).min(1).max(MAX_IMAGES_PER_ITEM).optional();
+const optionalText=n=>z.string().max(n).optional();
+const hasText=v=>typeof v==='string'&&v.trim().length>0;
 const list=(schema,max)=>z.array(schema).min(1).max(max).refine(unique,'IDs must be unique');
 export const schemas={
  rerank:z.object({query:text(8000),candidates:list(z.object({id,text:text(24000),source_ref:text(2048).optional()}).strict(),30),top_k:z.number().int().min(1).max(30).optional()}).strict().refine(v=>v.top_k===undefined||v.top_k<=v.candidates.length,'top_k exceeds candidate count'),
- evidence:z.object({items:list(z.object({id,claim:text(8000),source_text:text(80000),source_ref:text(2048),quote:z.string().min(1).max(80000).nullable().optional()}).strict(),256)}).strict(),
- classify:z.object({purpose:text(2000),items:list(z.object({id,text:text(8000)}).strict(),64),classes:list(z.object({id,description:text(2000),requires_review:z.boolean().optional()}).strict(),32).refine(a=>a.length>=2,'At least two classes required')}).strict(),
+ evidence:z.object({items:list(z.object({id,claim:text(8000),source_text:optionalText(80000),images,source_ref:text(2048),quote:z.string().min(1).max(80000).nullable().optional()}).strict().refine(r=>hasText(r.source_text)||r.images?.length,'Item needs source_text or images').refine(r=>r.quote==null||hasText(r.source_text),'quote requires source_text'),256)}).strict(),
+ classify:z.object({purpose:text(2000),items:list(z.object({id,text:optionalText(8000),images}).strict().refine(r=>hasText(r.text)||r.images?.length,'Item needs text or images'),64),classes:list(z.object({id,description:text(2000),requires_review:z.boolean().optional()}).strict(),32).refine(a=>a.length>=2,'At least two classes required')}).strict(),
  extract:z.object({document:text(50000),source_ref:text(2048),fields:list(z.object({id,description:text(1500),pattern:text(500),flags:z.string().regex(/^[imsu]*$/).optional()}).strict(),8)}).strict(),
- decide:z.object({decision:text(1500),evidence:text(12000),priorities:text(2000),candidates:list(z.object({id,description:text(2000)}).strict(),6).refine(a=>a.length>=2,'At least two candidates required'),requirements:z.array(text(500)).max(3).default([])}).strict(),
+ decide:z.object({decision:text(1500),evidence:text(12000),priorities:text(2000),candidates:list(z.object({id,description:text(2000),images}).strict(),6).refine(a=>a.length>=2,'At least two candidates required'),requirements:z.array(text(500)).max(3).default([])}).strict(),
 };
+// Images loaded during validation, reused by run() without re-reading files.
+const loadedImages=new WeakMap();
+export const imagesOf=data=>loadedImages.get(data)??new Map();
 export function parseInput(mode,value){
  if(!Object.hasOwn(schemas,mode))throw new Error('Unknown tool');
  if(Buffer.byteLength(JSON.stringify(value))>1_000_000)throw new Error('Input exceeds 1 MB; split without truncating sources');
  const data=schemas[mode].parse(value);
  if(mode==='rerank')validateRerankInput(data);
+ loadedImages.set(data,loadImages(mode,data));
  return data;
 }
 export const descriptions={

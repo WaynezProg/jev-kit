@@ -20,6 +20,12 @@ Built on `jev-use` and `jev-mcp` patterns, with local source/quote validation. P
 
 These are advisory judgments. Sources and alternatives come from the caller; the tools do not search for missing evidence or execute the selected decision. [Input schemas and examples](skills/jev-kit/references/inputs.md).
 
+For best results, send related records together using fixed classes/questions. Version 0.4.1 keeps at most 8 records per request and overlaps up to 4 requests per invocation, splits long evidence without truncation, and sends identical source strings once per batch. If inputs already exist in local JSON, use the file CLI instead of having a model retype them. For a small set already in the main model's context, direct reasoning was faster in two-host trials. High-confidence errors occurred, so reviewing only flagged items is not a reliable shortcut.
+
+#### Images — experimental
+
+`jev_evidence`, `jev_classify` and `jev_decide` items (evidence items, classify items, decide candidates) accept `images: [{"path": "/absolute/file.png"}]`, up to 4 per item. Classify `text` / evidence `source_text` may be omitted when images are present. PNG and JPEG only, detected by file content; each image ≤8 MiB and 280–1568 px per side; ≤20 MiB and ≤16 images per request. Images stay with their item when batching. jev-kit sends the required `TypeSafe-Danger-Zone-Images` header automatically. Receipts hold only image counts and SHA-256 hashes, never image data. `--validate-only` checks the files offline. TypeSafe image input is experimental; formats, limits and accuracy may change. Requests use `jev-1.14.0` (override with `JEV_KIT_MODEL`).
+
 ### Ego Lite browser automation — experimental
 
 Run a browser job with a goal, starting URL and expected outcome. The pinned `jev-ultrafast` policy chooses actions; Ego Lite executes them.
@@ -76,13 +82,17 @@ Measured workflow results; browser timings compare Jev against **Fable 5.1 low w
 
 | Workload | Observed result |
 |---|---|
+| Batch scheduling: 32 bilingual records, 3 repeats | Evidence **1.106 → 0.315 s**, classification **1.072 → 0.331 s**. Paired labels unchanged; larger 32-record requests reduced accuracy. This measures the judgment stage, not whole-agent time |
+| Shared-source evidence: 8 claims, 3 paired CLI runs | Input tokens **9,855 → 4,633** (53% fewer); both bundles answered **8/8** correctly in every run. This saving depends on repeated sources |
+| New browser tasks: 3 tasks × 2 runs | Jev **4/6**, both Fable policies **6/6**. Jev was faster on visible semantic selection (**4.17 vs 8.29 s**); Fable batch was faster on text entry, and Jev blocked on both dependent-field trials |
+| Two-host evidence workflow: 18 items × 2 repeats | Direct Codex/Luna and Claude/Fable each **36/36**. Jev assistance was slower; reviewing only flags scored **33/36** and **35/36**, respectively. This comparison used the frozen pre-optimization runtime |
 | Ego Lite: 3 form tasks × 2 runs | Both passed 6/6; Jev **6.35 s** vs Fable **7.30 s** (13.0% less time) |
 | Ego Lite: 2 Wikipedia tasks × 2 runs, after fix | Both passed 4/4; Jev **5.42 s** vs Fable **7.23 s** (25.1% less time) |
 | Code search: 64 queries | Paired target ranked first: BM25 **46.9%**, Jev **70.3%**, Fable **93.8%**. In the separate repair test, Jev was slower than BM25: **5.25 s vs 4.42 s** |
 | Model assistance | Haiku accuracy did not improve; Fable routing was faster but less accurate. No demonstrated reduction in required thinking level |
 
-The browser sample is small and uses familiar tasks; Wikipedia initially passed only 3/4 before the fix. These results support further browser trials, not a general coding speedup or cost-saving claim.
+The earlier browser samples below the new trials use familiar tasks; Wikipedia initially passed only 3/4 before the fix. The new dependent-field failures narrow the useful scope to observed controls and limited text generation. These small samples do not establish a general coding speedup, cost saving or reliable reduction in reasoning effort.
 
 [Browser measurements](https://github.com/WaynezProg/jev-kit/blob/37e1265b55f772bdc880662da11b834ea54d5392/benchmarks/ego-upstream/README.md) · [Search and repair measurements](https://github.com/WaynezProg/jev-kit/blob/37e1265b55f772bdc880662da11b834ea54d5392/benchmarks/rerank/results/RESULTS.md) · [Model comparisons](https://github.com/WaynezProg/jev-kit/blob/37e1265b55f772bdc880662da11b834ea54d5392/benchmarks/model-tiers/results/RESULTS.md) — links pin the tested historical revision.
 
-Engineering checks: **47 JavaScript + 36 Python tests passed**, with [macOS/Linux CI passing](https://github.com/WaynezProg/jev-kit/actions/runs/35521891562) on 2026-09-21. These check implementation behavior, separately from the task results above.
+Local 0.4.1 engineering checks on 2026-09-21: **51 JavaScript + 36 Python tests passed**, including concurrent failure isolation, stable ordering, source binding and oversized-input handling. The [last published macOS/Linux CI run](https://github.com/WaynezProg/jev-kit/actions/runs/35521891562) covers the earlier revision, not these local changes. Engineering checks are separate from the task results above.

@@ -4,6 +4,15 @@ Run `./jev browser --input job.json` through Jev Kit. The five existing MCP tool
 are unchanged. This is an explicit browser job, not an automatically enabled hook.
 It requires the `ego-browser` CLI and a running Ego Lite.
 
+Use this selectively for choices among visible controls with little generated
+text. A new three-task local comparison (two repeats per policy, 2026-09-21)
+found semantic selection faster with Jev: 4.17 s vs 8.29 s for Fable's bounded
+batch planner. A three-field form favored the batch planner: 7.80 s vs 8.82 s.
+On a form with a dependent field, Jev stopped BLOCKED before any action in both
+runs; both Fable policies completed it. These are small diagnostic samples,
+not a general speedup. A BLOCKED or unverified DONE should hand the current
+observation back to the host planner; automatic fallback is not implemented.
+
 The adapter imports the **unmodified, pinned** `jev-ultrafast` policy into a
 persistent Python process. Its DOM snapshot and operation/target fan-out stay
 upstream; Ego Page methods replace the Browser Harness/Chrome executor. It does

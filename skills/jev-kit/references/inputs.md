@@ -1,6 +1,8 @@
 # Inputs
 
-All inputs are JSON. Unknown fields and duplicate IDs are rejected. Inputs are capped at 1 MB. No thresholds or backend URLs are supplied by tool callers. Current backend: TypeSafe, model alias jev-latest; resolved model is recorded.
+All inputs are JSON. Unknown fields and duplicate IDs are rejected. Inputs are capped at 1 MB. No thresholds or backend URLs are supplied by tool callers. Current backend: TypeSafe, pinned model jev-1.14.0 (override: `JEV_KIT_MODEL`); resolved model is recorded. Evidence items, classify items and decide candidates accept experimental `images: [{"path":"/absolute.png"}]` (≤4 per item, PNG/JPEG, ≤8 MiB, 280–1568 px per side); see README.
+
+Submit batches in one invocation. Evidence/classification process up to 8 rows per request with up to 4 independent requests in flight per invocation; results and call receipts retain dispatch order. Evidence splits whole rows before the serialized state exceeds the engine's 120,000-character estimate. A single row that still exceeds that estimate stays review. This estimate is not an exact provider token count. Calls record `state_chars` and `backend_attempted`; the latter means the backend was invoked, not proof that an HTTP request succeeded. Locally screened calls and unsuccessful calls without a resolved model record `model: null`.
 
 ## evidence
 
@@ -8,7 +10,7 @@ All inputs are JSON. Unknown fields and duplicate IDs are rejected. Inputs are c
 {"items":[{"id":"release","claim":"Deployment completed.","source_ref":"log:42","source_text":"Build passed; deployment has not started.","quote":"deployment has not started"}]}
 ```
 
-Up to 256 items. claim ≤8,000 characters, source_text ≤80,000; quote optional/null. Source identifiers and hashes stay local. Only source_text, claim and optional quote enter model state. Each item uses its own source. All original source whitespace is preserved.
+Up to 256 items. claim ≤8,000 characters, source_text ≤80,000; quote optional/null. Source identifiers and hashes stay local. Only source_text, claim and optional quote enter model state. Identical source strings may be stored once within a batch with generated source indices; each question is bound to its assigned source. All original source whitespace is preserved. Neither a high confidence nor a missing review flag establishes factual correctness.
 
 ## classify
 

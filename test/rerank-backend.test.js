@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createBackend} from '../src/backend.js';
+import {createBackend,MODEL} from '../src/backend.js';
 import {run} from '../src/core.js';
 
 const input={query:'find the relevant implementation',candidates:[
@@ -28,7 +28,7 @@ test('score backend maps reverse-order native answer keys back to r0/r1',async t
   assert.equal(url,'https://api.typesafe.ai/v1/systemone');
   assert.equal(options.headers.Authorization,`Bearer ${key}`);
   const body=JSON.parse(options.body);
-  assert.equal(body.model,'jev-latest');
+  assert.equal(body.model,MODEL);assert.equal(MODEL,process.env.JEV_KIT_MODEL?.trim()||'jev-1.14.0');
   assert.deepEqual(Object.keys(body.questions),['r0','r1']);
   assert.equal(body.questions.r0.type,'score');assert.equal(body.questions.r0.criteria.length,4);
   assert.deepEqual(JSON.parse(body.state),{query:input.query,candidates:input.candidates.map(({id,text})=>({id,text}))});
